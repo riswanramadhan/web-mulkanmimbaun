@@ -1,559 +1,974 @@
 <!DOCTYPE html>
 
-<html class="light" lang="id"><head>
+<html lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Mulkan Mimbaun | Authentic Indonesian Culinary Heritage</title>
+<title>Mulkan Mimba'un - Authentic Culinary Heritage</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Work+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&amp;family=Noto+Serif:wght@600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "inverse-on-surface": "#f2f1ec",
-                    "background": "#fbf9f4",
-                    "on-secondary-fixed-variant": "#663d00",
-                    "secondary-fixed": "#ffddba",
-                    "on-primary": "#ffffff",
-                    "surface-dim": "#dbdad5",
-                    "error": "#ba1a1a",
-                    "surface-container-lowest": "#ffffff",
-                    "error-container": "#ffdad6",
-                    "primary-fixed-dim": "#ecbcaa",
-                    "on-tertiary-container": "#77a86c",
-                    "on-primary-container": "#bf9282",
-                    "inverse-surface": "#30312e",
-                    "on-tertiary-fixed-variant": "#23501e",
-                    "tertiary-fixed-dim": "#a1d494",
-                    "on-secondary-container": "#714500",
-                    "surface-container": "#f0eee9",
-                    "on-tertiary-fixed": "#002201",
-                    "tertiary-container": "#0e3c0c",
-                    "on-primary-fixed-variant": "#613e31",
-                    "surface-variant": "#e4e2dd",
-                    "surface-container-high": "#eae8e3",
-                    "secondary-container": "#ffb14f",
-                    "on-tertiary": "#ffffff",
-                    "tertiary": "#002501",
-                    "on-surface": "#1b1c19",
-                    "on-secondary": "#ffffff",
-                    "surface": "#fbf9f4",
-                    "primary-fixed": "#ffdbce",
-                    "on-error": "#ffffff",
-                    "surface-container-low": "#f5f3ee",
-                    "surface-bright": "#fbf9f4",
-                    "outline-variant": "#d5c3bd",
-                    "tertiary-fixed": "#bcf0ae",
-                    "primary": "#32170d",
-                    "inverse-primary": "#ecbcaa",
-                    "primary-container": "#4b2c20",
-                    "outline": "#83746f",
-                    "on-primary-fixed": "#2e140a",
-                    "secondary-fixed-dim": "#ffb965",
-                    "surface-container-highest": "#e4e2dd",
-                    "on-error-container": "#93000a",
-                    "on-secondary-fixed": "#2b1700",
-                    "on-background": "#1b1c19",
-                    "surface-tint": "#7b5647",
-                    "secondary": "#875300",
-                    "on-surface-variant": "#504440"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
-            },
-            "spacing": {
-                    "base": "8px",
-                    "margin-desktop": "40px",
-                    "container-max": "1280px",
-                    "gutter": "24px",
-                    "margin-mobile": "16px"
-            },
-            "fontFamily": {
-                    "label-md": ["Work Sans"],
-                    "headline-xl": ["Newsreader"],
-                    "headline-lg": ["Newsreader"],
-                    "body-lg": ["Work Sans"],
-                    "headline-lg-mobile": ["Newsreader"],
-                    "body-md": ["Work Sans"],
-                    "label-sm": ["Work Sans"],
-                    "headline-md": ["Newsreader"]
-            },
-            "fontSize": {
-                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
-                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
-                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
-                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
-                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
-                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
-                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
-                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "500"}]
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed": "#291800",
+                        "on-tertiary-container": "#9e9c96",
+                        "surface-variant": "#e5e2e1",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#504440",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#bf9282",
+                        "primary-container": "#4b2c20",
+                        "surface-container-highest": "#e5e2e1",
+                        "tertiary-container": "#343430",
+                        "outline": "#83746f",
+                        "on-error-container": "#93000a",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed-dim": "#c9c6c0",
+                        "primary-fixed-dim": "#ecbcaa",
+                        "outline-variant": "#d5c3bd",
+                        "inverse-on-surface": "#f3f0ef",
+                        "on-tertiary-fixed-variant": "#474742",
+                        "tertiary-fixed": "#e5e2db",
+                        "surface": "#fcf9f8",
+                        "surface-container-high": "#eae7e7",
+                        "secondary-fixed-dim": "#fabb63",
+                        "tertiary": "#1f1f1b",
+                        "on-primary-fixed-variant": "#613e31",
+                        "on-primary-fixed": "#2e140a",
+                        "on-tertiary-fixed": "#1c1c18",
+                        "inverse-surface": "#303030",
+                        "secondary-container": "#fdbe66",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed": "#ffddb4",
+                        "surface-tint": "#7b5647",
+                        "surface-dim": "#dcd9d9",
+                        "on-background": "#1b1b1c",
+                        "on-secondary-container": "#754b00",
+                        "inverse-primary": "#ecbcaa",
+                        "surface-container-low": "#f6f3f2",
+                        "surface-bright": "#fcf9f8",
+                        "on-surface": "#1b1b1c",
+                        "primary-fixed": "#ffdbce",
+                        "on-secondary-fixed-variant": "#633f00",
+                        "secondary": "#835500",
+                        "error": "#ba1a1a",
+                        "surface-container": "#f0eded",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#fcf9f8",
+                        "primary": "#32170d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap-lg": "120px",
+                        "section-gap-md": "80px",
+                        "margin-mobile": "16px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "element-gap": "16px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "display-lg": ["Noto Serif"],
+                        "headline-lg-mobile": ["Noto Serif"],
+                        "headline-lg": ["Noto Serif"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "headline-md": ["Noto Serif"],
+                        "body-md": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                }
             }
-          },
-        },
-      }
+        }
     </script>
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .hero-gradient {
-            background: linear-gradient(rgba(50, 23, 13, 0.4), rgba(50, 23, 13, 0.6));
-        }
-        .product-card-hover:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 30px -10px rgba(50, 23, 13, 0.15);
-        }
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .no-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-        details > summary {
-            list-style: none;
-        }
-        details > summary::-webkit-details-marker {
-            display: none;
-        }
         html {
             scroll-behavior: smooth;
         }
-    </style>
-<style>
         body {
-          min-height: max(884px, 100dvh);
+            opacity: 0;
+            transform: translateY(12px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        body.loaded {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.75s ease, transform 0.75s ease;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[data-weight="fill"] {
+            font-variation-settings: 'FILL' 1;
+        }
+        .soft-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
         }
     </style>
 </head>
-<body class="bg-background text-on-background font-body-md overflow-x-hidden">
-<!-- TopAppBar -->
-<nav class="w-full top-0 sticky z-50 bg-background/80 backdrop-blur-md flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-4 transition-all duration-300 ease-in-out">
-<div class="flex items-center gap-4">
-<span class="material-symbols-outlined text-primary cursor-pointer md:hidden">menu</span>
-<a class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim tracking-tight" href="#home">Mulkan Mimbaun</a>
+<body class="bg-background text-on-background font-body-md antialiased">
+<!-- TopNavBar -->
+<nav class="bg-surface/90 dark:bg-primary/90 backdrop-blur-md text-primary dark:text-primary-fixed docked full-width top-0 sticky z-50 border-b border-outline-variant/30 shadow-sm">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-gutter max-w-container-max mx-auto h-20">
+<div class="text-headline-md font-display-lg text-primary dark:text-primary-fixed">
+  <img src="Asset/Logo-Mulkan.Mimba'un.png" alt="Mulkan Mimba'un" class="h-10 w-auto object-contain" />
 </div>
-<div class="hidden md:flex items-center gap-8">
-<a class="text-secondary font-bold font-label-md transition-colors hover:text-secondary" href="#home">Home</a>
-<a class="text-on-surface-variant font-label-md hover:text-secondary transition-colors" href="#produk">Produk</a>
-<a class="text-on-surface-variant font-label-md hover:text-secondary transition-colors" href="#tentang-kami">Tentang Kami</a>
-<a class="text-on-surface-variant font-label-md hover:text-secondary transition-colors" href="#kemitraan">Kemitraan</a>
-<a class="text-on-surface-variant font-label-md hover:text-secondary transition-colors" href="#bantuan">Bantuan</a>
+<ul class="hidden md:flex space-x-8" id="navbar-menu">
+<li><a class="nav-link active-nav text-secondary font-bold border-b-2 border-secondary pb-1 text-label-md font-label-md transition-all" href="#home" data-section="home">Beranda</a></li>
+<li><a class="nav-link text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors hover:text-secondary dark:hover:text-secondary-fixed transition-all text-label-md font-label-md" href="#tentangkami" data-section="tentangkami">Tentang Kami</a></li>
+<li><a class="nav-link text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors hover:text-secondary dark:hover:text-secondary-fixed transition-all text-label-md font-label-md" href="#produk" data-section="produk">Produk</a></li>
+<li><a class="nav-link text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors hover:text-secondary dark:hover:text-secondary-fixed transition-all text-label-md font-label-md" href="#faq" data-section="faq">Bantuan</a></li>
+</ul>
+<a href="https://wa.me/6282293648411?text=Halo%20Admin%2C%20saya%20ingin%20mengajukan%20pertanyaan%20mengenai%20produk%20dan%20layanan%20Mulkan%20Mimba%27un." target="_blank" rel="noopener noreferrer" class="bg-primary text-on-primary px-6 py-2 rounded font-label-md text-label-md hover:bg-secondary transition-all transform active:scale-95 hidden md:inline-flex items-center justify-center">Hubungi Kami</a>
+<button class="md:hidden p-2 text-primary">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
 </div>
-<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-label-md hover:opacity-90 transition-opacity">Hubungi Kami</button>
 </nav>
 <!-- Hero Section -->
-<header class="relative min-h-[751px] flex items-center overflow-hidden" id="home">
-<div class="absolute inset-0 z-0">
-<img class="w-full h-full object-cover" data-alt="A premium, artisanal Indonesian culinary setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzC2BedF1I_OgDDb6X6rsYXPR_FvyaHbMTudFdcCFGXe-MAumg5FTro7hyQTvNQ9GpBKGc05dFxByIxZHpxLCaKhAigH-yW9qBtNg6czcQuEZ6OWfkzc2QmLzk1urf2cu5rZnvqD05HhXlmnO_36hCzs7ORfAh-jveBxb18wHqYjVr3HxAsnGevIvUuvXQEBy9x5PbL9Hx_qojoOYfBNei8cpqIqjTBxjaJhGxF6w5c7SxvfXpi4Z7zuiW94Tc2BJquXw21qJNjy-e"/>
-<div class="absolute inset-0 hero-gradient"></div>
-</div>
-<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full">
-<div class="max-w-3xl">
-<h1 class="font-headline-xl text-headline-xl text-white mb-6 md:text-[64px] md:leading-[1.1]">Warisan Rasa Indonesia untuk Dunia</h1>
-<p class="font-body-lg text-body-lg text-surface-variant/90 mb-10 max-w-xl">
-                    Nikmati keajaiban cita rasa nusantara yang diolah dengan standar kualitas ekspor terbaik. Membawa tradisi kuliner lokal ke panggung global melalui kurasi bahan pilihan.
-                </p>
-<div class="flex flex-col sm:flex-row gap-4">
-<a class="bg-secondary-container text-on-secondary-container px-8 py-4 rounded-full font-label-md text-lg hover:bg-secondary-fixed transition-colors text-center" href="#produk">Lihat Produk</a>
-<a class="border border-white/30 bg-white/10 backdrop-blur-md text-white px-8 py-4 rounded-full font-label-md text-lg hover:bg-white/20 transition-colors text-center" href="#kemitraan">Pelajari Kemitraan</a>
-</div>
-</div>
-</div>
+<header id="home" class="relative w-full h-[819px] flex items-center bg-transparent overflow-hidden">
+  <img src="Asset/hero-section2.png" alt="Produk makanan dan minuman tradisional Indonesia dari Mulkan Mimba'un" class="absolute inset-0 w-full h-full object-cover" />
+  
+  <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none"></div>
+  
+  <div class="absolute bottom-16 left-8 md:left-12 flex flex-col items-start gap-3 z-10 text-left px-4 md:px-0">
+    <h1 class="text-white text-3xl md:text-5xl font-serif font-bold tracking-[0.05em] drop-shadow-lg">
+      Mulkan Mimba'un
+    </h1>
+    
+    <button class="mt-2 border-2 border-white bg-white/10 backdrop-blur-sm text-white px-10 py-3 rounded-full font-bold text-sm tracking-wider hover:bg-white hover:text-[#4A2E1B] transition-all duration-300 shadow-xl group">
+      Discover
+    </button>
+  </div>
+  <div class="absolute left-1/2 bottom-8 -translate-x-1/2 z-10">
+    <span class="material-symbols-outlined text-white text-3xl animate-bounce font-light drop-shadow-md">
+      expand_more
+    </span>
+  </div>
 </header>
-<!-- Didukung Oleh Mitra Terpercaya -->
-<section class="py-16 bg-surface-container-lowest border-b border-outline-variant/30">
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
-<h2 class="font-label-md text-secondary tracking-[0.2em] uppercase mb-8">Didukung Oleh Mitra Terpercaya</h2>
-<div class="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-<div class="flex flex-col items-center gap-2">
-<img alt="DekatLokal" class="h-12 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPrs9XQyATINaWvegxXp39KikMiiWPGMqbPtduh2jiBFAAES3y14cFwQvF_KzUKe3DH2WWp4Azo7riyPEuxHyMUhG6rSGV8wBrtLzHleuRFgPDhS9HcSPVD2CNyJ8eHxA3bfLbmRZYtVy0dZGFSEfaiAEK2y2iQE-gs5hLL-CF8HBTIjKYdjudYpdC5w3m9VSO1nlWw10I8Q2tP2w-B7_dzLEJ48J1FQUv5Xgq4FYn9ApjNr2Pj_zUV_IKGGUSh9WQjY-dC7fd4uCq"/>
-<span class="text-[10px] font-bold text-on-surface uppercase tracking-widest">DekatLokal</span>
-</div>
-<div class="flex flex-col items-center gap-2">
-<img alt="Rumah BUMN Makassar" class="h-12 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzC2BedF1I_OgDDb6X6rsYXPR_FvyaHbMTudFdcCFGXe-MAumg5FTro7hyQTvNQ9GpBKGc05dFxByIxZHpxLCaKhAigH-yW9qBtNg6czcQuEZ6OWfkzc2QmLzk1urf2cu5rZnvqD05HhXlmnO_36hCzs7ORfAh-jveBxb18wHqYjVr3HxAsnGevIvUuvXQEBy9x5PbL9Hx_qojoOYfBNei8cpqIqjTBxjaJhGxF6w5c7SxvfXpi4Z7zuiW94Tc2BJquXw21qJNjy-e"/>
-<span class="text-[10px] font-bold text-on-surface uppercase tracking-widest">Rumah BUMN</span>
-</div>
-<div class="flex flex-col items-center gap-2">
-<img alt="Bank BRI" class="h-12 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACM_661nFHjMuR0JrjelARPXoeN_TQc_s17OJakZhIMw8LooU8Skrb7g8BtOOSxdp22tFyI4ghYWN36LpXk99oQLHq74by8-v9sX3Wog4Pw-DUPYxLxhrVfs_-0dM5yONAZp2uwOOwGKq0c6XLZC90CAo5yTViQdZWTJqSFBLlwTbyg3SyhwGErmoTS2q0O38wWHMZAFHY39BaueyajwwZheoddmfSFsTAybipj-E7gw-gAYskOuZbVfcFfV_5xIzbFWu3LlgdkEbQ"/>
-<span class="text-[10px] font-bold text-on-surface uppercase tracking-widest">Bank BRI</span>
-</div>
-</div>
-</div>
+<!-- Trusted Partners -->
+<section class="py-20 bg-white">
+  <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
+    
+    <!-- Bagian Judul yang Diperbarui: Kapsul dengan dua warna teks -->
+    <div class="inline-block rounded-full bg-[#FAF9F6] border border-[#D9D9D9] px-4 py-2 shadow-md mb-4 mx-auto">
+      <h2 class="font-serif text-xl md:text-2xl tracking-wide font-bold flex items-center gap-1.5">
+        <span class="text-[#4A2E1B]">Didukung Oleh</span>
+        <span class="text-[#8B2C1A]">Mitra Terpercaya</span>
+      </h2>
+    </div>
+    
+    <!-- Bagian Paragraf yang Diperbarui: Perbaikan apostrof dan penyesuaian warna -->
+    <p class="text-[#666666] max-w-3xl mx-auto mb-14 text-sm md:text-base leading-relaxed font-sans">
+      Mulkan Mimba’un didukung oleh mitra-mitra terpercaya untuk memberikan layanan terbaik dan mendukung pertumbuhan UMKM di Indonesia
+    </p>
+    
+    <!-- Bagian Kisi Mitra (tetap sama) -->
+    <div class="flex flex-row flex-wrap justify-center items-center gap-8 md:gap-12 max-w-4xl mx-auto">
+      
+      <!-- Dekat Lokal -->
+      <div class="flex items-center justify-center h-[50px] cursor-pointer group">
+        <img 
+          src="Asset/dekat-lokal.png" 
+          alt="Logo Dekat Lokal" 
+          class="h-full object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 group-hover:animate-[bounce_0.5s_ease-in-out_1]" 
+        />
+      </div>
+
+      <!-- Rumah BUMN -->
+      <div class="flex items-center justify-center h-[60px] cursor-pointer group">
+        <img 
+          src="Asset/rumah-bumn.png" 
+          alt="Logo Rumah BUMN" 
+          class="h-full object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 group-hover:animate-[bounce_0.5s_ease-in-out_1]" 
+        />
+      </div>
+
+      <!-- Bank BRI -->
+      <div class="flex items-center justify-center h-[40px] cursor-pointer group">
+        <img 
+          src="Asset/bank-bri.png" 
+          alt="Logo Bank BRI" 
+          class="h-full object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 group-hover:animate-[bounce_0.5s_ease-in-out_1]" 
+        />
+      </div>
+
+    </div>
+  </div>
 </section>
-<!-- Cerita Kami (Our Story) - Relocated -->
-<section class="py-24 bg-surface-container-low" id="tentang-kami">
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-<div class="bg-white rounded-3xl p-8 md:p-16 flex flex-col lg:flex-row gap-12 items-center shadow-sm">
-<div class="lg:w-1/2">
-<span class="text-secondary font-label-md tracking-widest uppercase">Cerita Kami</span>
-<h2 class="font-headline-xl text-headline-xl text-primary mt-4 mb-8 leading-tight">Membawa Warisan Rasa dari Akar Tradisi ke Panggung Global</h2>
-<p class="text-on-surface-variant font-body-lg mb-6">
-                        "Kira Kira Michi" dibentuk pada tahun 2023. Bermula dari keinginan sepasang suami istri tanpa pekerjaan tetap yang baru saja memulai kehidupan berumah tangga, bersama bayi mereka yang baru lahir. Berangkat dari hobi desain, menggambar, serta keinginan untuk memberikan pengalaman agar setiap orang dapat memiliki produk impian yang selama ini mereka idamkan.
-                    </p>
-<p class="text-on-surface-variant font-body-lg">
-                        Melalui merek Mulkan Mimbaun, kami kini fokus pada kurasi produk kuliner artisanal. Produksi kami bermula dari ide desain yang kemudian diolah secara digital hingga menjadi produk akhir yang dikemas secara premium. Setiap gigitan adalah cerita tentang ketekunan dan kecintaan kami pada warisan kuliner Indonesia.
-                    </p>
-</div>
-<div class="lg:w-1/2 flex gap-4">
-<div class="w-1/2 pt-12">
-<img alt="Artisanal Process" class="rounded-2xl shadow-lg w-full object-cover aspect-[3/4]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBD7eQrMa60Ziv3RJ9ez3kC_C3ikRrI-oojZ78O28rdxg27vCBhaRBCgNHK5puzGsMtZgWBlnI7UViMbtDia0DNvdC4Vbg5aAQ1gRmEyRFWU1fXIkMu44C71fev97IKFNDo3jm0VMCZ9hfuvxzOv-qa-lbW4gVEH1-ymE8XwqwYhZm214_8slX6_1zwNxtofwXFY0WUy9VMRgsPr7n6eK_enBsAYpP5Kqw7Xy9vPCRlBBb0LCuX9ioPWolSucGsFT337C3GRiJ5PHnq"/>
-</div>
-<div class="w-1/2">
-<img alt="Artisanal Workshop" class="rounded-2xl shadow-lg w-full object-cover aspect-[3/4]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzC2BedF1I_OgDDb6X6rsYXPR_FvyaHbMTudFdcCFGXe-MAumg5FTro7hyQTvNQ9GpBKGc05dFxByIxZHpxLCaKhAigH-yW9qBtNg6czcQuEZ6OWfkzc2QmLzk1urf2cu5rZnvqD05HhXlmnO_36hCzs7ORfAh-jveBxb18wHqYjVr3HxAsnGevIvUuvXQEBy9x5PbL9Hx_qojoOYfBNei8cpqIqjTBxjaJhGxF6w5c7SxvfXpi4Z7zuiW94Tc2BJquXw21qJNjy-e"/>
-</div>
-</div>
-</div>
-</div>
+<!-- Our Story -->
+<section id="tentangkami" class="py-16 bg-[#FAFAF6]">
+  <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+    
+    <div class="bg-white rounded-[32px] p-8 md:p-16 border border-gray-100 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.03)] flex flex-col lg:flex-row gap-12 items-center">
+      
+      <div class="w-full lg:w-1/2 flex flex-col justify-center">
+        <span class="text-xs font-bold uppercase tracking-[0.15em] text-[#8C6D53] mb-3 block font-sans">
+          Cerita Kami
+        </span>
+        
+        <h2 class="font-headline-lg text-primary text-3xl md:text-[40px] leading-[1.15] tracking-wide mb-6 font-serif">
+          Dari Tantangan Menjadi Inovasi Lokal Dapur Lokal
+        </h2>
+        
+        <div class="space-y-5 text-[#5C544E] font-medium leading-relaxed font-serif text-[15px] md:text-base">
+          <p>
+            Perjalanan Mulkan Mimba'un bermula di masa pandemi (2019) saat aktivitas pasar ikan terhenti, meninggalkan hasil tangkapan laut lokal yang tidak termanfaatkan secara maksimal. Karena hal tersebut, muncul ide untuk mengolah ikan menjadi produk dan lahirlah Abon Tuna Panggang sebagai inovasi utama. 
+          </p>
+          <p>
+            Seiring berjalannya waktu, Mulkan Mimba'un terus berkembang dan kini, produk kami telah merambah ke berbagai produk, mulai dari  Keripik Tempe dan Otak-Otak Ikan, hingga produk minuman yaitu Minuman Coklat Jahe dan Kopi Bubuk.
+          </p>
+        </div>
+      </div>
+      
+      <div class="w-full lg:w-1/2 flex justify-center">
+        <div class="relative overflow-hidden rounded-[24px] max-w-[500px] w-full aspect-[4/3] shadow-md">
+          <img 
+            src="Asset/cerita-kami.png" 
+            alt="Koleksi produk premium Tempeh Chips dan Abon Tuna Panggang Mulkan Mimbaun" 
+            class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+          />
+        </div>
+      </div>
+
+    </div>
+
+  </div>
 </section>
-<!-- Value Proposition - Relocated -->
-<section class="py-24 bg-surface-container-lowest">
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center mb-16">
-<h2 class="font-headline-lg text-headline-lg text-primary">Kenapa Memilih Kami?</h2>
-<div class="w-24 h-1 bg-secondary-container mx-auto mt-4"></div>
-</div>
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-12">
-<div class="flex flex-col items-center text-center">
-<div class="w-20 h-20 bg-tertiary-fixed flex items-center justify-center rounded-full mb-6">
-<span class="material-symbols-outlined text-tertiary text-4xl" style="font-variation-settings: 'FILL' 1;">verified_user</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-primary mb-3">Sertifikasi Halal</h3>
-<p class="text-on-surface-variant font-body-md px-4">Menjamin kehalalan dan kebersihan standar internasional untuk kepercayaan setiap konsumen.</p>
-</div>
-<div class="flex flex-col items-center text-center">
-<div class="w-20 h-20 bg-secondary-fixed flex items-center justify-center rounded-full mb-6">
-<span class="material-symbols-outlined text-secondary text-4xl" style="font-variation-settings: 'FILL' 1;">language</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-primary mb-3">Kualitas Ekspor</h3>
-<p class="text-on-surface-variant font-body-md px-4">Telah memenuhi syarat untuk pasar global yang ketat, membawa rasa Indonesia ke dunia.</p>
-</div>
-<div class="flex flex-col items-center text-center">
-<div class="w-20 h-20 bg-primary-fixed flex items-center justify-center rounded-full mb-6">
-<span class="material-symbols-outlined text-primary-container text-4xl" style="font-variation-settings: 'FILL' 1;">pan_tool</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-primary mb-3">Artisanal Made</h3>
-<p class="text-on-surface-variant font-body-md px-4">Dibuat dengan tangan terampil dan resep warisan untuk menjaga keaslian rasa tradisi.</p>
-</div>
-</div>
-</section>
-<!-- Signature Products -->
-<section class="py-24 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop" id="produk">
-<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
-<div>
-<span class="text-secondary font-label-md tracking-widest uppercase">Koleksi Terpilih</span>
-<h2 class="font-headline-lg text-headline-lg text-primary mt-2">Produk Unggulan Kami</h2>
-</div>
-<a class="text-primary font-label-md border-b-2 border-secondary-container pb-1 hover:text-secondary transition-colors" href="#">Lihat Semua Katalog</a>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<!-- Product 1: Abon Tuna Panggang -->
-<div class="product-card-hover group bg-surface-container-low rounded-xl overflow-hidden transition-all duration-500 flex flex-col">
-<div class="h-80 overflow-hidden relative">
-<img alt="Abon Tuna Panggang Premium" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACM_661nFHjMuR0JrjelARPXoeN_TQc_s17OJakZhIMw8LooU8Skrb7g8BtOOSxdp22tFyI4ghYWN36LpXk99oQLHq74by8-v9sX3Wog4Pw-DUPYxLxhrVfs_-0dM5yONAZp2uwOOwGKq0c6XLZC90CAo5yTViQdZWTJqSFBLlwTbyg3SyhwGErmoTS2q0O38wWHMZAFHY39BaueyajwwZheoddmfSFsTAybipj-E7gw-gAYskOuZbVfcFfV_5xIzbFWu3LlgdkEbQ"/>
-<div class="absolute top-4 left-4 flex gap-2">
-<span class="bg-tertiary-fixed text-on-tertiary-fixed text-xs font-bold px-3 py-1 rounded-full">Sertifikasi Halal</span>
-</div>
-</div>
-<div class="p-8 flex-grow flex flex-col">
-<h3 class="font-headline-md text-headline-md text-primary mb-2">Abon Tuna Panggang</h3>
-<p class="text-on-surface-variant font-body-md mb-6 leading-relaxed">Olahan ikan tuna segar pilihan yang dipanggang dengan rempah otentik nusantara. Tekstur serat yang lembut dan cita rasa premium yang sehat tanpa minyak berlebih.</p>
-<div class="flex items-center justify-between mt-auto">
-<span class="text-secondary font-bold text-xl">IDR 85.000</span>
-<button class="bg-primary text-on-primary px-4 py-2 rounded-lg font-label-sm hover:opacity-90 transition-opacity">Beli Sekarang</button>
-</div>
-</div>
-</div>
-<!-- Product 2: Keripik Tempe Artisanal -->
-<div class="product-card-hover group bg-surface-container-low rounded-xl overflow-hidden transition-all duration-500 flex flex-col">
-<div class="h-80 overflow-hidden relative">
-<img alt="Keripik Tempe Artisanal" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3LMOtbdmKldftmwUr5t49axDln3L49j5HTe-6l8WNKEZrs7mp8J0SRZQ2z1gs-6uANH6w-kvuCjIXnmN5KjrMo1aJREVx4e3qLpAovwFv1P8guoY546nI1fANJUnnWynCgTpugLaCx7Fxyr3VhyhrE59qshftojiu7oLiayPuB3jZ4Iy4Qu3L9Y2EKeaas1VS8uv6qpstWrYYPM5OPPZ6mnFV0Trp6ASaZmPMCUepLLsZ-gHDqu1qZaIwItog2lov4LLvzm2B_ssa"/>
-<div class="absolute top-4 left-4 flex gap-2">
-<span class="bg-secondary-fixed text-on-secondary-fixed text-xs font-bold px-3 py-1 rounded-full">Best Seller</span>
-</div>
-</div>
-<div class="p-8 flex-grow flex flex-col">
-<h3 class="font-headline-md text-headline-md text-primary mb-2">Keripik Tempe Artisanal</h3>
-<p class="text-on-surface-variant font-body-md mb-6 leading-relaxed">Camilan tradisional yang naik kelas. Dibuat dari kedelai non-GMO dengan proses fermentasi sempurna, menghasilkan keripik tempe tipis yang renyah dan penuh nutrisi.</p>
-<div class="flex items-center justify-between mt-auto">
-<span class="text-secondary font-bold text-xl">IDR 45.000</span>
-<button class="bg-primary text-on-primary px-4 py-2 rounded-lg font-label-sm hover:opacity-90 transition-opacity">Beli Sekarang</button>
-</div>
-</div>
-</div>
-<!-- Product 3: Warm Chocolate Ginger -->
-<div class="product-card-hover group bg-surface-container-low rounded-xl overflow-hidden transition-all duration-500 flex flex-col">
-<div class="h-80 overflow-hidden relative">
-<img alt="Warm Chocolate Ginger" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkqJrzBMK-RlCBoIMdiHH9s0VgE7c63IQHYxON911VbE0wmHYl1C7er4rgfrvrPTFCK0V5QgNJd8YBAlsOj7CCz-T050iPIQeZ0pgVqdH5CzgXz__7ZCPXJRwLukIaC7r-M2vdO3lkqAoqqAjWhLNq-k1i1HiPk8MY1qm1oFpbA--YvhHzhS0_gQyWenEPI8xkRkxmkeSXaptooaTh8WyAo8HDMK-Huj6Ra_TE2DFFlQunEarBSSy6pDghckxEi-KSKt5u0i5RzVia"/>
-</div>
-<div class="p-8 flex-grow flex flex-col">
-<h3 class="font-headline-md text-headline-md text-primary mb-2">Warm Chocolate Ginger</h3>
-<p class="text-on-surface-variant font-body-md mb-6 leading-relaxed">Perpaduan cokelat premium nusantara dengan jahe pilihan untuk kehangatan tubuh. Minuman fungsional yang menggabungkan kemewahan rasa dan khasiat herbal.</p>
-<div class="flex items-center justify-between mt-auto">
-<span class="text-secondary font-bold text-xl">IDR 65.000</span>
-<button class="bg-primary text-on-primary px-4 py-2 rounded-lg font-label-sm hover:opacity-90 transition-opacity">Beli Sekarang</button>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Alur Pemesanan (Ordering Process) -->
-<section class="py-24 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-<div class="text-center mb-16">
-<h2 class="font-headline-xl text-headline-xl text-primary mb-4">Alur Pemesanan</h2>
-<p class="text-on-surface-variant font-body-lg">Ikuti langkah-langkah mudah untuk memesan kuliner favorit kamu</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-<div class="flex flex-col items-center text-center">
-<div class="w-16 h-16 bg-[#FDF2F0] rounded-full flex items-center justify-center mb-6">
-<span class="material-symbols-outlined text-[#E57373]">shopping_basket</span>
-</div>
-<h4 class="font-headline-md text-xl text-primary mb-2">Pilih Produk</h4>
-<p class="text-on-surface-variant text-sm">Pilih varian kuliner favorit Anda, konsultasikan dengan kami jika ingin pesanan khusus.</p>
-</div>
-<div class="flex flex-col items-center text-center">
-<div class="w-16 h-16 bg-[#FFF9E6] rounded-full flex items-center justify-center mb-6">
-<span class="material-symbols-outlined text-[#FBC02D]">payments</span>
-</div>
-<h4 class="font-headline-md text-xl text-primary mb-2">Pembayaran</h4>
-<p class="text-on-surface-variant text-sm">Pilih metode pembayaran yang aman dan nyaman sesuai pilihan Anda.</p>
-</div>
-<div class="flex flex-col items-center text-center">
-<div class="w-16 h-16 bg-[#E8F5E9] rounded-full flex items-center justify-center mb-6">
-<span class="material-symbols-outlined text-[#4CAF50]">local_shipping</span>
-</div>
-<h4 class="font-headline-md text-xl text-primary mb-2">Pengiriman</h4>
-<p class="text-on-surface-variant text-sm">Pengiriman aman menggunakan ekspedisi terpercaya dengan jaminan kualitas produk terjaga.</p>
-</div>
-<div class="flex flex-col items-center text-center">
-<div class="w-16 h-16 bg-[#F5F5F5] rounded-full flex items-center justify-center mb-6">
-<span class="material-symbols-outlined text-[#757575]">rate_review</span>
-</div>
-<h4 class="font-headline-md text-xl text-primary mb-2">Ulasan</h4>
-<p class="text-on-surface-variant text-sm">Beri kami feedback setelah produk sampai untuk membantu kami terus berkembang.</p>
-</div>
-</div>
+<!-- Produk Kami -->
+<section id="produk" class="py-20 bg-[#FAFAF6]">
+  <div class="max-w-7xl mx-auto px-4 md:px-8">
+    
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+      <div>
+        <h2 class="text-3xl md:text-[36px] font-bold text-[#5C3A21] font-serif mb-2">
+          Produk Kami
+        </h2>
+        <p class="text-[#736A62] font-sans text-sm md:text-base">
+          Jelajahi varian produk makanan dan minuman terbaik kami
+        </p>
+      </div>
+      <a href="#" class="text-[#A43B2A] font-semibold font-sans text-sm hover:underline flex items-center gap-1">
+        Lihat Semua Produk >
+      </a>
+    </div>
+
+    <div class="mb-12">
+      <div class="flex items-center gap-4 mb-8">
+        <div class="w-12 h-12 rounded-full bg-[#963023] flex items-center justify-center flex-shrink-0 shadow-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm8-7c-2.21 0-4 1.79-4 4v5c0 1.66 1.34 3 3 3v8h2v-8c1.66 0 3-1.34 3-3V6c0-2.21-1.79-4-4-4z"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold text-[#5C3A21] font-serif mb-1">Makanan</h3>
+          <p class="text-[#736A62] text-sm font-sans">Nikmati kelezatan autentik ragam kuliner premium</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="bg-[#FCF7F8] rounded-[16px] p-5 flex flex-col justify-between transition-all duration-300 shadow-sm hover:shadow-lg">
+          <div>
+            <div class="overflow-hidden aspect-square mb-5 relative rounded-t-[16px]">
+              <img src="Asset/abon-tuna-panggang.png" alt="Abon Tuna Panggang" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+              <div class="absolute top-3 left-3 bg-[#D32F2F] text-white text-xs font-bold px-3 py-1 rounded-full">Best Seller</div>
+            </div>
+            <h4 class="text-lg font-bold text-[#6A432D] mb-2 font-serif">Abon Tuna Panggang</h4>
+            <p class="text-xs text-[#736A62] leading-relaxed font-sans mb-6">
+              Olahan ikan tuna segar pilihan yang dipanggang dengan rempah otentik nusantara. Tekstur serat yang lembut dan cita rasa premium yang sehat tanpa minyak berlebih.
+            </p>
+          </div>
+          <div class="flex justify-between items-center pt-2">
+            <span class="text-base font-bold text-[#6A432D] font-sans">IDR 35.000</span>
+            <a href="https://wa.me/6282293648411?text=Halo%20Admin%2C%20saya%20tertarik%20membeli%20Abon%20Tuna%20Panggang." target="_blank" rel="noopener noreferrer" class="bg-[#1C1310] text-white text-xs font-bold px-4 py-2 rounded-md hover:bg-[#362113] transition-colors font-sans">Beli Sekarang</a>
+          </div>
+        </div>
+
+        <div class="bg-[#FCF7F8] rounded-[16px] p-5 flex flex-col justify-between transition-all duration-300 shadow-sm hover:shadow-lg">
+          <div>
+            <div class="overflow-hidden aspect-square mb-5 rounded-t-[16px]">
+              <img src="Asset/keripik-tempe.png" alt="Keripik Tempe" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+            </div>
+            <h4 class="text-lg font-bold text-[#6A432D] mb-2 font-serif">Keripik Tempe</h4>
+            <p class="text-xs text-[#736A62] leading-relaxed font-sans mb-6">
+              Camilan tradisional yang naik kelas. Dibuat dari kedelai non-GMO dengan proses fermentasi sempurna, menghasilkan keripik tempe tipis yang renyah dan penuh nutrisi.
+            </p>
+          </div>
+          <div class="flex justify-between items-center pt-2">
+            <span class="text-base font-bold text-[#6A432D] font-sans">IDR 15.000</span>
+            <a href="https://wa.me/6282293648411?text=Halo%20Admin%2C%20saya%20tertarik%20membeli%20Keripik%20Tempe." target="_blank" rel="noopener noreferrer" class="bg-[#1C1310] text-white text-xs font-bold px-4 py-2 rounded-md hover:bg-[#362113] transition-colors font-sans">Beli Sekarang</a>
+          </div>
+        </div>
+
+        <div class="bg-[#FCF7F8] rounded-[16px] p-5 flex flex-col justify-between transition-all duration-300 shadow-sm hover:shadow-lg">
+          <div>
+            <div class="overflow-hidden aspect-square mb-5 rounded-t-[16px]">
+              <img src="Asset/otak-otak.png" alt="Otak - Otak Ikan" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+            </div>
+            <h4 class="text-lg font-bold text-[#6A432D] mb-2 font-serif">Otak - Otak Ikan</h4>
+            <p class="text-xs text-[#736A62] leading-relaxed font-sans mb-6">
+              Otak - otak ikan yang terbuat dari ikan tengiri dan tuna pilihan dengan rasa gurih, tekstur lembut, dan aroma daun pisang yang khas dengan cita rasa premium.
+            </p>
+          </div>
+          <div class="flex justify-between items-center pt-2">
+            <span class="text-base font-bold text-[#6A432D] font-sans">IDR 65.000</span>
+            <a href="https://wa.me/6282293648411?text=Halo%20Admin%2C%20saya%20tertarik%20membeli%20Otak%20-%20Otak%20Ikan." target="_blank" rel="noopener noreferrer" class="bg-[#1C1310] text-white text-xs font-bold px-4 py-2 rounded-md hover:bg-[#362113] transition-colors font-sans">Beli Sekarang</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div>
+      <div class="flex items-center gap-4 mb-8 mt-16">
+        <div class="w-12 h-12 rounded-full bg-[#963023] flex items-center justify-center flex-shrink-0 shadow-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.11 0 2-.89 2-2V5c0-1.11-.89-2-2-2zm0 5h-2V5h2v3zM4 19h16v2H4z"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold text-[#5C3A21] font-serif mb-1">Minuman</h3>
+          <p class="text-[#736A62] text-sm font-sans">Rasakan kehangatan sejati dari lini minuman premium kami</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="bg-[#FCF7F8] rounded-[16px] p-5 flex flex-col justify-between transition-all duration-300 shadow-sm hover:shadow-lg">
+          <div>
+            <div class="overflow-hidden aspect-square mb-5 rounded-t-[16px]">
+              <img src="Asset/GULJACO.png" alt="GULJACO" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+            </div>
+            <h4 class="text-lg font-bold text-[#6A432D] mb-2 font-serif">GULJACO</h4>
+            <p class="text-xs text-[#736A62] leading-relaxed font-sans mb-6">
+              Minuman serbuk herbal instan masa kini yang memadukan kelezatan cokelat premium dengan khasiat hangat jahe alami untuk stamina harian Anda
+            </p>
+          </div>
+          <div class="flex justify-between items-center pt-2">
+            <span class="text-base font-bold text-[#6A432D] font-sans">IDR 8.500</span>
+            <a href="https://wa.me/6282293648411?text=Halo%20Admin%2C%20saya%20tertarik%20membeli%20GULJACO." target="_blank" rel="noopener noreferrer" class="bg-[#1C1310] text-white text-xs font-bold px-4 py-2 rounded-md hover:bg-[#362113] transition-colors font-sans">Beli Sekarang</a>
+          </div>
+        </div>
+
+        <div class="bg-[#FCF7F8] rounded-[16px] p-5 flex flex-col justify-between transition-all duration-300 shadow-sm hover:shadow-lg">
+          <div>
+            <div class="overflow-hidden aspect-square mb-5 rounded-t-[16px]">
+              <img src="Asset/Kopi.png" alt="Kopi Para Raja" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+            </div>
+            <h4 class="text-lg font-bold text-[#6A432D] mb-2 font-serif">Kopi Para Raja</h4>
+            <p class="text-xs text-[#736A62] leading-relaxed font-sans mb-6">
+              Rasakan keaslian rasa dan aroma pekat khas Kopi Arabika asli Enrekang, Sulawesi Selatan, yang dikurasi khusus untuk para pencinta kopi sejati
+            </p>
+          </div>
+          <div class="flex justify-between items-center pt-2">
+            <span class="text-base font-bold text-[#6A432D] font-sans">IDR 78.000</span>
+            <a href="https://wa.me/6282293648411?text=Halo%20Admin%2C%20saya%20tertarik%20membeli%20Kopi%20Para%20Raja." target="_blank" rel="noopener noreferrer" class="bg-[#1C1310] text-white text-xs font-bold px-4 py-2 rounded-md hover:bg-[#362113] transition-colors font-sans">Beli Sekarang</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
 </section>
 <!-- Testimonials -->
-<section class="py-24 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop overflow-hidden">
-<div class="flex flex-col md:flex-row justify-between items-center mb-16">
-<h2 class="font-headline-lg text-headline-lg text-primary">Apa Kata Mereka?</h2>
-<div class="flex gap-4 mt-4 md:mt-0">
-<button class="w-12 h-12 rounded-full border border-outline flex items-center justify-center hover:bg-surface-container transition-colors">
-<span class="material-symbols-outlined">chevron_left</span>
-</button>
-<button class="w-12 h-12 rounded-full border border-outline flex items-center justify-center hover:bg-surface-container transition-colors">
-<span class="material-symbols-outlined">chevron_right</span>
-</button>
-</div>
-</div>
-<div class="flex gap-gutter overflow-x-auto pb-8 snap-x no-scrollbar">
-<!-- Testimonial 1 -->
-<div class="min-w-[300px] md:min-w-[400px] snap-start bg-surface-container-high p-10 rounded-2xl relative">
-<span class="material-symbols-outlined text-primary-container/20 text-7xl absolute top-4 right-8">format_quote</span>
-<div class="flex gap-1 mb-6">
-<span class="material-symbols-outlined text-secondary text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-secondary text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-secondary text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-secondary text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-secondary text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
-</div>
-<p class="font-body-lg italic text-on-surface mb-8">"Rasa asli Indonesia yang sangat otentik. Abon tunanya memiliki tekstur yang sempurna dan bumbunya benar-benar meresap."</p>
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 rounded-full bg-primary-fixed"></div>
-<div>
-<p class="font-label-md text-primary">Budi Santoso</p>
-<p class="text-label-sm text-on-surface-variant">Jakarta, Indonesia</p>
-</div>
-</div>
-</div>
-<!-- Testimonial 2 -->
-<div class="min-w-[300px] md:min-w-[400px] snap-start bg-surface-container-high p-10 rounded-2xl relative">
-<span class="material-symbols-outlined text-primary-container/20 text-7xl absolute top-4 right-8">format_quote</span>
-<div class="flex gap-1 mb-6">
-<span class="material-symbols-outlined text-secondary text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-secondary text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-secondary text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-secondary text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-secondary text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
-</div>
-<p class="font-body-lg italic text-on-surface mb-8">"The tempeh chips are a revelation! Exceptional export quality. Crisp, light, and full of natural flavor. Highly recommended."</p>
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 rounded-full bg-secondary-fixed"></div>
-<div>
-<p class="font-label-md text-primary">Helga Weber</p>
-<p class="text-label-sm text-on-surface-variant">Munich, Germany</p>
-</div>
-</div>
-</div>
-<!-- Testimonial 3 -->
-<div class="min-w-[300px] md:min-w-[400px] snap-start bg-surface-container-high p-10 rounded-2xl relative">
-<span class="material-symbols-outlined text-primary-container/20 text-7xl absolute top-4 right-8">format_quote</span>
-<div class="flex gap-1 mb-6">
-<span class="material-symbols-outlined text-secondary text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-secondary text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-secondary text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-secondary text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-secondary text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
-</div>
-<p class="font-body-lg italic text-on-surface mb-8">"Impressive commitment to quality. My go-to Indonesian snacks. The chocolate ginger drink is my favorite evening ritual."</p>
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 rounded-full bg-tertiary-fixed"></div>
-<div>
-<p class="font-label-md text-primary">Li Wei</p>
-<p class="text-label-sm text-on-surface-variant">Singapore</p>
-</div>
-</div>
-</div>
-</div>
+<section class="py-20 bg-[#FAFAF6] overflow-hidden">
+  <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <h2 class="font-headline-lg text-primary text-3xl md:text-[36px] tracking-wide font-serif mb-4">
+        Apa Kata Mereka?
+      </h2>
+      <p class="text-sm md:text-base text-[#8C6D53] font-medium font-sans leading-relaxed">
+        Berikut adalah beberapa testimoni dari pelanggan setia kami yang telah merasakan kelezatan produk Mulkan Mimbaun dan layanan terbaik kami.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <article class="group relative rounded-[28px] bg-white border border-transparent p-8 pt-12 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#F4B71A]/30 hover:shadow-[0_25px_50px_-35px_rgba(0,0,0,0.15)]">
+        <div class="absolute -top-5 right-6 inline-flex h-12 w-12 items-center justify-center rounded-3xl bg-[#F4B71A] text-white text-2xl font-bold shadow-sm select-none">
+          “
+        </div>
+        <div class="flex items-center gap-1 text-[#F4B71A] mb-5">
+          <span class="material-symbols-outlined text-xl" data-weight="fill">star</span>
+          <span class="material-symbols-outlined text-xl" data-weight="fill">star</span>
+          <span class="material-symbols-outlined text-xl" data-weight="fill">star</span>
+          <span class="material-symbols-outlined text-xl" data-weight="fill">star</span>
+          <span class="material-symbols-outlined text-xl" data-weight="fill">star</span>
+        </div>
+        <p class="text-[#5C544E] text-base font-medium leading-relaxed mb-8">
+          "Keripik tempenya tipis, renyah banget, dan gurihnya pas tidak bikin seret. Pas sekali untuk camilan sehat keluarga karena kualitasnya terasa sangat premium."
+        </p>
+        <div class="flex items-center gap-3">
+          <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#E1DDD5] text-[#4A2E1B] font-bold text-base shadow-sm">
+            B
+          </div>
+          <div class="flex flex-col leading-tight">
+            <span class="font-semibold text-[#4A2E1B] text-sm">Budi Santoso</span>
+            <span class="text-xs text-[#8C827A] uppercase tracking-[0.15em]">Makassar, Indonesia</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="group relative rounded-[28px] bg-white border border-transparent p-8 pt-12 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#F4B71A]/30 hover:shadow-[0_25px_50px_-35px_rgba(0,0,0,0.15)]">
+        <div class="absolute -top-5 right-6 inline-flex h-12 w-12 items-center justify-center rounded-3xl bg-[#F4B71A] text-white text-2xl font-bold shadow-sm select-none">
+          “
+        </div>
+        <div class="flex items-center gap-1 text-[#F4B71A] mb-5">
+          <span class="material-symbols-outlined text-xl" data-weight="fill">star</span>
+          <span class="material-symbols-outlined text-xl" data-weight="fill">star</span>
+          <span class="material-symbols-outlined text-xl" data-weight="fill">star</span>
+          <span class="material-symbols-outlined text-xl" data-weight="fill">star</span>
+          <span class="material-symbols-outlined text-xl" data-weight="fill">star</span>
+        </div>
+        <p class="text-[#5C544E] text-base font-medium leading-relaxed mb-8">
+          "Abon tuna panggang ini beneran beda karena tidak berminyak sama sekali dan tekstur seratnya halus. Sangat praktis untuk lauk makan nasi hangat, anak-anak di rumah pun langsung suka."
+        </p>
+        <div class="flex items-center gap-3">
+          <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#E1DDD5] text-[#4A2E1B] font-bold text-base shadow-sm">
+            F
+          </div>
+          <div class="flex flex-col leading-tight">
+            <span class="font-semibold text-[#4A2E1B] text-sm">Fatiha Alya</span>
+            <span class="text-xs text-[#8C827A] uppercase tracking-[0.15em]">Surabaya, Indonesia</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="group relative rounded-[28px] bg-white border border-transparent p-8 pt-12 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#F4B71A]/30 hover:shadow-[0_25px_50px_-35px_rgba(0,0,0,0.15)]">
+        <div class="absolute -top-5 right-6 inline-flex h-12 w-12 items-center justify-center rounded-3xl bg-[#F4B71A] text-white text-2xl font-bold shadow-sm select-none">
+          “
+        </div>
+        <div class="flex items-center gap-1 text-[#F4B71A] mb-5">
+          <span class="material-symbols-outlined text-xl" data-weight="fill">star</span>
+          <span class="material-symbols-outlined text-xl" data-weight="fill">star</span>
+          <span class="material-symbols-outlined text-xl" data-weight="fill">star</span>
+          <span class="material-symbols-outlined text-xl" data-weight="fill">star</span>
+          <span class="material-symbols-outlined text-xl" data-weight="fill">star</span>
+        </div>
+        <p class="text-[#5C544E] text-base font-medium leading-relaxed mb-8">
+          "Otak-otaknya terasa sekali daging tuna segarnya dan teksturnya sangat lembut. Aroma panggangan rempah nusantara di setiap gigitan benar-benar bikin ketagihan."
+        </p>
+        <div class="flex items-center gap-3">
+          <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#E1DDD5] text-[#4A2E1B] font-bold text-base shadow-sm">
+            G
+          </div>
+          <div class="flex flex-col leading-tight">
+            <span class="font-semibold text-[#4A2E1B] text-sm">Gwen Cantika</span>
+            <span class="text-xs text-[#8C827A] uppercase tracking-[0.15em]">Jakarta, Indonesia</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
 </section>
-<!-- Pusat Bantuan (FAQ) -->
-<section class="py-24 bg-white" id="bantuan">
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-<div class="mb-12">
-<span class="text-secondary font-label-md tracking-widest uppercase">Bantuan</span>
-<h2 class="font-headline-xl text-headline-xl text-primary mt-2">Pusat Bantuan</h2>
-</div>
-<div class="space-y-4">
-<details class="group bg-surface-container-low rounded-xl overflow-hidden border border-outline-variant">
-<summary class="p-6 cursor-pointer flex justify-between items-center font-bold text-primary">
-                        1. Apakah produk Mulkan Mimbaun aman untuk dikirim ke luar negeri?
-                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
-</summary>
-<div class="p-6 pt-0 text-on-surface-variant font-body-md">
-                        Tentu saja. Semua produk kami dikemas dengan standar ekspor menggunakan kemasan vakum dan proteksi tambahan untuk menjaga kualitas rasa hingga ke mancanegara.
+
+<!--LOKASI KAMI-->
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lokasi Kami</title>
+    <style>
+        /* Pengaturan Dasar */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .lokasi-section {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* Bagian Header */
+        .section-header {
+            margin-bottom: 30px;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            font-weight: 600;
+            color: #555;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            font-size: 32px;
+            font-weight: bold;
+            color: #5c3a21; /* Warna coklat tua */
+            margin: 10px 0;
+        }
+
+        .highlight-text {
+            color: #8c1c1c; /* Warna merah gelap untuk penekanan */
+        }
+
+        .section-desc {
+            font-size: 16px;
+            color: #666;
+            margin-top: 0;
+        }
+
+        /* Tata Letak Grid untuk Kartu */
+        .cards-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .row-top {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* 2 kolom */
+            gap: 20px;
+        }
+
+        .row-bottom {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr; /* 3 kolom */
+            gap: 20px;
+        }
+
+        /* Desain Kartu (Card) */
+        .card {
+            background-color: #fcfcfc;
+            border: 1px solid #eaeaea;
+            border-radius: 12px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .icon-circle {
+            background-color: #963023;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .icon-small {
+            color: #8c1c1c;
+            font-size: 20px;
+        }
+
+        .card h3 {
+            font-size: 18px;
+            margin: 0;
+            color: #111;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            flex-grow: 1; /* Membuat tombol sejajar di bawah */
+        }
+
+        /* Tombol Shop Now */
+        .btn-shop {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #22c55e; /* Hijau */
+            color: white;
+            border: none;
+            border-radius: 6px;
+          padding: 12px 0;
+          font-size: 14px;
+            font-weight: 600;
+            font-style: normal;
+            line-height: 1.2;
+            text-decoration: none;
+            width: 100%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-shop:hover {
+            background-color: #16a34a;
+        }
+
+        /* Smaller variant for hidden option buttons */
+        .btn-shop-small {
+          padding: 8px 12px;
+          font-size: 13px;
+          border-radius: 8px;
+          width: auto;
+          min-width: 140px;
+          justify-self: start;
+        }
+
+        /* Responsif untuk layar kecil (Mobile) */
+        @media (max-width: 768px) {
+            .row-top, .row-bottom {
+                grid-template-columns: 1fr; /* Menjadi 1 kolom di HP */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<section class="lokasi-section">
+    <div class="section-header">
+        <div class="subtitle">LOKASI KAMI</div>
+        <h2 class="text-3xl md:text-[36px] tracking-wide font-serif font-bold text-[#5C3A21] mb-3">Datang dan Lihat Produk <span class="text-[#8B2C1A]">Secara Langsung</span></h2>
+        <p class="section-desc">Produk Mulkan Mimba'un tersedia di berbagai lokasi strategis</p>
+    </div>
+
+    <div class="cards-container">
+        
+        <div class="row-top">
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <div class="icon-circle">
+                            <span class="material-symbols-outlined text-white text-2xl">flight</span>
+                        </div>
+                        <h3>Bandara Sultan Hasanuddin</h3>
                     </div>
-</details>
-<details class="group bg-surface-container-low rounded-xl overflow-hidden border border-outline-variant">
-<summary class="p-6 cursor-pointer flex justify-between items-center font-bold text-primary">
-                        2. Apakah ada opsi custom kemasan untuk hampers atau souvenir?
-                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
-</summary>
-<div class="p-6 pt-0 text-on-surface-variant font-body-md">
-                        Ya, kami melayani pesanan khusus untuk hampers korporat atau souvenir pernikahan dengan label dan kemasan yang dapat dipersonalisasi.
+                    <p>Cari Produk kami di area keberangkatan Bandara Sultan Hasanuddin. Pilihan praktis untuk oleh -oleh sebelum terbang</p>
+                </div>
+                <a href="https://www.google.com/maps/place/Bandar+Udara+Internasional+Sultan+Hasanuddin/@-5.0777016,119.5467395,17z/data=!3m1!4b1!4m6!3m5!1s0x2dbefbcebbcac701:0xf030bfcad763610!8m2!3d-5.0777069!4d119.5493144!16s%2Fm%2F02pkf8y!5m2!1e4!1e1?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" 
+                class="btn-shop">Klik Disini</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <div class="icon-circle">
+                            <span class="material-symbols-outlined text-white text-2xl">shopping_bag</span>
+                        </div>
+                        <h3>Hero Supermarket</h3>
                     </div>
-</details>
-<details class="group bg-surface-container-low rounded-xl overflow-hidden border border-outline-variant">
-<summary class="p-6 cursor-pointer flex justify-between items-center font-bold text-primary">
-                        3. Berapa Jumlah Minimum (MOQ) untuk menjadi reseller?
-                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
-</summary>
-<div class="p-6 pt-0 text-on-surface-variant font-body-md">
-                        Untuk program reseller, kami menawarkan paket awal yang sangat terjangkau mulai dari 20 unit saja agar Anda dapat memulai bisnis dengan risiko minimal.
+                    <p>Kini produk Mulkan Mimba'un makin mudah ditemukan di deretan rak Hero Supermarket di kota Anda.</p>
+                </div>
+              <div>
+                <a href="https://www.google.com/maps/place/HERO/@-5.15318,119.3983185,15z/data=!4m10!1m2!2m1!1shero+supermarket!3m6!1s0x2dbf1d587ab85b21:0x7a5f9ceb5a38a7ad!8m2!3d-5.15318!4d119.4173729!15sChBoZXJvIHN1cGVybWFya2V0WhIiEGhlcm8gc3VwZXJtYXJrZXSSAQtzdXBlcm1hcmtldOABAA!16s%2Fg%2F1ptvvhfqj!5m2!1e4!1e1?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="btn-shop">Klik Disini</a>
+              </div>
+            </div>
+        </div>
+
+        <div class="row-bottom">
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <div class="icon-small">📍</div>
+                        <h3>Makassar (Pusat)</h3>
                     </div>
-</details>
-<details class="group bg-surface-container-low rounded-xl overflow-hidden border border-outline-variant">
-<summary class="p-6 cursor-pointer flex justify-between items-center font-bold text-primary">
-                        4. Bagaimana cara bergabung sebagai mitra distributor?
-                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
-</summary>
-<div class="p-6 pt-0 text-on-surface-variant font-body-md">
-                        Silakan hubungi tim kemitraan kami melalui tombol "Pelajari Kemitraan" di bagian atas untuk mendapatkan profil lengkap dan skema kerjasama distributor resmi.
+                    <p>Tersedia diseluruh Outlet Roti dan Brownies Daeng Makassar. Kunjungi toko pusat kami untuk varian terlengkap dan pelayanan langsung.</p>
+                </div>
+                <a href="https://www.google.com/maps/search/roti+daeng/@-5.1324351,119.3660223,13z/data=!3m1!4b1!5m2!1e4!1e1?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="btn-shop">Klik Disini</a>
+            </div>
+
+            <div class="card">
+              <div>
+                <div class="card-header">
+                  <div class="icon-small">📍</div>
+                  <h3>Tanggerang</h3>
+                </div>
+                <p>Tersedia Outlet Roti dan Brownies Daeng Ciledug. Kunjungi toko kami untuk varian terlengkap dan pelayanan langsung.</p>
+              </div>
+              <a href="https://www.google.com/maps/place/Roti+%26+Brownies+Daeng+-+Ciledug/@-6.2352895,106.7142551,17z/data=!3m1!4b1!4m6!3m5!1s0x2e69fbf092b139ff:0x35596934e5d5fdd5!8m2!3d-6.2352949!4d106.719126!16s%2Fg%2F11npbh8f40!5m2!1e4!1e1?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="btn-shop">Klik Disini</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <div class="icon-small">📍</div>
+                        <h3>Surabaya</h3>
                     </div>
-</details>
-<details class="group bg-surface-container-low rounded-xl overflow-hidden border border-outline-variant">
-<summary class="p-6 cursor-pointer flex justify-between items-center font-bold text-primary">
-                        5. Apa saja metode pembayaran yang tersedia?
-                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
-</summary>
-<div class="p-6 pt-0 text-on-surface-variant font-body-md">
-                        Kami menerima transfer bank antar-bank nasional (BCA, Mandiri, BNI, BRI) serta pembayaran digital melalui QRIS, GoPay, dan ShopeePay.
-                    </div>
-</details>
-</div>
-</div>
+                    <p>Tersedia di Shopee. Kunjungi toko online kami untuk varian terlengkap dan pelayanan online.</p>
+                </div>
+                <a href="https://shopee.co.id/Abon-Panggang-Tuna-Abon-Ikan-Tanpa-Proses-Goreng-Non-Kolesterol-i.2076328.19578323405?extraParams=%7B%22display_model_id%22%3A204195671360%2C%22model_selection_logic%22%3A3%7D&sp_atk=1f532cef-31b5-48d1-ad65-e614f2245171&xptdk=1f532cef-31b5-48d1-ad65-e614f2245171" target="_blank" rel="noopener noreferrer" class="btn-shop">Klik Disini</a>
+            </div>
+        </div>
+
+    </div>
 </section>
-<!-- Partnership CTA Banner -->
-<section class="py-20 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop" id="kemitraan">
-<div class="bg-primary-container rounded-3xl overflow-hidden flex flex-col md:flex-row items-center">
-<div class="p-12 md:p-16 md:w-3/5">
-<h2 class="font-headline-lg text-headline-lg text-primary-fixed mb-6">Gabung Jadi Reseller &amp; Affiliate Kami</h2>
-<p class="text-primary-fixed-dim font-body-lg mb-10 max-w-xl">
-                    Jadilah bagian dari misi kami memperkenalkan keaslian rasa Indonesia ke pasar yang lebih luas. Dapatkan komisi menarik dan dukungan pemasaran eksklusif.
-                </p>
-<div class="flex flex-col sm:flex-row gap-4">
-<button class="bg-secondary-container text-on-secondary-container px-8 py-3.5 rounded-full font-label-md hover:opacity-95 transition-opacity">Daftar Sekarang</button>
-<button class="border border-primary-fixed-dim text-primary-fixed-dim px-8 py-3.5 rounded-full font-label-md hover:bg-primary-fixed/10 transition-colors">Lihat Keuntungan</button>
-</div>
-</div>
-<div class="md:w-2/5 h-80 md:h-full self-stretch">
-<img class="w-full h-full object-cover grayscale opacity-50" data-alt="Partnership Handshake" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHH-nN7GHnb34kqIBk1RAQvVI_ikR6Yp_YqY28hJSb4CaGJ0BSMu-RpQDWOiLknwCAj9frlteh6mmBYw1PnGOuEie_iu0qOgDNSNYBJnyPGiv6cUB9RaXboHit5dzVM7tsWrDJX0iF_udXj-hrytwnnAPR-J-M2AMYQHPnjL5jIflYGk8vJX0LRAxhgDxUCkAcUeMEcvWZgf1EWrpXy2Ky-zNWyMoe37m_Va5w-QoPLgdOI04BRw5s7YLeTWdjtoCPydrSprymf9AT"/>
-</div>
-</div>
+<!-- ─── FAQ ─── -->
+<section id="faq" class="py-20 bg-[#FAFAF6]">
+  <div class="max-w-6xl mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="text-center md:text-left mb-12">
+      <div class="text-sm uppercase tracking-[0.35em] text-[#8C5A36] font-semibold mb-3">FAQ</div>
+      <h2 class="text-3xl md:text-[40px] font-serif font-bold text-[#5C3A21] leading-tight mb-4">
+        Ada pertanyaan? Temukan jawaban cepat di sini.
+      </h2>
+      <p class="max-w-2xl mx-auto md:mx-0 text-[#736A62] text-sm md:text-base leading-relaxed">
+        Kami siap membantu setiap kebutuhan Anda. Jika belum menemukan jawaban, silakan hubungi kami langsung via WhatsApp.
+      </p>
+      <a href="https://wa.me/6282293648411" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center mt-6 rounded-full bg-[#963023] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[#963023]/10 hover:bg-[#7e231c] transition-colors duration-300">
+        Tanya via WhatsApp
+      </a>
+    </div>
+
+    <div class="grid gap-2">
+      <details class="group rounded-[20px] border border-[#E2D8D0] bg-white shadow-sm transition-shadow duration-300 hover:shadow-md" open>
+        <summary class="flex cursor-pointer items-center justify-between gap-2 p-3 text-sm font-semibold text-[#4A2E1B] select-none">
+          Bagaimana cara memesan produk Mulkan Mimba'un?
+          <span class="text-xl text-[#963023] transition-transform duration-300 group-open:-rotate-180">▾</span>
+        </summary>
+        <div class="border-t border-[#F1ECE6] px-3 py-2 text-sm text-[#5F534B] leading-relaxed">
+          Anda bisa memesan melalui WhatsApp dan juga Shopee. Klik tombol "Beli Sekarang" yang tersedia di halaman ini untuk langsung terhubung.
+        </div>
+      </details>
+
+      <details class="group rounded-[20px] border border-[#E2D8D0] bg-white shadow-sm transition-shadow duration-300 hover:shadow-md">
+        <summary class="flex cursor-pointer items-center justify-between gap-2 p-3 text-sm font-semibold text-[#4A2E1B] select-none">
+          Apakah produk tersedia untuk pengiriman ke luar kota?
+          <span class="text-xl text-[#963023] transition-transform duration-300 group-open:-rotate-180">▾</span>
+        </summary>
+        <div class="border-t border-[#F1ECE6] px-3 py-2 text-sm text-[#5F534B] leading-relaxed">
+          Ya! Kami melayani pengiriman ke seluruh Indonesia. Produk dikemas dengan aman menggunakan packaging yang tahan lama sehingga tetap dalam kondisi prima saat tiba di tangan Anda.
+        </div>
+      </details>
+
+      <details class="group rounded-[20px] border border-[#E2D8D0] bg-white shadow-sm transition-shadow duration-300 hover:shadow-md">
+        <summary class="flex cursor-pointer items-center justify-between gap-2 p-3 text-sm font-semibold text-[#4A2E1B] select-none">
+          Apakah produk menggunakan bahan pengawet?
+          <span class="text-xl text-[#963023] transition-transform duration-300 group-open:-rotate-180">▾</span>
+        </summary>
+        <div class="border-t border-[#F1ECE6] px-3 py-2 text-sm text-[#5F534B] leading-relaxed">
+          Produk kami menggunakan bahan-bahan alami tanpa pengawet berbahaya. Kami berkomitmen menghadirkan produk yang sehat dan aman dikonsumsi oleh seluruh anggota keluarga.
+        </div>
+      </details>
+
+      <details class="group rounded-[20px] border border-[#E2D8D0] bg-white shadow-sm transition-shadow duration-300 hover:shadow-md">
+        <summary class="flex cursor-pointer items-center justify-between gap-2 p-3 text-sm font-semibold text-[#4A2E1B] select-none">
+          Berapa lama daya tahan produk?
+          <span class="text-xl text-[#963023] transition-transform duration-300 group-open:-rotate-180">▾</span>
+        </summary>
+        <div class="border-t border-[#F1ECE6] px-3 py-2 text-sm text-[#5F534B] leading-relaxed">
+          Setiap produk memiliki masa simpan yang tertera di kemasan. Umumnya produk abon dan keripik dapat bertahan 1-3 bulan dalam kondisi disimpan di tempat sejuk dan kering. Kopi bubuk dan coklat jahe bisa bertahan lebih lama.
+        </div>
+      </details>
+
+      <details class="group rounded-[20px] border border-[#E2D8D0] bg-white shadow-sm transition-shadow duration-300 hover:shadow-md">
+        <summary class="flex cursor-pointer items-center justify-between gap-2 p-3 text-sm font-semibold text-[#4A2E1B] select-none">
+          Apakah ada minimum pembelian?
+          <span class="text-xl text-[#963023] transition-transform duration-300 group-open:-rotate-180">▾</span>
+        </summary>
+        <div class="border-t border-[#F1ECE6] px-3 py-2 text-sm text-[#5F534B] leading-relaxed">
+          Tidak ada minimum pembelian untuk order reguler. Namun untuk pembelian dalam jumlah besar (grosir/reseller), kami memiliki harga khusus. Silakan hubungi kami untuk informasi lebih lanjut.
+        </div>
+      </details>
+
+      <details class="group rounded-[20px] border border-[#E2D8D0] bg-white shadow-sm transition-shadow duration-300 hover:shadow-md">
+        <summary class="flex cursor-pointer items-center justify-between gap-2 p-3 text-sm font-semibold text-[#4A2E1B] select-none">
+          Apakah produk sudah bersertifikat halal?
+          <span class="text-xl text-[#963023] transition-transform duration-300 group-open:-rotate-180">▾</span>
+        </summary>
+        <div class="border-t border-[#F1ECE6] px-3 py-2 text-sm text-[#5F534B] leading-relaxed">
+          Seluruh produk kami dibuat dengan bahan-bahan yang halal dan diproses sesuai standar keamanan pangan. Sertifikasi halal sedang dalam proses pengajuan resmi.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!--CTA-->
+<section id="kemitraan" class="py-12 bg-gradient-to-r from-[#8C1C1C] via-[#2A0E0B] to-black">
+  <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center text-white">
+    <div class="max-w-2xl mx-auto flex flex-col items-center">
+      
+      <h2 class="text-3xl md:text-[40px] font-bold tracking-tight mb-5 font-sans leading-tight">
+        Saatnya Menikmati Kuliner Praktis, Sehat, & Bergizi!
+      </h2>
+      
+      <p class="text-white/85 text-base md:text-[17px] leading-relaxed font-sans mb-12 max-w-xl">
+        Jangan biarkan meja makan Anda sepi tanpa kehangatan dan kegurihan produk terbaik kami.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-6 justify-center items-center w-full sm:w-auto">
+        
+        <a 
+          href="#"
+          class="w-full sm:w-auto bg-[#F7B200] text-[#2A0E0B] font-semibold text-base px-10 py-3.5 rounded-xl shadow-md hover:bg-[#D4CFC5] transition-all duration-300 text-center font-sans"
+        >
+          Cari Toko Terdekat
+        </a>
+        
+        <a 
+          href="https://wa.me/6282293648411?text=Halo%20Admin%2C%20saya%20ingin%20mendaftar%20atau%20mendapatkan%20informasi%20lebih%20lanjut%20tentang%20program%20Mulkan%20Mimba%27un." 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="w-full sm:w-auto bg-[#2A0E0B] border-2 border-[#F7B200] text-[#F7B200] font-semibold text-base px-10 py-3.5 rounded-xl hover:bg-[#3B140F] transition-all duration-300 text-center font-sans"
+        >
+          Hubungi Admin
+        </a>
+      </div>
+      
+    </div>
+  </div>
 </section>
 <!-- Footer -->
-<footer class="w-full bg-surface-container-highest dark:bg-primary-container pt-24 pb-12">
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-<!-- Brand Info -->
-<div class="space-y-6">
-<a class="font-headline-md text-headline-md text-primary dark:text-primary-fixed" href="#home">Mulkan Mimbaun</a>
-<p class="text-secondary font-label-md font-bold uppercase tracking-tight">Authentic Culinary Heritage</p>
-<div class="flex gap-4">
-<a class="w-10 h-10 rounded-full border border-outline flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
-<img alt="Instagram" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY_BD0akbtcIaoDYstX6_TgK3851OWYEyTAnVkxra02ZUl0JljcszXy-pLh_15RwoktAxRLzVZePy2XxkV8wCaD5mwe_-Q4K7CJGzbwYQT-bm3k_6Y0Mwe8GnkMgNBC7qxOEtc7pcLy3qddTlhysTKPMHshlDh0jhoWfpFOTrHOqywig8ltXSdR7df_G4EtDUAsE0IVZF_RpBMza9cGicyuTo09DzKwomcl9UHN2OqUwTiDuu4iZSyNmgSe6mtrM2_RCNtQ236IXjK"/>
-</a>
-<a class="w-10 h-10 rounded-full border border-outline flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
-<img alt="WhatsApp" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcuaHZgyVmRmx1DxiExKrNrX4QTGLLlK4YOldWAwj7MX-CplNCMxkrtdzDhdLGcELaqLY6jC75gf2PecDfthl8RNXkz1WkL3qfc5CawE8hAW6MMcrtnTuimu6T8pfrzkuxvfjCac0XcmgBkNIHd5TIPlbkkkFcYBoFjj58k8Zus424yJ5TKELh7nQT7dGFpnFfTT-DJsDPjL1tpgjkOnv-OzoiYKcMdtkl4ytO5u90SqjisRR0Qda3RYM-ixSrV8cUt268_hQ8Go6e"/>
-</a>
+<footer class="bg-white text-[#4A2E1B] full-width pt-section-gap-md pb-8 flat no shadows">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter grid grid-cols-1 md:grid-cols-4 gap-element-gap">
+<div class="mb-8 md:mb-0">
+<img src="Asset/Logo-Mulkan.Mimba'un.png" alt="Logo Mulkan Mimba'un" class="max-w-[220px] h-auto mb-4" />
+<p class="font-body-md text-[#6A544B]">Authentic Culinary Heritage</p>
 </div>
-</div>
-<!-- Quick Links -->
-<div class="space-y-4">
-<p class="font-label-md text-primary uppercase tracking-widest font-bold">Tautan Cepat</p>
-<ul class="space-y-3 font-body-md text-on-surface-variant">
-<li><a class="hover:text-secondary transition-colors" href="#home">Home</a></li>
-<li><a class="hover:text-secondary transition-colors" href="#produk">Produk</a></li>
-<li><a class="hover:text-secondary transition-colors" href="#tentang-kami">Tentang Kami</a></li>
-<li><a class="hover:text-secondary transition-colors" href="#kemitraan">Kemitraan</a></li>
+<div>
+<h4 class="font-label-md text-label-md text-[#4A2E1B] mb-4 uppercase tracking-wider">Tautan Cepat</h4>
+<ul class="space-y-3 font-body-md text-[#6A544B]">
+<li><a class="text-[#6A544B] hover:text-[#8C1C1C] transition-colors" href="#Beranda">Beranda</a></li>
+<li><a class="text-[#6A544B] hover:text-[#8C1C1C] transition-colors" href="#tentangkami">Tentang Kami</a></li>
+<li><a class="text-[#6A544B] hover:text-[#8C1C1C] transition-colors" href="#produk">Produk</a></li>
+<li><a class="text-[#6A544B] hover:text-[#8C1C1C] transition-colors" href="#bantuan">Bantuan</a></li>
 </ul>
 </div>
-<!-- Help -->
-<div class="space-y-4">
-<p class="font-label-md text-primary uppercase tracking-widest font-bold">Dukungan</p>
-<ul class="space-y-3 font-body-md text-on-surface-variant">
-<li><a class="hover:text-secondary transition-colors" href="#bantuan">Pusat Bantuan (FAQ)</a></li>
-<li><a class="hover:text-secondary transition-colors" href="#">Kebijakan Pengiriman</a></li>
-<li><a class="hover:text-secondary transition-colors" href="#">Kontak Kami</a></li>
+<div>
+<h4 class="font-label-md text-label-md text-[#4A2E1B] mb-4 uppercase tracking-wider">Dukungan</h4>
+<ul class="space-y-3 font-body-md text-[#6A544B]">
+<li><a class="text-[#6A544B] hover:text-[#8C1C1C] transition-colors" href="#bantuan">Pusat Bantuan FAQ</a></li>
+<li><a class="text-[#6A544B] hover:text-[#8C1C1C] transition-colors" href="#home">Kontak Kami</a></li>
 </ul>
 </div>
-<!-- Partner Logos Small -->
-<div class="space-y-4">
-<p class="font-label-md text-primary uppercase tracking-widest font-bold">Mitra Kami</p>
-<div class="flex flex-col gap-6 opacity-60">
-<img alt="DekatLokal" class="h-8 object-contain w-max" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPrs9XQyATINaWvegxXp39KikMiiWPGMqbPtduh2jiBFAAES3y14cFwQvF_KzUKe3DH2WWp4Azo7riyPEuxHyMUhG6rSGV8wBrtLzHleuRFgPDhS9HcSPVD2CNyJ8eHxA3bfLbmRZYtVy0dZGFSEfaiAEK2y2iQE-gs5hLL-CF8HBTIjKYdjudYpdC5w3m9VSO1nlWw10I8Q2tP2w-B7_dzLEJ48J1FQUv5Xgq4FYn9ApjNr2Pj_zUV_IKGGUSh9WQjY-dC7fd4uCq"/>
-<img alt="Rumah BUMN Makassar" class="h-8 object-contain w-max" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzC2BedF1I_OgDDb6X6rsYXPR_FvyaHbMTudFdcCFGXe-MAumg5FTro7hyQTvNQ9GpBKGc05dFxByIxZHpxLCaKhAigH-yW9qBtNg6czcQuEZ6OWfkzc2QmLzk1urf2cu5rZnvqD05HhXlmnO_36hCzs7ORfAh-jveBxb18wHqYjVr3HxAsnGevIvUuvXQEBy9x5PbL9Hx_qojoOYfBNei8cpqIqjTBxjaJhGxF6w5c7SxvfXpi4Z7zuiW94Tc2BJquXw21qJNjy-e"/>
+<div>
+  <div class="flex flex-col items-start text-left max-w-[280px]">
+    <h4 class="font-label-md text-label-md text-[#4A2E1B] mb-4 uppercase tracking-wider">Mitra Kami</h4>
+
+    <div class="flex flex-col items-start gap-5 w-full">
+      <div class="h-9 opacity-80 hover:opacity-100 transition-opacity duration-200">
+        <img 
+          src="Asset/dekat-lokal.png" 
+          alt="Dekat Lokal" 
+          class="h-full w-auto object-contain object-left"
+        />
+      </div>
+
+      <div class="h-14 opacity-80 hover:opacity-100 transition-opacity duration-200">
+        <img 
+          src="Asset/rumah-bumn.png" 
+          alt="Rumah BUMN Makassar" 
+          class="h-full w-auto object-contain object-left"
+        />
+      </div>
+
+      <div class="h-8 opacity-80 hover:opacity-100 transition-opacity duration-200">
+        <img 
+          src="Asset/bank-bri.png" 
+          alt="Bank BRI" 
+          class="h-full w-auto object-contain object-left"
+        />
+      </div>
+    </div>
+  </div>
 </div>
 </div>
-</div>
-<div class="border-t border-outline/10 pt-8 text-center">
-<p class="font-body-md text-on-surface-variant opacity-80">© 2024 Mulkan Mimbaun. Authentic Indonesian Culinary Heritage.</p>
-</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter mt-16 pt-8 border-t border-[#E7E4E0] text-center">
+  <p class="font-body-md text-[#6A5B51]">© 2026 Mulkan Mimba'un. Semua hak cipta dilindungi undang-undang | Powered by Dekat Lokal</p>
 </div>
 </footer>
 <script>
-        // Simple intersection observer for scroll reveal effects
-        const observerOptions = {
-            threshold: 0.1
-        };
+  window.addEventListener('load', function() {
+    document.body.classList.add('loaded');
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.12
+    });
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('opacity-100', 'translate-y-0');
-                    entry.target.classList.remove('opacity-0', 'translate-y-10');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('section > div').forEach(el => {
-            el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
-            observer.observe(el);
+    document.querySelectorAll('header, section').forEach(el => {
+      el.classList.add('reveal');
+      observer.observe(el);
+    });
+  });
+  
+  // Navbar active state management
+  document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    // Handle click on navbar links
+    navLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        // Remove active class from all links
+        navLinks.forEach(l => {
+          l.classList.remove('active-nav', 'text-secondary', 'border-b-2', 'border-secondary');
+          l.classList.add('text-on-surface-variant');
         });
-    </script>
+        
+        // Add active class to clicked link
+        this.classList.add('active-nav', 'text-secondary', 'border-b-2', 'border-secondary');
+        this.classList.remove('text-on-surface-variant');
+      });
+    });
+    
+    // Update navbar on scroll to show which section is in view
+    window.addEventListener('scroll', function() {
+      const sections = document.querySelectorAll('header, section');
+      let currentSection = '';
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionHeight = section.offsetHeight;
+        
+        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+          currentSection = section.id;
+        }
+      });
+      
+      // Update navbar based on scroll position
+      navLinks.forEach(link => {
+        const linkSection = link.getAttribute('data-section');
+        if (linkSection === currentSection) {
+          link.classList.add('active-nav', 'text-secondary', 'border-b-2', 'border-secondary');
+          link.classList.remove('text-on-surface-variant');
+        } else {
+          link.classList.remove('active-nav', 'text-secondary', 'border-b-2', 'border-secondary');
+          link.classList.add('text-on-surface-variant');
+        }
+      });
+    });
+  });
+  
+  
+</script>
 </body></html>
