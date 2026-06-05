@@ -9,7 +9,7 @@
           "value": "web-mulkanmimbaun.vercel.app"
         }
       ],
-      "destination": "https://mulkanmimbaun.dekatlokal.com/:path*",
+      "destination": "https://mulkanmimbaun.dekatlokal.com/",
       "permanent": true
     }
   ]
