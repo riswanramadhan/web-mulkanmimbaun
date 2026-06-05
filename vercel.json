@@ -6,7 +6,7 @@
       "missing": [
         {
           "type": "host",
-          "value": "mulkanmimbaun.vercel.app"
+          "value": "web-mulkanmimbaun.vercel.app"
         }
       ],
       "destination": "https://mulkanmimbaun.dekatlokal.com/:path*",
