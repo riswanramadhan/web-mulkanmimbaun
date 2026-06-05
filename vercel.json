@@ -2,14 +2,25 @@
 {
   "redirects": [
     {
-      "source": "/:path*",
-      "missing": [
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "mulkanmimbaun.vercel.app"
+        }
+      ],
+      "destination": "https://mulkanmimbaun.dekatlokal.com/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
         {
           "type": "host",
           "value": "web-mulkanmimbaun.vercel.app"
         }
       ],
-      "destination": "https://mulkanmimbaun.dekatlokal.com/",
+      "destination": "https://mulkanmimbaun.dekatlokal.com/$1",
       "permanent": true
     }
   ]
