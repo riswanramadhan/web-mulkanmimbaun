@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mulkanmimbaun.dekatlokal.com/sitemap.xml

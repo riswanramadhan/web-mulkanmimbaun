@@ -1,974 +1,2635 @@
 <!DOCTYPE html>
-
-<html lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Mulkan Mimba'un - Authentic Culinary Heritage</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&amp;family=Noto+Serif:wght@600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "on-secondary-fixed": "#291800",
-                        "on-tertiary-container": "#9e9c96",
-                        "surface-variant": "#e5e2e1",
-                        "on-primary": "#ffffff",
-                        "on-tertiary": "#ffffff",
-                        "on-surface-variant": "#504440",
-                        "on-secondary": "#ffffff",
-                        "on-primary-container": "#bf9282",
-                        "primary-container": "#4b2c20",
-                        "surface-container-highest": "#e5e2e1",
-                        "tertiary-container": "#343430",
-                        "outline": "#83746f",
-                        "on-error-container": "#93000a",
-                        "on-error": "#ffffff",
-                        "tertiary-fixed-dim": "#c9c6c0",
-                        "primary-fixed-dim": "#ecbcaa",
-                        "outline-variant": "#d5c3bd",
-                        "inverse-on-surface": "#f3f0ef",
-                        "on-tertiary-fixed-variant": "#474742",
-                        "tertiary-fixed": "#e5e2db",
-                        "surface": "#fcf9f8",
-                        "surface-container-high": "#eae7e7",
-                        "secondary-fixed-dim": "#fabb63",
-                        "tertiary": "#1f1f1b",
-                        "on-primary-fixed-variant": "#613e31",
-                        "on-primary-fixed": "#2e140a",
-                        "on-tertiary-fixed": "#1c1c18",
-                        "inverse-surface": "#303030",
-                        "secondary-container": "#fdbe66",
-                        "error-container": "#ffdad6",
-                        "secondary-fixed": "#ffddb4",
-                        "surface-tint": "#7b5647",
-                        "surface-dim": "#dcd9d9",
-                        "on-background": "#1b1b1c",
-                        "on-secondary-container": "#754b00",
-                        "inverse-primary": "#ecbcaa",
-                        "surface-container-low": "#f6f3f2",
-                        "surface-bright": "#fcf9f8",
-                        "on-surface": "#1b1b1c",
-                        "primary-fixed": "#ffdbce",
-                        "on-secondary-fixed-variant": "#633f00",
-                        "secondary": "#835500",
-                        "error": "#ba1a1a",
-                        "surface-container": "#f0eded",
-                        "surface-container-lowest": "#ffffff",
-                        "background": "#fcf9f8",
-                        "primary": "#32170d"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "section-gap-lg": "120px",
-                        "section-gap-md": "80px",
-                        "margin-mobile": "16px",
-                        "container-max": "1280px",
-                        "gutter": "24px",
-                        "element-gap": "16px"
-                    },
-                    "fontFamily": {
-                        "body-lg": ["Plus Jakarta Sans"],
-                        "display-lg": ["Noto Serif"],
-                        "headline-lg-mobile": ["Noto Serif"],
-                        "headline-lg": ["Noto Serif"],
-                        "label-md": ["Plus Jakarta Sans"],
-                        "headline-md": ["Noto Serif"],
-                        "body-md": ["Plus Jakarta Sans"]
-                    },
-                    "fontSize": {
-                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
-                        "display-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
-                        "headline-lg-mobile": ["28px", { "lineHeight": "1.3", "fontWeight": "600" }],
-                        "headline-lg": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
-                        "label-md": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600" }],
-                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
-                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }]
-                    }
-                }
-            }
-        }
-    </script>
-<style>
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            opacity: 0;
-            transform: translateY(12px);
-            transition: opacity 0.7s ease, transform 0.7s ease;
-        }
-        body.loaded {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .reveal {
-            opacity: 0;
-            transform: translateY(24px);
-            transition: opacity 0.75s ease, transform 0.75s ease;
-        }
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .material-symbols-outlined[data-weight="fill"] {
-            font-variation-settings: 'FILL' 1;
-        }
-        .soft-shadow {
-            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-        }
-    </style>
-</head>
-<body class="bg-background text-on-background font-body-md antialiased">
-<!-- TopNavBar -->
-<nav class="bg-surface/90 dark:bg-primary/90 backdrop-blur-md text-primary dark:text-primary-fixed docked full-width top-0 sticky z-50 border-b border-outline-variant/30 shadow-sm">
-<div class="flex justify-between items-center w-full px-margin-mobile md:px-gutter max-w-container-max mx-auto h-20">
-<div class="text-headline-md font-display-lg text-primary dark:text-primary-fixed">
-  <img src="Asset/Logo-Mulkan.Mimba'un.png" alt="Mulkan Mimba'un" class="h-10 w-auto object-contain" />
-</div>
-<ul class="hidden md:flex space-x-8" id="navbar-menu">
-<li><a class="nav-link active-nav text-secondary font-bold border-b-2 border-secondary pb-1 text-label-md font-label-md transition-all" href="#home" data-section="home">Beranda</a></li>
-<li><a class="nav-link text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors hover:text-secondary dark:hover:text-secondary-fixed transition-all text-label-md font-label-md" href="#tentangkami" data-section="tentangkami">Tentang Kami</a></li>
-<li><a class="nav-link text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors hover:text-secondary dark:hover:text-secondary-fixed transition-all text-label-md font-label-md" href="#produk" data-section="produk">Produk</a></li>
-<li><a class="nav-link text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors hover:text-secondary dark:hover:text-secondary-fixed transition-all text-label-md font-label-md" href="#faq" data-section="faq">Bantuan</a></li>
-</ul>
-<a href="https://wa.me/6282293648411?text=Halo%20Admin%2C%20saya%20ingin%20mengajukan%20pertanyaan%20mengenai%20produk%20dan%20layanan%20Mulkan%20Mimba%27un." target="_blank" rel="noopener noreferrer" class="bg-primary text-on-primary px-6 py-2 rounded font-label-md text-label-md hover:bg-secondary transition-all transform active:scale-95 hidden md:inline-flex items-center justify-center">Hubungi Kami</a>
-<button class="md:hidden p-2 text-primary">
-<span class="material-symbols-outlined" data-icon="menu">menu</span>
-</button>
-</div>
-</nav>
-<!-- Hero Section -->
-<header id="home" class="relative w-full h-[819px] flex items-center bg-transparent overflow-hidden">
-  <img src="Asset/hero-section2.png" alt="Produk makanan dan minuman tradisional Indonesia dari Mulkan Mimba'un" class="absolute inset-0 w-full h-full object-cover" />
-  
-  <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none"></div>
-  
-  <div class="absolute bottom-16 left-8 md:left-12 flex flex-col items-start gap-3 z-10 text-left px-4 md:px-0">
-    <h1 class="text-white text-3xl md:text-5xl font-serif font-bold tracking-[0.05em] drop-shadow-lg">
-      Mulkan Mimba'un
-    </h1>
-    
-    <button class="mt-2 border-2 border-white bg-white/10 backdrop-blur-sm text-white px-10 py-3 rounded-full font-bold text-sm tracking-wider hover:bg-white hover:text-[#4A2E1B] transition-all duration-300 shadow-xl group">
-      Discover
-    </button>
-  </div>
-  <div class="absolute left-1/2 bottom-8 -translate-x-1/2 z-10">
-    <span class="material-symbols-outlined text-white text-3xl animate-bounce font-light drop-shadow-md">
-      expand_more
-    </span>
-  </div>
-</header>
-<!-- Trusted Partners -->
-<section class="py-20 bg-white">
-  <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
-    
-    <!-- Bagian Judul yang Diperbarui: Kapsul dengan dua warna teks -->
-    <div class="inline-block rounded-full bg-[#FAF9F6] border border-[#D9D9D9] px-4 py-2 shadow-md mb-4 mx-auto">
-      <h2 class="font-serif text-xl md:text-2xl tracking-wide font-bold flex items-center gap-1.5">
-        <span class="text-[#4A2E1B]">Didukung Oleh</span>
-        <span class="text-[#8B2C1A]">Mitra Terpercaya</span>
-      </h2>
-    </div>
-    
-    <!-- Bagian Paragraf yang Diperbarui: Perbaikan apostrof dan penyesuaian warna -->
-    <p class="text-[#666666] max-w-3xl mx-auto mb-14 text-sm md:text-base leading-relaxed font-sans">
-      Mulkan Mimba’un didukung oleh mitra-mitra terpercaya untuk memberikan layanan terbaik dan mendukung pertumbuhan UMKM di Indonesia
-    </p>
-    
-    <!-- Bagian Kisi Mitra (tetap sama) -->
-    <div class="flex flex-row flex-wrap justify-center items-center gap-8 md:gap-12 max-w-4xl mx-auto">
-      
-      <!-- Dekat Lokal -->
-      <div class="flex items-center justify-center h-[50px] cursor-pointer group">
-        <img 
-          src="Asset/dekat-lokal.png" 
-          alt="Logo Dekat Lokal" 
-          class="h-full object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 group-hover:animate-[bounce_0.5s_ease-in-out_1]" 
-        />
-      </div>
-
-      <!-- Rumah BUMN -->
-      <div class="flex items-center justify-center h-[60px] cursor-pointer group">
-        <img 
-          src="Asset/rumah-bumn.png" 
-          alt="Logo Rumah BUMN" 
-          class="h-full object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 group-hover:animate-[bounce_0.5s_ease-in-out_1]" 
-        />
-      </div>
-
-      <!-- Bank BRI -->
-      <div class="flex items-center justify-center h-[40px] cursor-pointer group">
-        <img 
-          src="Asset/bank-bri.png" 
-          alt="Logo Bank BRI" 
-          class="h-full object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 group-hover:animate-[bounce_0.5s_ease-in-out_1]" 
-        />
-      </div>
-
-    </div>
-  </div>
-</section>
-<!-- Our Story -->
-<section id="tentangkami" class="py-16 bg-[#FAFAF6]">
-  <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-    
-    <div class="bg-white rounded-[32px] p-8 md:p-16 border border-gray-100 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.03)] flex flex-col lg:flex-row gap-12 items-center">
-      
-      <div class="w-full lg:w-1/2 flex flex-col justify-center">
-        <span class="text-xs font-bold uppercase tracking-[0.15em] text-[#8C6D53] mb-3 block font-sans">
-          Cerita Kami
-        </span>
-        
-        <h2 class="font-headline-lg text-primary text-3xl md:text-[40px] leading-[1.15] tracking-wide mb-6 font-serif">
-          Dari Tantangan Menjadi Inovasi Lokal Dapur Lokal
-        </h2>
-        
-        <div class="space-y-5 text-[#5C544E] font-medium leading-relaxed font-serif text-[15px] md:text-base">
-          <p>
-            Perjalanan Mulkan Mimba'un bermula di masa pandemi (2019) saat aktivitas pasar ikan terhenti, meninggalkan hasil tangkapan laut lokal yang tidak termanfaatkan secara maksimal. Karena hal tersebut, muncul ide untuk mengolah ikan menjadi produk dan lahirlah Abon Tuna Panggang sebagai inovasi utama. 
-          </p>
-          <p>
-            Seiring berjalannya waktu, Mulkan Mimba'un terus berkembang dan kini, produk kami telah merambah ke berbagai produk, mulai dari  Keripik Tempe dan Otak-Otak Ikan, hingga produk minuman yaitu Minuman Coklat Jahe dan Kopi Bubuk.
-          </p>
-        </div>
-      </div>
-      
-      <div class="w-full lg:w-1/2 flex justify-center">
-        <div class="relative overflow-hidden rounded-[24px] max-w-[500px] w-full aspect-[4/3] shadow-md">
-          <img 
-            src="Asset/cerita-kami.png" 
-            alt="Koleksi produk premium Tempeh Chips dan Abon Tuna Panggang Mulkan Mimbaun" 
-            class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-          />
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-<!-- Produk Kami -->
-<section id="produk" class="py-20 bg-[#FAFAF6]">
-  <div class="max-w-7xl mx-auto px-4 md:px-8">
-    
-    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
-      <div>
-        <h2 class="text-3xl md:text-[36px] font-bold text-[#5C3A21] font-serif mb-2">
-          Produk Kami
-        </h2>
-        <p class="text-[#736A62] font-sans text-sm md:text-base">
-          Jelajahi varian produk makanan dan minuman terbaik kami
-        </p>
-      </div>
-      <a href="#" class="text-[#A43B2A] font-semibold font-sans text-sm hover:underline flex items-center gap-1">
-        Lihat Semua Produk >
-      </a>
-    </div>
-
-    <div class="mb-12">
-      <div class="flex items-center gap-4 mb-8">
-        <div class="w-12 h-12 rounded-full bg-[#963023] flex items-center justify-center flex-shrink-0 shadow-sm">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm8-7c-2.21 0-4 1.79-4 4v5c0 1.66 1.34 3 3 3v8h2v-8c1.66 0 3-1.34 3-3V6c0-2.21-1.79-4-4-4z"/>
-          </svg>
-        </div>
-        <div>
-          <h3 class="text-2xl font-bold text-[#5C3A21] font-serif mb-1">Makanan</h3>
-          <p class="text-[#736A62] text-sm font-sans">Nikmati kelezatan autentik ragam kuliner premium</p>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        
-        <div class="bg-[#FCF7F8] rounded-[16px] p-5 flex flex-col justify-between transition-all duration-300 shadow-sm hover:shadow-lg">
-          <div>
-            <div class="overflow-hidden aspect-square mb-5 relative rounded-t-[16px]">
-              <img src="Asset/abon-tuna-panggang.png" alt="Abon Tuna Panggang" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
-              <div class="absolute top-3 left-3 bg-[#D32F2F] text-white text-xs font-bold px-3 py-1 rounded-full">Best Seller</div>
-            </div>
-            <h4 class="text-lg font-bold text-[#6A432D] mb-2 font-serif">Abon Tuna Panggang</h4>
-            <p class="text-xs text-[#736A62] leading-relaxed font-sans mb-6">
-              Olahan ikan tuna segar pilihan yang dipanggang dengan rempah otentik nusantara. Tekstur serat yang lembut dan cita rasa premium yang sehat tanpa minyak berlebih.
-            </p>
-          </div>
-          <div class="flex justify-between items-center pt-2">
-            <span class="text-base font-bold text-[#6A432D] font-sans">IDR 35.000</span>
-            <a href="https://wa.me/6282293648411?text=Halo%20Admin%2C%20saya%20tertarik%20membeli%20Abon%20Tuna%20Panggang." target="_blank" rel="noopener noreferrer" class="bg-[#1C1310] text-white text-xs font-bold px-4 py-2 rounded-md hover:bg-[#362113] transition-colors font-sans">Beli Sekarang</a>
-          </div>
-        </div>
-
-        <div class="bg-[#FCF7F8] rounded-[16px] p-5 flex flex-col justify-between transition-all duration-300 shadow-sm hover:shadow-lg">
-          <div>
-            <div class="overflow-hidden aspect-square mb-5 rounded-t-[16px]">
-              <img src="Asset/keripik-tempe.png" alt="Keripik Tempe" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
-            </div>
-            <h4 class="text-lg font-bold text-[#6A432D] mb-2 font-serif">Keripik Tempe</h4>
-            <p class="text-xs text-[#736A62] leading-relaxed font-sans mb-6">
-              Camilan tradisional yang naik kelas. Dibuat dari kedelai non-GMO dengan proses fermentasi sempurna, menghasilkan keripik tempe tipis yang renyah dan penuh nutrisi.
-            </p>
-          </div>
-          <div class="flex justify-between items-center pt-2">
-            <span class="text-base font-bold text-[#6A432D] font-sans">IDR 15.000</span>
-            <a href="https://wa.me/6282293648411?text=Halo%20Admin%2C%20saya%20tertarik%20membeli%20Keripik%20Tempe." target="_blank" rel="noopener noreferrer" class="bg-[#1C1310] text-white text-xs font-bold px-4 py-2 rounded-md hover:bg-[#362113] transition-colors font-sans">Beli Sekarang</a>
-          </div>
-        </div>
-
-        <div class="bg-[#FCF7F8] rounded-[16px] p-5 flex flex-col justify-between transition-all duration-300 shadow-sm hover:shadow-lg">
-          <div>
-            <div class="overflow-hidden aspect-square mb-5 rounded-t-[16px]">
-              <img src="Asset/otak-otak.png" alt="Otak - Otak Ikan" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
-            </div>
-            <h4 class="text-lg font-bold text-[#6A432D] mb-2 font-serif">Otak - Otak Ikan</h4>
-            <p class="text-xs text-[#736A62] leading-relaxed font-sans mb-6">
-              Otak - otak ikan yang terbuat dari ikan tengiri dan tuna pilihan dengan rasa gurih, tekstur lembut, dan aroma daun pisang yang khas dengan cita rasa premium.
-            </p>
-          </div>
-          <div class="flex justify-between items-center pt-2">
-            <span class="text-base font-bold text-[#6A432D] font-sans">IDR 65.000</span>
-            <a href="https://wa.me/6282293648411?text=Halo%20Admin%2C%20saya%20tertarik%20membeli%20Otak%20-%20Otak%20Ikan." target="_blank" rel="noopener noreferrer" class="bg-[#1C1310] text-white text-xs font-bold px-4 py-2 rounded-md hover:bg-[#362113] transition-colors font-sans">Beli Sekarang</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <div>
-      <div class="flex items-center gap-4 mb-8 mt-16">
-        <div class="w-12 h-12 rounded-full bg-[#963023] flex items-center justify-center flex-shrink-0 shadow-sm">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.11 0 2-.89 2-2V5c0-1.11-.89-2-2-2zm0 5h-2V5h2v3zM4 19h16v2H4z"/>
-          </svg>
-        </div>
-        <div>
-          <h3 class="text-2xl font-bold text-[#5C3A21] font-serif mb-1">Minuman</h3>
-          <p class="text-[#736A62] text-sm font-sans">Rasakan kehangatan sejati dari lini minuman premium kami</p>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        
-        <div class="bg-[#FCF7F8] rounded-[16px] p-5 flex flex-col justify-between transition-all duration-300 shadow-sm hover:shadow-lg">
-          <div>
-            <div class="overflow-hidden aspect-square mb-5 rounded-t-[16px]">
-              <img src="Asset/GULJACO.png" alt="GULJACO" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
-            </div>
-            <h4 class="text-lg font-bold text-[#6A432D] mb-2 font-serif">GULJACO</h4>
-            <p class="text-xs text-[#736A62] leading-relaxed font-sans mb-6">
-              Minuman serbuk herbal instan masa kini yang memadukan kelezatan cokelat premium dengan khasiat hangat jahe alami untuk stamina harian Anda
-            </p>
-          </div>
-          <div class="flex justify-between items-center pt-2">
-            <span class="text-base font-bold text-[#6A432D] font-sans">IDR 8.500</span>
-            <a href="https://wa.me/6282293648411?text=Halo%20Admin%2C%20saya%20tertarik%20membeli%20GULJACO." target="_blank" rel="noopener noreferrer" class="bg-[#1C1310] text-white text-xs font-bold px-4 py-2 rounded-md hover:bg-[#362113] transition-colors font-sans">Beli Sekarang</a>
-          </div>
-        </div>
-
-        <div class="bg-[#FCF7F8] rounded-[16px] p-5 flex flex-col justify-between transition-all duration-300 shadow-sm hover:shadow-lg">
-          <div>
-            <div class="overflow-hidden aspect-square mb-5 rounded-t-[16px]">
-              <img src="Asset/Kopi.png" alt="Kopi Para Raja" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
-            </div>
-            <h4 class="text-lg font-bold text-[#6A432D] mb-2 font-serif">Kopi Para Raja</h4>
-            <p class="text-xs text-[#736A62] leading-relaxed font-sans mb-6">
-              Rasakan keaslian rasa dan aroma pekat khas Kopi Arabika asli Enrekang, Sulawesi Selatan, yang dikurasi khusus untuk para pencinta kopi sejati
-            </p>
-          </div>
-          <div class="flex justify-between items-center pt-2">
-            <span class="text-base font-bold text-[#6A432D] font-sans">IDR 78.000</span>
-            <a href="https://wa.me/6282293648411?text=Halo%20Admin%2C%20saya%20tertarik%20membeli%20Kopi%20Para%20Raja." target="_blank" rel="noopener noreferrer" class="bg-[#1C1310] text-white text-xs font-bold px-4 py-2 rounded-md hover:bg-[#362113] transition-colors font-sans">Beli Sekarang</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-  </div>
-</section>
-<!-- Testimonials -->
-<section class="py-20 bg-[#FAFAF6] overflow-hidden">
-  <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-    <div class="text-center max-w-2xl mx-auto mb-16">
-      <h2 class="font-headline-lg text-primary text-3xl md:text-[36px] tracking-wide font-serif mb-4">
-        Apa Kata Mereka?
-      </h2>
-      <p class="text-sm md:text-base text-[#8C6D53] font-medium font-sans leading-relaxed">
-        Berikut adalah beberapa testimoni dari pelanggan setia kami yang telah merasakan kelezatan produk Mulkan Mimbaun dan layanan terbaik kami.
-      </p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 max-w-6xl mx-auto">
-      <article class="group relative rounded-[28px] bg-white border border-transparent p-8 pt-12 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#F4B71A]/30 hover:shadow-[0_25px_50px_-35px_rgba(0,0,0,0.15)]">
-        <div class="absolute -top-5 right-6 inline-flex h-12 w-12 items-center justify-center rounded-3xl bg-[#F4B71A] text-white text-2xl font-bold shadow-sm select-none">
-          “
-        </div>
-        <div class="flex items-center gap-1 text-[#F4B71A] mb-5">
-          <span class="material-symbols-outlined text-xl" data-weight="fill">star</span>
-          <span class="material-symbols-outlined text-xl" data-weight="fill">star</span>
-          <span class="material-symbols-outlined text-xl" data-weight="fill">star</span>
-          <span class="material-symbols-outlined text-xl" data-weight="fill">star</span>
-          <span class="material-symbols-outlined text-xl" data-weight="fill">star</span>
-        </div>
-        <p class="text-[#5C544E] text-base font-medium leading-relaxed mb-8">
-          "Keripik tempenya tipis, renyah banget, dan gurihnya pas tidak bikin seret. Pas sekali untuk camilan sehat keluarga karena kualitasnya terasa sangat premium."
-        </p>
-        <div class="flex items-center gap-3">
-          <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#E1DDD5] text-[#4A2E1B] font-bold text-base shadow-sm">
-            B
-          </div>
-          <div class="flex flex-col leading-tight">
-            <span class="font-semibold text-[#4A2E1B] text-sm">Budi Santoso</span>
-            <span class="text-xs text-[#8C827A] uppercase tracking-[0.15em]">Makassar, Indonesia</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="group relative rounded-[28px] bg-white border border-transparent p-8 pt-12 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#F4B71A]/30 hover:shadow-[0_25px_50px_-35px_rgba(0,0,0,0.15)]">
-        <div class="absolute -top-5 right-6 inline-flex h-12 w-12 items-center justify-center rounded-3xl bg-[#F4B71A] text-white text-2xl font-bold shadow-sm select-none">
-          “
-        </div>
-        <div class="flex items-center gap-1 text-[#F4B71A] mb-5">
-          <span class="material-symbols-outlined text-xl" data-weight="fill">star</span>
-          <span class="material-symbols-outlined text-xl" data-weight="fill">star</span>
-          <span class="material-symbols-outlined text-xl" data-weight="fill">star</span>
-          <span class="material-symbols-outlined text-xl" data-weight="fill">star</span>
-          <span class="material-symbols-outlined text-xl" data-weight="fill">star</span>
-        </div>
-        <p class="text-[#5C544E] text-base font-medium leading-relaxed mb-8">
-          "Abon tuna panggang ini beneran beda karena tidak berminyak sama sekali dan tekstur seratnya halus. Sangat praktis untuk lauk makan nasi hangat, anak-anak di rumah pun langsung suka."
-        </p>
-        <div class="flex items-center gap-3">
-          <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#E1DDD5] text-[#4A2E1B] font-bold text-base shadow-sm">
-            F
-          </div>
-          <div class="flex flex-col leading-tight">
-            <span class="font-semibold text-[#4A2E1B] text-sm">Fatiha Alya</span>
-            <span class="text-xs text-[#8C827A] uppercase tracking-[0.15em]">Surabaya, Indonesia</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="group relative rounded-[28px] bg-white border border-transparent p-8 pt-12 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#F4B71A]/30 hover:shadow-[0_25px_50px_-35px_rgba(0,0,0,0.15)]">
-        <div class="absolute -top-5 right-6 inline-flex h-12 w-12 items-center justify-center rounded-3xl bg-[#F4B71A] text-white text-2xl font-bold shadow-sm select-none">
-          “
-        </div>
-        <div class="flex items-center gap-1 text-[#F4B71A] mb-5">
-          <span class="material-symbols-outlined text-xl" data-weight="fill">star</span>
-          <span class="material-symbols-outlined text-xl" data-weight="fill">star</span>
-          <span class="material-symbols-outlined text-xl" data-weight="fill">star</span>
-          <span class="material-symbols-outlined text-xl" data-weight="fill">star</span>
-          <span class="material-symbols-outlined text-xl" data-weight="fill">star</span>
-        </div>
-        <p class="text-[#5C544E] text-base font-medium leading-relaxed mb-8">
-          "Otak-otaknya terasa sekali daging tuna segarnya dan teksturnya sangat lembut. Aroma panggangan rempah nusantara di setiap gigitan benar-benar bikin ketagihan."
-        </p>
-        <div class="flex items-center gap-3">
-          <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#E1DDD5] text-[#4A2E1B] font-bold text-base shadow-sm">
-            G
-          </div>
-          <div class="flex flex-col leading-tight">
-            <span class="font-semibold text-[#4A2E1B] text-sm">Gwen Cantika</span>
-            <span class="text-xs text-[#8C827A] uppercase tracking-[0.15em]">Jakarta, Indonesia</span>
-          </div>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!--LOKASI KAMI-->
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lokasi Kami</title>
-    <style>
-        /* Pengaturan Dasar */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #ffffff;
-            color: #333;
-            margin: 0;
-            padding: 40px 20px;
-        }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mulkan Mimba'un adalah brand oleh-oleh makanan dan minuman lokal dari Indonesia, menghadirkan abon tuna panggang, keripik tempe, otak-otak ikan, kopi, dan minuman coklat jahe yang praktis untuk keluarga, perjalanan, dan hadiah." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <title>Mulkan Mimba'un - Oleh-Oleh Makanan dan Minuman Lokal</title>
+  <link rel="canonical" href="https://mulkanmimbaun.dekatlokal.com/" />
 
-        .lokasi-section {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="id_ID" />
+  <meta property="og:url" content="https://mulkanmimbaun.dekatlokal.com/" />
+  <meta property="og:site_name" content="mulkanmimbaun" />
+  <meta property="og:title" content="mulkanmimbaun - Oleh-Oleh Makanan dan Minuman Lokal" />
+  <meta property="og:description" content="Mulkan Mimba'un menghadirkan oleh-oleh makanan dan minuman lokal seperti abon tuna panggang, keripik tempe, otak-otak ikan, kopi, dan coklat jahe untuk keluarga, perjalanan, dan hadiah." />
+  <meta property="og:image" content="https://mulkanmimbaun.dekatlokal.com/Asset/hero-section2.png" />
+  <meta property="og:image:alt" content="Produk oleh-oleh Mulkan Mimba'un" />
 
-        /* Bagian Header */
-        .section-header {
-            margin-bottom: 30px;
-        }
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="mulkan mimbaun - Oleh-Oleh Makanan dan Minuman Lokal" />
+  <meta name="twitter:description" content="Oleh-oleh makanan dan minuman lokal praktis dari Mulkan Mimba'un untuk keluarga, perjalanan, dan hadiah." />
+  <meta name="twitter:image" content="https://mulkanmimbaun.dekatlokal.com/Asset/hero-section2.png" />
+  <meta name="twitter:image:alt" content="Produk oleh-oleh Mulkan Mimba'un" />
 
-        .subtitle {
-            font-size: 14px;
-            font-weight: 600;
-            color: #555;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="shortcut icon" href="/favicon.png" />
 
-        .section-title {
-            font-size: 32px;
-            font-weight: bold;
-            color: #5c3a21; /* Warna coklat tua */
-            margin: 10px 0;
-        }
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "mulkanmimbaun",
+      "alternateName": [
+        "mulkan mimbaun",
+        "Mulkan Mimba'un"
+      ],
+      "url": "https://mulkanmimbaun.dekatlokal.com/",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Mulkan Mimba'un",
+        "url": "https://mulkanmimbaun.dekatlokal.com/",
+        "logo": "https://mulkanmimbaun.dekatlokal.com/logo-mulkan-mimbaun-512.png"
+      },
+      "inLanguage": "id-ID"
+    }
+  </script>
 
-        .highlight-text {
-            color: #8c1c1c; /* Warna merah gelap untuk penekanan */
-        }
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Mulkan Mimba'un",
+      "url": "https://mulkanmimbaun.dekatlokal.com/",
+      "logo": "https://mulkanmimbaun.dekatlokal.com/logo-mulkan-mimbaun-512.png",
+      "image": "https://mulkanmimbaun.dekatlokal.com/logo-mulkan-mimbaun-512.png"
+    }
+  </script>
 
-        .section-desc {
-            font-size: 16px;
-            color: #666;
-            margin-top: 0;
-        }
+  <style>
+    :root {
+      --red: #ef1703;
+      --red-dark: #a80f05;
+      --yellow: #fde104;
+      --orange: #f58f0b;
+      --ink: #211815;
+      --deep: #35120d;
+      --brown: #6f3323;
+      --muted: #786961;
+      --soft: #fff8eb;
+      --paper: #fffdf8;
+      --cream: #f7efe2;
+      --line: #ead9c8;
+      --green: #27644c;
+      --white: #ffffff;
+      --shadow: 0 18px 50px rgba(67, 25, 12, 0.1);
+      --shadow-strong: 0 26px 70px rgba(90, 25, 10, 0.18);
+      --radius: 8px;
+      --container: 1180px;
+      --font-body: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --font-heading: "Montserrat", "Poppins", system-ui, sans-serif;
+      --font-accent: "Manrope", "Poppins", system-ui, sans-serif;
+    }
 
-        /* Tata Letak Grid untuk Kartu */
-        .cards-container {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
+    * {
+      box-sizing: border-box;
+      letter-spacing: 0;
+    }
 
-        .row-top {
-            display: grid;
-            grid-template-columns: 1fr 1fr; /* 2 kolom */
-            gap: 20px;
-        }
+    html {
+      scroll-behavior: smooth;
+      scrollbar-width: thin;
+      scrollbar-color: var(--red) var(--soft);
+    }
 
-        .row-bottom {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr; /* 3 kolom */
-            gap: 20px;
-        }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      overflow-x: hidden;
+      background:
+        radial-gradient(circle at top left, rgba(253, 225, 4, 0.16), transparent 32rem),
+        linear-gradient(180deg, #fffdf8 0%, #fff7e9 46%, #fffdf8 100%);
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.6;
+      opacity: 1;
+    }
 
-        /* Desain Kartu (Card) */
-        .card {
-            background-color: #fcfcfc;
-            border: 1px solid #eaeaea;
-            border-radius: 12px;
-            padding: 24px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-        }
+    body.is-loaded {
+      opacity: 1;
+    }
 
-        .card-header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 15px;
-        }
+    body.menu-open {
+      overflow: hidden;
+    }
 
-        .icon-circle {
-            background-color: #963023;
-            color: white;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-        }
+    body.menu-open .floating-whatsapp {
+      opacity: 0;
+      pointer-events: none;
+    }
 
-        .icon-small {
-            color: #8c1c1c;
-            font-size: 20px;
-        }
+    body::-webkit-scrollbar {
+      width: 13px;
+    }
 
-        .card h3 {
-            font-size: 18px;
-            margin: 0;
-            color: #111;
-        }
+    body::-webkit-scrollbar-track {
+      background: linear-gradient(180deg, #fff7e5, #ffffff);
+    }
 
-        .card p {
-            font-size: 14px;
-            color: #555;
-            line-height: 1.5;
-            margin-bottom: 20px;
-            flex-grow: 1; /* Membuat tombol sejajar di bawah */
-        }
+    body::-webkit-scrollbar-thumb {
+      border: 3px solid #fff7e5;
+      border-radius: 999px;
+      background: linear-gradient(180deg, var(--red), var(--orange), var(--yellow));
+    }
 
-        /* Tombol Shop Now */
-        .btn-shop {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #22c55e; /* Hijau */
-            color: white;
-            border: none;
-            border-radius: 6px;
-          padding: 12px 0;
-          font-size: 14px;
-            font-weight: 600;
-            font-style: normal;
-            line-height: 1.2;
-            text-decoration: none;
-            width: 100%;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
+    body::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(180deg, var(--red-dark), var(--red), var(--orange));
+    }
 
-        .btn-shop:hover {
-            background-color: #16a34a;
-        }
+    img {
+      display: block;
+      max-width: 100%;
+    }
 
-        /* Smaller variant for hidden option buttons */
-        .btn-shop-small {
-          padding: 8px 12px;
-          font-size: 13px;
-          border-radius: 8px;
-          width: auto;
-          min-width: 140px;
-          justify-self: start;
-        }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-        /* Responsif untuk layar kecil (Mobile) */
-        @media (max-width: 768px) {
-            .row-top, .row-bottom {
-                grid-template-columns: 1fr; /* Menjadi 1 kolom di HP */
-            }
-        }
-    </style>
+    button,
+    summary {
+      font: inherit;
+    }
+
+    button {
+      border: 0;
+      cursor: pointer;
+    }
+
+    section,
+    header,
+    footer {
+      position: relative;
+    }
+
+    .material-symbols-outlined {
+      font-family: "Material Symbols Outlined";
+      font-weight: normal;
+      font-style: normal;
+      font-size: 24px;
+      line-height: 1;
+      display: inline-block;
+      text-transform: none;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-feature-settings: "liga";
+      -webkit-font-smoothing: antialiased;
+      font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 0, "opsz" 24;
+    }
+
+    .material-symbols-outlined.fill {
+      font-variation-settings: "FILL" 1, "wght" 500, "GRAD" 0, "opsz" 24;
+    }
+
+    .scroll-progress {
+      position: fixed;
+      inset: 0 auto auto 0;
+      width: 100%;
+      height: 4px;
+      z-index: 100;
+      pointer-events: none;
+      transform-origin: left center;
+      transform: scaleX(0);
+      background: linear-gradient(90deg, var(--red), var(--orange), var(--yellow));
+      box-shadow: 0 0 22px rgba(239, 23, 3, 0.26);
+    }
+
+    .container {
+      width: min(var(--container), calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .section-pad {
+      padding: 98px 0;
+    }
+
+    .section-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      margin-bottom: 14px;
+      padding: 8px 12px;
+      border: 1px solid rgba(239, 23, 3, 0.18);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.68);
+      color: var(--red-dark);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      margin: 0;
+      color: var(--deep);
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 4vw, 3.6rem);
+      line-height: 1.05;
+      font-weight: 800;
+    }
+
+    .section-desc {
+      margin: 16px 0 0;
+      max-width: 660px;
+      color: var(--muted);
+      font-size: clamp(0.96rem, 1.5vw, 1.08rem);
+    }
+
+    .accent {
+      color: var(--red);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 48px;
+      padding: 13px 18px;
+      border-radius: var(--radius);
+      font-weight: 800;
+      line-height: 1;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--red) 0%, var(--orange) 72%, var(--yellow) 100%);
+      color: #fff;
+      box-shadow: 0 14px 30px rgba(239, 23, 3, 0.24);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 18px 42px rgba(239, 23, 3, 0.32);
+    }
+
+    .btn-dark {
+      background: var(--ink);
+      color: #fff;
+      box-shadow: 0 14px 30px rgba(33, 24, 21, 0.18);
+    }
+
+    .btn-ghost {
+      border: 1px solid rgba(255, 255, 255, 0.56);
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff;
+      backdrop-filter: blur(10px);
+    }
+
+    .btn-light {
+      border: 1px solid rgba(239, 23, 3, 0.18);
+      background: #fff;
+      color: var(--deep);
+    }
+
+    .wa-icon {
+      width: 1.18em;
+      height: 1.18em;
+      flex: 0 0 auto;
+      fill: currentColor;
+    }
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 108;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #25d366;
+      color: #fff;
+      box-shadow: 0 18px 42px rgba(37, 211, 102, 0.34);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    }
+
+    .floating-whatsapp:hover {
+      transform: translateY(-3px);
+      background: #1fbd5b;
+      box-shadow: 0 22px 54px rgba(37, 211, 102, 0.44);
+    }
+
+    .floating-whatsapp .wa-icon {
+      width: 31px;
+      height: 31px;
+    }
+
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 90;
+      border-bottom: 1px solid rgba(234, 217, 200, 0.75);
+      background: rgba(255, 253, 248, 0.86);
+      backdrop-filter: blur(18px);
+      transition: box-shadow 0.25s ease, background 0.25s ease;
+    }
+
+    .site-nav.is-scrolled {
+      background: rgba(255, 253, 248, 0.96);
+      box-shadow: 0 12px 34px rgba(51, 18, 10, 0.08);
+    }
+
+    .nav-inner {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 78px;
+      gap: 24px;
+    }
+
+    .nav-logo {
+      display: inline-flex;
+      align-items: center;
+      min-width: 142px;
+    }
+
+    .nav-logo img {
+      width: auto;
+      height: 46px;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .nav-link {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      min-height: 42px;
+      padding: 0 12px;
+      border-radius: var(--radius);
+      color: #5f4e46;
+      font-size: 14px;
+      font-weight: 800;
+      transition: color 0.2s ease, background 0.2s ease;
+    }
+
+    .nav-link:hover,
+    .nav-link.is-active {
+      background: rgba(239, 23, 3, 0.08);
+      color: var(--red);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-order {
+      min-height: 44px;
+      padding: 12px 16px;
+      font-size: 14px;
+    }
+
+    .menu-toggle,
+    .menu-close {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius);
+      background: rgba(239, 23, 3, 0.08);
+      color: var(--red);
+    }
+
+    .menu-toggle {
+      flex: 0 0 auto;
+      display: inline-flex !important;
+      position: fixed;
+      right: auto;
+      left: calc(min(100vw, 390px) - 62px);
+      top: 16px;
+      width: 46px;
+      height: 46px;
+      transform: none;
+      background: var(--red);
+      color: #fff;
+      box-shadow: 0 12px 28px rgba(239, 23, 3, 0.22);
+    }
+
+    @media (min-width: 1101px) {
+      .menu-toggle {
+        display: none !important;
+      }
+    }
+
+    @media (min-width: 561px) and (max-width: 1100px) {
+      .menu-toggle {
+        right: 20px;
+        left: auto;
+      }
+    }
+
+    .mobile-panel {
+      position: fixed;
+      inset: 0;
+      z-index: 110;
+      display: flex;
+      flex-direction: column;
+      min-height: 100dvh;
+      padding: 22px;
+      overflow-y: auto;
+      background:
+        linear-gradient(140deg, rgba(239, 23, 3, 0.92), rgba(53, 18, 13, 0.98) 55%),
+        radial-gradient(circle at 85% 12%, rgba(253, 225, 4, 0.28), transparent 22rem);
+      color: #fff;
+      transform: translateX(100%);
+      transition: transform 0.45s cubic-bezier(0.19, 1, 0.22, 1);
+      visibility: hidden;
+    }
+
+    .mobile-panel .menu-close {
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      background: rgba(255, 255, 255, 0.14);
+      color: #fff;
+    }
+
+    .mobile-panel.is-open {
+      transform: translateX(0);
+      visibility: visible;
+    }
+
+    .mobile-panel-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .mobile-panel-head img {
+      height: 56px;
+      width: auto;
+      padding: 8px;
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.92);
+    }
+
+    .mobile-menu-links {
+      display: grid;
+      gap: 10px;
+      margin: 48px 0 28px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .mobile-menu-links a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 58px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+      color: #fff;
+      font-family: var(--font-heading);
+      font-size: clamp(1.65rem, 9vw, 2.8rem);
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .mobile-menu-links a span {
+      font-size: 26px;
+      color: var(--yellow);
+    }
+
+    .mobile-order {
+      width: 100%;
+      background: var(--yellow);
+      color: var(--deep);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .mobile-powered {
+      margin-top: auto;
+      padding-top: 28px;
+      color: rgba(255, 255, 255, 0.76);
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .mobile-powered a,
+    .dekat-link {
+      color: var(--yellow);
+      font-weight: 900;
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
+    }
+
+    .hero {
+      min-height: calc(100svh - 78px);
+      display: grid;
+      align-items: center;
+      overflow: hidden;
+      background: var(--ink);
+      isolation: isolate;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: -3;
+    }
+
+    .hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.04);
+      animation: heroZoom 14s ease-in-out infinite alternate;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background:
+        linear-gradient(90deg, rgba(22, 11, 8, 0.86) 0%, rgba(22, 11, 8, 0.48) 44%, rgba(22, 11, 8, 0.18) 100%),
+        linear-gradient(0deg, rgba(22, 11, 8, 0.72) 0%, rgba(22, 11, 8, 0.18) 48%, rgba(22, 11, 8, 0.08) 100%);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      z-index: -1;
+      height: 34%;
+      background: linear-gradient(180deg, transparent, rgba(239, 23, 3, 0.24));
+    }
+
+    .hero-inner {
+      display: grid;
+      gap: 22px;
+      padding: clamp(56px, 9vh, 88px) 0 clamp(42px, 7vh, 64px);
+      transform: translateY(-3vh);
+    }
+
+    .hero-copy {
+      max-width: 640px;
+      color: #fff;
+      text-align: left;
+    }
+
+    .hero-copy h1 {
+      margin: 0 0 16px;
+      font-family: var(--font-heading);
+      font-size: clamp(2.15rem, 5vw, 4.8rem);
+      line-height: 1.03;
+      font-weight: 900;
+    }
+
+    .hero-highlight {
+      display: inline;
+      color: #fff;
+      padding-inline: 0.04em;
+      background-image: url("data:image/svg+xml,%3Csvg width='220' height='18' viewBox='0 0 220 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 11.5C23 5.8 41 14.6 62 9.2C85 3.3 106 14.8 129 9.8C151 5 171 12.8 194 8.4C202 6.9 210 7.2 216 8.8' stroke='%23FDE104' stroke-width='5' stroke-linecap='round'/%3E%3Cpath d='M6 13.7C35 10.1 54 12.8 79 11.2C103 9.7 126 13.1 151 10.5C176 8 196 10.3 216 9.6' stroke='%23F58F0B' stroke-width='3' stroke-linecap='round' opacity='0.85'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-size: 100% 0.24em;
+      background-position: 0 96%;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+      text-shadow: 0 3px 22px rgba(0, 0, 0, 0.42);
+    }
+
+    .hero-copy p {
+      margin: 0;
+      max-width: 570px;
+      color: rgba(255, 255, 255, 0.88);
+      font-size: clamp(1rem, 1.6vw, 1.18rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: flex-start;
+      margin-top: 24px;
+    }
+
+    .hero-proof {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .proof-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      min-height: 42px;
+      padding: 10px 13px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff;
+      backdrop-filter: blur(10px);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .proof-chip span {
+      color: var(--yellow);
+      font-size: 20px;
+    }
+
+    .scroll-cue {
+      position: absolute;
+      right: max(28px, calc((100vw - var(--container)) / 2));
+      bottom: 34px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 46px;
+      height: 46px;
+      border: 1px solid rgba(255, 255, 255, 0.34);
+      border-radius: 50%;
+      color: #fff;
+      animation: cueBounce 1.8s ease-in-out infinite;
+    }
+
+    .partners {
+      min-height: 560px;
+      display: grid;
+      align-items: center;
+      overflow: hidden;
+      background: transparent;
+    }
+
+    .partners-head {
+      display: grid;
+      justify-items: center;
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .partner-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .partner-card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 150px;
+      padding: 12px;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+      transition: transform 0.3s ease;
+    }
+
+    .partner-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .partner-card img {
+      width: 100%;
+      height: 112px;
+      object-fit: contain;
+      opacity: 0.78;
+      filter: brightness(0.52) contrast(1.16);
+      transition: opacity 0.3s ease, filter 0.3s ease, transform 0.3s ease;
+    }
+
+    .partner-card:hover img {
+      opacity: 1;
+      filter: brightness(0.45) contrast(1.2);
+      transform: scale(1.04);
+    }
+
+    .story {
+      background: var(--paper);
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.02fr) minmax(320px, 0.98fr);
+      gap: 54px;
+      align-items: center;
+    }
+
+    .story-media {
+      position: relative;
+      overflow: hidden;
+      min-height: 520px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-strong);
+    }
+
+    .story-media img {
+      width: 100%;
+      height: 100%;
+      min-height: 520px;
+      object-fit: cover;
+      transition: transform 0.7s ease;
+    }
+
+    .story-media:hover img {
+      transform: scale(1.04);
+    }
+
+    .story-badge {
+      position: absolute;
+      left: 20px;
+      bottom: 20px;
+      display: grid;
+      gap: 4px;
+      width: min(270px, calc(100% - 40px));
+      padding: 16px;
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 16px 40px rgba(33, 24, 21, 0.16);
+    }
+
+    .story-badge strong {
+      color: var(--red);
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      line-height: 1;
+    }
+
+    .story-badge span {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .story-text {
+      display: grid;
+      gap: 22px;
+    }
+
+    .story-text p {
+      margin: 0;
+      color: #625149;
+      font-family: var(--font-accent);
+      font-size: 1.02rem;
+    }
+
+    .story-points {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .story-point {
+      display: grid;
+      gap: 8px;
+      padding: 15px;
+      border: 1px solid rgba(234, 217, 200, 0.9);
+      border-radius: var(--radius);
+      background: #fff;
+      color: var(--brown);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .story-point span {
+      color: var(--red);
+    }
+
+    .products {
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 90% 6%, rgba(245, 143, 11, 0.12), transparent 26rem),
+        linear-gradient(180deg, #fff8eb 0%, #fffdf8 100%);
+    }
+
+    .products-head {
+      display: grid;
+      grid-template-columns: minmax(0, 0.8fr) minmax(280px, 0.42fr);
+      gap: 28px;
+      align-items: end;
+      margin-bottom: 44px;
+    }
+
+    .products-note {
+      padding: 18px;
+      border-left: 4px solid var(--red);
+      border-radius: var(--radius);
+      background: #fff;
+      color: var(--muted);
+      box-shadow: 0 14px 34px rgba(67, 25, 12, 0.08);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .category {
+      margin-top: 42px;
+    }
+
+    .category:first-of-type {
+      margin-top: 0;
+    }
+
+    .category-head {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 22px;
+    }
+
+    .category-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 54px;
+      height: 54px;
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, var(--red), var(--orange));
+      color: #fff;
+      box-shadow: 0 16px 34px rgba(239, 23, 3, 0.2);
+    }
+
+    .category-head h3 {
+      margin: 0;
+      color: var(--deep);
+      font-family: var(--font-heading);
+      font-size: clamp(1.55rem, 3vw, 2.2rem);
+      line-height: 1.1;
+    }
+
+    .category-head p {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .product-grid.drink-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      max-width: 780px;
+    }
+
+    .product-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      overflow: hidden;
+      border: 1px solid rgba(234, 217, 200, 0.9);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: var(--shadow);
+      transition: transform 0.32s ease, box-shadow 0.32s ease, border-color 0.32s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(239, 23, 3, 0.28);
+      box-shadow: var(--shadow-strong);
+    }
+
+    .product-media {
+      position: relative;
+      aspect-ratio: 1 / 0.82;
+      overflow: hidden;
+      background: #f4eadc;
+    }
+
+    .product-media::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 44%;
+      background: linear-gradient(180deg, transparent, rgba(33, 24, 21, 0.72));
+      opacity: 0.72;
+      transition: opacity 0.3s ease;
+    }
+
+    .product-card:hover .product-media::after {
+      opacity: 0.92;
+    }
+
+    .product-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s ease;
+    }
+
+    .product-card:hover .product-media img {
+      transform: scale(1.08);
+    }
+
+    .product-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      z-index: 2;
+      padding: 7px 10px;
+      border-radius: var(--radius);
+      background: var(--yellow);
+      color: var(--deep);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .product-content {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      gap: 14px;
+      padding: 18px;
+    }
+
+    .product-card h4 {
+      margin: 0;
+      color: var(--deep);
+      font-family: var(--font-heading);
+      font-size: 1.42rem;
+      line-height: 1.15;
+    }
+
+    .product-card p {
+      margin: 0;
+      color: #6e5d55;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .product-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: auto;
+    }
+
+    .product-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      min-height: 30px;
+      padding: 6px 9px;
+      border-radius: var(--radius);
+      background: var(--soft);
+      color: #6a3b2d;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .product-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 6px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(234, 217, 200, 0.86);
+    }
+
+    .price {
+      display: grid;
+      gap: 2px;
+      color: var(--red);
+      font-weight: 900;
+      line-height: 1.05;
+    }
+
+    .price small {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .product-order {
+      min-height: 42px;
+      padding: 11px 13px;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .testimonials {
+      background: var(--paper);
+      overflow: hidden;
+    }
+
+    .testimonial-head {
+      display: grid;
+      grid-template-columns: minmax(0, 0.78fr) minmax(280px, 0.42fr);
+      gap: 28px;
+      align-items: end;
+      margin-bottom: 34px;
+    }
+
+    .trust-strip {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .trust-item {
+      min-height: 92px;
+      padding: 16px;
+      border: 1px solid rgba(234, 217, 200, 0.9);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: 0 12px 30px rgba(67, 25, 12, 0.07);
+    }
+
+    .trust-item strong {
+      display: block;
+      color: var(--red);
+      font-family: var(--font-heading);
+      font-size: 1.7rem;
+      line-height: 1;
+    }
+
+    .trust-item span {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .testimonial-card {
+      position: relative;
+      overflow: hidden;
+      min-height: 340px;
+      padding: 24px;
+      border: 1px solid rgba(234, 217, 200, 0.9);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-7px);
+      box-shadow: var(--shadow-strong);
+    }
+
+    .testimonial-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 7px;
+      background: linear-gradient(90deg, var(--red), var(--orange), var(--yellow));
+    }
+
+    .quote-mark {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      margin-top: 10px;
+      border-radius: var(--radius);
+      background: rgba(239, 23, 3, 0.09);
+      color: var(--red);
+    }
+
+    .stars {
+      display: flex;
+      gap: 2px;
+      margin: 18px 0 16px;
+      color: var(--orange);
+    }
+
+    .stars span {
+      font-size: 19px;
+    }
+
+    .testimonial-card p {
+      margin: 0;
+      color: #5c4a43;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .customer {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(234, 217, 200, 0.82);
+    }
+
+    .customer-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      flex: 0 0 auto;
+      border-radius: 50%;
+      color: #fff;
+      background: linear-gradient(135deg, var(--red), var(--orange));
+      box-shadow: 0 12px 26px rgba(239, 23, 3, 0.18);
+    }
+
+    .customer-icon.green {
+      background: linear-gradient(135deg, var(--green), #7a9b42);
+    }
+
+    .customer-icon.gold {
+      background: linear-gradient(135deg, var(--orange), #b6631a);
+    }
+
+    .customer-icon span {
+      font-size: 31px;
+    }
+
+    .customer strong {
+      display: block;
+      color: var(--deep);
+      font-size: 14px;
+      line-height: 1.2;
+    }
+
+    .customer small {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .locations {
+      overflow: hidden;
+      background:
+        linear-gradient(180deg, #fff8eb 0%, #fffdf8 100%);
+    }
+
+    .locations-head {
+      display: grid;
+      grid-template-columns: minmax(0, 0.78fr) minmax(280px, 0.42fr);
+      gap: 30px;
+      align-items: end;
+      margin-bottom: 34px;
+    }
+
+    .location-proof {
+      display: grid;
+      gap: 10px;
+      padding: 18px;
+      border-radius: var(--radius);
+      background: var(--deep);
+      color: #fff;
+      box-shadow: 0 20px 50px rgba(53, 18, 13, 0.18);
+    }
+
+    .location-proof-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: rgba(255, 255, 255, 0.86);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .location-proof-item span {
+      color: var(--yellow);
+      font-size: 20px;
+    }
+
+    .special-location-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+      margin-bottom: 22px;
+    }
+
+    .location-special {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      min-height: 360px;
+      padding: 24px;
+      border-radius: var(--radius);
+      background:
+        linear-gradient(145deg, rgba(53, 18, 13, 0.94), rgba(168, 15, 5, 0.88)),
+        linear-gradient(135deg, var(--red), var(--orange));
+      color: #fff;
+      box-shadow: var(--shadow-strong);
+      isolation: isolate;
+    }
+
+    .location-special::before {
+      content: "";
+      position: absolute;
+      inset: -20% -10% auto auto;
+      width: 230px;
+      height: 230px;
+      border-radius: 50%;
+      background: rgba(253, 225, 4, 0.22);
+      filter: blur(8px);
+      z-index: -1;
+      animation: softPulse 4s ease-in-out infinite;
+    }
+
+    .location-special.hero-market {
+      background:
+        linear-gradient(145deg, rgba(33, 24, 21, 0.94), rgba(39, 100, 76, 0.86)),
+        linear-gradient(135deg, var(--green), var(--orange));
+    }
+
+    .location-brand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: min(280px, 100%);
+      height: 116px;
+      min-height: 0;
+      margin-bottom: 24px;
+      padding: 14px 16px;
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.92);
+      box-shadow: 0 18px 44px rgba(0, 0, 0, 0.18);
+    }
+
+    .location-brand.airport-logo {
+      width: min(320px, 100%);
+    }
+
+    .location-brand.hero-logo {
+      width: min(260px, 100%);
+    }
+
+    .location-brand img {
+      width: 100%;
+      height: 100%;
+      max-height: 90px;
+      object-fit: contain;
+    }
+
+    .location-brand span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 70px;
+      color: var(--brown);
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 800;
+      text-align: center;
+    }
+
+    .location-special .tag {
+      display: inline-flex;
+      margin-bottom: 12px;
+      padding: 7px 10px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--yellow);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .location-special h3 {
+      margin: 0;
+      max-width: 520px;
+      font-family: var(--font-heading);
+      font-size: clamp(1.7rem, 3.2vw, 2.65rem);
+      line-height: 1.04;
+    }
+
+    .location-special p {
+      margin: 14px 0 22px;
+      max-width: 560px;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .location-special .btn {
+      align-self: flex-start;
+      margin-top: auto;
+      background: #fff;
+      color: var(--deep);
+    }
+
+    .branch-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .branch-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 250px;
+      padding: 20px;
+      border: 1px solid rgba(234, 217, 200, 0.92);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .branch-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-strong);
+    }
+
+    .branch-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 46px;
+      height: 46px;
+      margin-bottom: 18px;
+      border-radius: var(--radius);
+      background: var(--soft);
+      color: var(--red);
+    }
+
+    .branch-card h3 {
+      margin: 0 0 10px;
+      color: var(--deep);
+      font-family: var(--font-heading);
+      font-size: 1.55rem;
+      line-height: 1.12;
+    }
+
+    .branch-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .branch-card .btn {
+      width: 100%;
+      margin-top: auto;
+      background: var(--soft);
+      color: var(--red);
+      box-shadow: none;
+    }
+
+    .faq {
+      background: var(--paper);
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: minmax(280px, 0.42fr) minmax(0, 0.76fr);
+      gap: 34px;
+      align-items: start;
+    }
+
+    .faq-panel {
+      position: sticky;
+      top: 104px;
+      padding: 24px;
+      border-radius: var(--radius);
+      background:
+        linear-gradient(145deg, var(--deep), #7b1409 58%, var(--red));
+      color: #fff;
+      box-shadow: var(--shadow-strong);
+      overflow: hidden;
+    }
+
+    .faq-panel::after {
+      content: "";
+      position: absolute;
+      inset: auto -60px -70px auto;
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      background: rgba(253, 225, 4, 0.24);
+    }
+
+    .faq-panel h2 {
+      margin: 0 0 14px;
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 3vw, 3rem);
+      line-height: 1.05;
+    }
+
+    .faq-panel p {
+      margin: 0 0 22px;
+      color: rgba(255, 255, 255, 0.84);
+    }
+
+    .faq-panel .btn {
+      background: var(--yellow);
+      color: var(--deep);
+      position: relative;
+      z-index: 1;
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .faq-item {
+      border: 1px solid rgba(234, 217, 200, 0.92);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: 0 10px 28px rgba(67, 25, 12, 0.06);
+      overflow: hidden;
+    }
+
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      min-height: 70px;
+      padding: 18px 20px;
+      color: var(--deep);
+      font-weight: 900;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary span {
+      flex: 0 0 auto;
+      color: var(--red);
+      transition: transform 0.25s ease;
+    }
+
+    .faq-item[open] summary {
+      background: var(--soft);
+    }
+
+    .faq-item[open] summary span {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      padding: 0 20px 20px;
+      color: #66564e;
+      font-size: 15px;
+    }
+
+    .cta {
+      overflow: hidden;
+      padding: 86px 0;
+      background:
+        linear-gradient(110deg, rgba(53, 18, 13, 0.98), rgba(168, 15, 5, 0.96), rgba(245, 143, 11, 0.94));
+      color: #fff;
+      isolation: isolate;
+    }
+
+    .cta::before {
+      content: "";
+      position: absolute;
+      inset: -40% auto -40% -20%;
+      width: 42%;
+      background: linear-gradient(90deg, transparent, rgba(253, 225, 4, 0.24), transparent);
+      transform: rotate(12deg);
+      animation: shimmer 5.8s ease-in-out infinite;
+      z-index: -1;
+    }
+
+    .cta::after {
+      content: "";
+      position: absolute;
+      inset: auto -80px -110px auto;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: rgba(253, 225, 4, 0.19);
+      filter: blur(4px);
+      animation: softPulse 4.5s ease-in-out infinite;
+      z-index: -1;
+    }
+
+    .cta-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 0.82fr) auto;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .cta h2 {
+      margin: 0 0 12px;
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 4vw, 4rem);
+      line-height: 1.02;
+    }
+
+    .cta p {
+      margin: 0;
+      max-width: 680px;
+      color: rgba(255, 255, 255, 0.86);
+      font-size: 1.05rem;
+    }
+
+    .cta-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: flex-end;
+    }
+
+    .cta .btn-light {
+      border-color: #fff;
+      background: #fff;
+      color: var(--deep);
+    }
+
+    .cta .btn-ghost {
+      border-color: rgba(255, 255, 255, 0.48);
+    }
+
+    .footer {
+      padding: 76px 0 26px;
+      background: #1c110e;
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: minmax(260px, 1.2fr) repeat(3, minmax(0, 0.7fr));
+      gap: 32px;
+      align-items: start;
+    }
+
+    .footer-logo {
+      width: min(240px, 100%);
+      padding: 12px;
+      border-radius: var(--radius);
+      background: #fff;
+      margin-bottom: 18px;
+    }
+
+    .footer-brand p {
+      max-width: 360px;
+      margin: 0;
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    .footer h3 {
+      margin: 0 0 15px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .footer ul {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .footer a:not(.dekat-link) {
+      color: rgba(255, 255, 255, 0.72);
+      transition: color 0.2s ease;
+    }
+
+    .footer a:not(.dekat-link):hover {
+      color: var(--yellow);
+    }
+
+    .footer-partners {
+      display: grid;
+      gap: 16px;
+      align-items: start;
+      justify-items: start;
+    }
+
+    .footer-partners img {
+      width: auto;
+      height: var(--footer-partner-height, 34px);
+      max-width: min(100%, var(--footer-partner-max-width, 136px));
+      max-height: none;
+      object-fit: contain;
+      padding: 0;
+      border-radius: 0;
+      background: transparent;
+    }
+
+    .footer-partner-dekat {
+      --footer-partner-height: 36px;
+      --footer-partner-max-width: 120px;
+    }
+
+    .footer-partner-rumah {
+      --footer-partner-height: 54px;
+      --footer-partner-max-width: 110px;
+    }
+
+    .footer-partner-bri {
+      --footer-partner-height: 30px;
+      --footer-partner-max-width: 136px;
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      margin-top: 52px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      color: rgba(255, 255, 255, 0.68);
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .footer-bottom p {
+      width: 100%;
+      margin: 0;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.72s ease, transform 0.72s ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .stagger > * {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.58s ease, transform 0.58s ease;
+    }
+
+    .stagger.is-visible > * {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .stagger.is-visible > *:nth-child(2) {
+      transition-delay: 0.08s;
+    }
+
+    .stagger.is-visible > *:nth-child(3) {
+      transition-delay: 0.16s;
+    }
+
+    .stagger.is-visible > *:nth-child(4) {
+      transition-delay: 0.24s;
+    }
+
+    .stagger.is-visible > *:nth-child(5) {
+      transition-delay: 0.32s;
+    }
+
+    @keyframes heroZoom {
+      from {
+        transform: scale(1.04);
+      }
+
+      to {
+        transform: scale(1.1);
+      }
+    }
+
+    @keyframes cueBounce {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(8px);
+      }
+    }
+
+    @keyframes softPulse {
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 0.8;
+      }
+
+      50% {
+        transform: scale(1.12);
+        opacity: 0.45;
+      }
+    }
+
+    @keyframes shimmer {
+      0% {
+        transform: translateX(-40%) rotate(12deg);
+      }
+
+      55%,
+      100% {
+        transform: translateX(360%) rotate(12deg);
+      }
+    }
+
+    @media (max-width: 1100px) {
+      .nav-links,
+      .nav-actions .nav-order {
+        display: none;
+      }
+
+      .menu-toggle,
+      .menu-close {
+        display: inline-flex !important;
+      }
+
+      .menu-toggle {
+        position: fixed;
+        right: auto;
+        left: calc(min(100vw, 390px) - 62px);
+        top: 16px;
+        z-index: 2;
+        width: 46px;
+        height: 46px;
+        transform: none;
+      }
+
+      .story-grid,
+      .products-head,
+      .testimonial-head,
+      .locations-head,
+      .faq-grid,
+      .cta-inner,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .faq-panel {
+        position: relative;
+        top: auto;
+      }
+
+      .cta-actions {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .section-pad {
+        padding: 74px 0;
+      }
+
+      .container {
+        width: min(100% - 28px, var(--container));
+      }
+
+      .hero {
+        min-height: calc(100svh - 70px);
+      }
+
+      .hero-inner {
+        padding: 68px 0 72px;
+        transform: none;
+      }
+
+      .scroll-cue {
+        right: 18px;
+        bottom: 22px;
+      }
+
+      .partner-grid,
+      .product-grid,
+      .product-grid.drink-grid,
+      .testimonial-grid,
+      .special-location-grid,
+      .branch-grid,
+      .trust-strip,
+      .story-points {
+        grid-template-columns: 1fr;
+      }
+
+      .partners {
+        min-height: auto;
+      }
+
+      .partner-card {
+        min-height: 150px;
+      }
+
+      .partner-card img {
+        height: 98px;
+      }
+
+      .story-media,
+      .story-media img {
+        min-height: 380px;
+      }
+
+      .product-footer {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .product-order {
+        width: 100%;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .footer-partner-dekat {
+        --footer-partner-height: 32px;
+        --footer-partner-max-width: 108px;
+      }
+
+      .footer-partner-rumah {
+        --footer-partner-height: 48px;
+        --footer-partner-max-width: 98px;
+      }
+
+      .footer-partner-bri {
+        --footer-partner-height: 28px;
+        --footer-partner-max-width: 126px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      body {
+        font-size: 15px;
+      }
+
+      .nav-inner {
+        min-height: 70px;
+      }
+
+      .nav-logo img {
+        height: 40px;
+      }
+
+      .hero {
+        min-height: calc(100dvh - 70px);
+      }
+
+      .hero-copy h1 {
+        max-width: 11.5em;
+        font-size: 2.08rem;
+        line-height: 1.04;
+      }
+
+      .hero-copy p {
+        max-width: 31em;
+      }
+
+      .hero-actions,
+      .cta-actions {
+        width: 100%;
+        flex-direction: column;
+      }
+
+      .hero-actions .btn,
+      .cta-actions .btn {
+        width: 100%;
+      }
+
+      .hero-proof {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+      }
+
+      .proof-chip {
+        width: 100%;
+      }
+
+      .section-kicker {
+        font-size: 11px;
+      }
+
+      .mobile-panel {
+        padding: 18px;
+      }
+
+      .location-special {
+        min-height: 340px;
+        padding: 20px;
+      }
+
+      .location-brand {
+        width: 100%;
+      }
+
+      .floating-whatsapp {
+        right: 16px;
+        bottom: 16px;
+        width: 54px;
+        height: 54px;
+      }
+
+      .floating-whatsapp .wa-icon {
+        width: 28px;
+        height: 28px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.001ms !important;
+      }
+    }
+  </style>
 </head>
 <body>
+  <svg aria-hidden="true" focusable="false" width="0" height="0" style="position:absolute;overflow:hidden">
+    <symbol id="icon-whatsapp" viewBox="0 0 24 24">
+      <path d="M20.52 3.48A11.86 11.86 0 0 0 12.07 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.15 1.6 5.96L.06 24l6.3-1.65a11.86 11.86 0 0 0 5.7 1.45h.01c6.56 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.17-3.45-8.42ZM12.07 21.8h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.74.98 1-3.64-.24-.38a9.84 9.84 0 0 1-1.52-5.27c0-5.46 4.45-9.9 9.92-9.9a9.86 9.86 0 0 1 7 2.9 9.84 9.84 0 0 1 2.9 7c0 5.46-4.45 9.9-9.91 9.9Zm5.43-7.42c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47a8.9 8.9 0 0 1-1.64-2.04c-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.62.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2-1.41.25-.7.25-1.3.18-1.42-.08-.13-.27-.2-.57-.35Z" />
+    </symbol>
+  </svg>
 
-<section class="lokasi-section">
-    <div class="section-header">
-        <div class="subtitle">LOKASI KAMI</div>
-        <h2 class="text-3xl md:text-[36px] tracking-wide font-serif font-bold text-[#5C3A21] mb-3">Datang dan Lihat Produk <span class="text-[#8B2C1A]">Secara Langsung</span></h2>
-        <p class="section-desc">Produk Mulkan Mimba'un tersedia di berbagai lokasi strategis</p>
-    </div>
+  <div class="scroll-progress" aria-hidden="true"></div>
 
-    <div class="cards-container">
-        
-        <div class="row-top">
-            <div class="card">
-                <div>
-                    <div class="card-header">
-                        <div class="icon-circle">
-                            <span class="material-symbols-outlined text-white text-2xl">flight</span>
-                        </div>
-                        <h3>Bandara Sultan Hasanuddin</h3>
-                    </div>
-                    <p>Cari Produk kami di area keberangkatan Bandara Sultan Hasanuddin. Pilihan praktis untuk oleh -oleh sebelum terbang</p>
-                </div>
-                <a href="https://www.google.com/maps/place/Bandar+Udara+Internasional+Sultan+Hasanuddin/@-5.0777016,119.5467395,17z/data=!3m1!4b1!4m6!3m5!1s0x2dbefbcebbcac701:0xf030bfcad763610!8m2!3d-5.0777069!4d119.5493144!16s%2Fm%2F02pkf8y!5m2!1e4!1e1?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" 
-                class="btn-shop">Klik Disini</a>
-            </div>
+  <a class="floating-whatsapp" href="https://wa.me/6282293648411?text=Halo%20Admin%2C%20saya%20ingin%20bertanya%20tentang%20produk%20Mulkan%20Mimba%27un.%0A%0APesan%20ini%20dikirim%20melalui%20website%20Mulkan%20Mimba%27un%20Powered%20by%20DekatLokal." target="_blank" rel="noopener noreferrer" aria-label="Hubungi Mulkan Mimba'un via WhatsApp">
+    <svg class="wa-icon" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
+  </a>
 
-            <div class="card">
-                <div>
-                    <div class="card-header">
-                        <div class="icon-circle">
-                            <span class="material-symbols-outlined text-white text-2xl">shopping_bag</span>
-                        </div>
-                        <h3>Hero Supermarket</h3>
-                    </div>
-                    <p>Kini produk Mulkan Mimba'un makin mudah ditemukan di deretan rak Hero Supermarket di kota Anda.</p>
-                </div>
-              <div>
-                <a href="https://www.google.com/maps/place/HERO/@-5.15318,119.3983185,15z/data=!4m10!1m2!2m1!1shero+supermarket!3m6!1s0x2dbf1d587ab85b21:0x7a5f9ceb5a38a7ad!8m2!3d-5.15318!4d119.4173729!15sChBoZXJvIHN1cGVybWFya2V0WhIiEGhlcm8gc3VwZXJtYXJrZXSSAQtzdXBlcm1hcmtldOABAA!16s%2Fg%2F1ptvvhfqj!5m2!1e4!1e1?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="btn-shop">Klik Disini</a>
-              </div>
-            </div>
-        </div>
-
-        <div class="row-bottom">
-            <div class="card">
-                <div>
-                    <div class="card-header">
-                        <div class="icon-small">📍</div>
-                        <h3>Makassar (Pusat)</h3>
-                    </div>
-                    <p>Tersedia diseluruh Outlet Roti dan Brownies Daeng Makassar. Kunjungi toko pusat kami untuk varian terlengkap dan pelayanan langsung.</p>
-                </div>
-                <a href="https://www.google.com/maps/search/roti+daeng/@-5.1324351,119.3660223,13z/data=!3m1!4b1!5m2!1e4!1e1?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="btn-shop">Klik Disini</a>
-            </div>
-
-            <div class="card">
-              <div>
-                <div class="card-header">
-                  <div class="icon-small">📍</div>
-                  <h3>Tanggerang</h3>
-                </div>
-                <p>Tersedia Outlet Roti dan Brownies Daeng Ciledug. Kunjungi toko kami untuk varian terlengkap dan pelayanan langsung.</p>
-              </div>
-              <a href="https://www.google.com/maps/place/Roti+%26+Brownies+Daeng+-+Ciledug/@-6.2352895,106.7142551,17z/data=!3m1!4b1!4m6!3m5!1s0x2e69fbf092b139ff:0x35596934e5d5fdd5!8m2!3d-6.2352949!4d106.719126!16s%2Fg%2F11npbh8f40!5m2!1e4!1e1?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="btn-shop">Klik Disini</a>
-            </div>
-
-            <div class="card">
-                <div>
-                    <div class="card-header">
-                        <div class="icon-small">📍</div>
-                        <h3>Surabaya</h3>
-                    </div>
-                    <p>Tersedia di Shopee. Kunjungi toko online kami untuk varian terlengkap dan pelayanan online.</p>
-                </div>
-                <a href="https://shopee.co.id/Abon-Panggang-Tuna-Abon-Ikan-Tanpa-Proses-Goreng-Non-Kolesterol-i.2076328.19578323405?extraParams=%7B%22display_model_id%22%3A204195671360%2C%22model_selection_logic%22%3A3%7D&sp_atk=1f532cef-31b5-48d1-ad65-e614f2245171&xptdk=1f532cef-31b5-48d1-ad65-e614f2245171" target="_blank" rel="noopener noreferrer" class="btn-shop">Klik Disini</a>
-            </div>
-        </div>
-
-    </div>
-</section>
-<!-- ─── FAQ ─── -->
-<section id="faq" class="py-20 bg-[#FAFAF6]">
-  <div class="max-w-6xl mx-auto px-margin-mobile md:px-margin-desktop">
-    <div class="text-center md:text-left mb-12">
-      <div class="text-sm uppercase tracking-[0.35em] text-[#8C5A36] font-semibold mb-3">FAQ</div>
-      <h2 class="text-3xl md:text-[40px] font-serif font-bold text-[#5C3A21] leading-tight mb-4">
-        Ada pertanyaan? Temukan jawaban cepat di sini.
-      </h2>
-      <p class="max-w-2xl mx-auto md:mx-0 text-[#736A62] text-sm md:text-base leading-relaxed">
-        Kami siap membantu setiap kebutuhan Anda. Jika belum menemukan jawaban, silakan hubungi kami langsung via WhatsApp.
-      </p>
-      <a href="https://wa.me/6282293648411" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center mt-6 rounded-full bg-[#963023] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[#963023]/10 hover:bg-[#7e231c] transition-colors duration-300">
-        Tanya via WhatsApp
+  <nav class="site-nav" aria-label="Navigasi utama">
+    <div class="container nav-inner">
+      <a class="nav-logo" href="#home" aria-label="Mulkan Mimba'un">
+        <img src="Asset/Logo-Mulkan.Mimba'un.png" alt="Mulkan Mimba'un" />
       </a>
-    </div>
 
-    <div class="grid gap-2">
-      <details class="group rounded-[20px] border border-[#E2D8D0] bg-white shadow-sm transition-shadow duration-300 hover:shadow-md" open>
-        <summary class="flex cursor-pointer items-center justify-between gap-2 p-3 text-sm font-semibold text-[#4A2E1B] select-none">
-          Bagaimana cara memesan produk Mulkan Mimba'un?
-          <span class="text-xl text-[#963023] transition-transform duration-300 group-open:-rotate-180">▾</span>
-        </summary>
-        <div class="border-t border-[#F1ECE6] px-3 py-2 text-sm text-[#5F534B] leading-relaxed">
-          Anda bisa memesan melalui WhatsApp dan juga Shopee. Klik tombol "Beli Sekarang" yang tersedia di halaman ini untuk langsung terhubung.
-        </div>
-      </details>
+      <ul class="nav-links" id="desktop-menu">
+        <li><a class="nav-link is-active" href="#home">Beranda</a></li>
+        <li><a class="nav-link" href="#mitra">Mitra</a></li>
+        <li><a class="nav-link" href="#tentangkami">Tentang Kami</a></li>
+        <li><a class="nav-link" href="#produk">Produk</a></li>
+        <li><a class="nav-link" href="#lokasi">Lokasi</a></li>
+        <li><a class="nav-link" href="#faq">FAQ</a></li>
+      </ul>
 
-      <details class="group rounded-[20px] border border-[#E2D8D0] bg-white shadow-sm transition-shadow duration-300 hover:shadow-md">
-        <summary class="flex cursor-pointer items-center justify-between gap-2 p-3 text-sm font-semibold text-[#4A2E1B] select-none">
-          Apakah produk tersedia untuk pengiriman ke luar kota?
-          <span class="text-xl text-[#963023] transition-transform duration-300 group-open:-rotate-180">▾</span>
-        </summary>
-        <div class="border-t border-[#F1ECE6] px-3 py-2 text-sm text-[#5F534B] leading-relaxed">
-          Ya! Kami melayani pengiriman ke seluruh Indonesia. Produk dikemas dengan aman menggunakan packaging yang tahan lama sehingga tetap dalam kondisi prima saat tiba di tangan Anda.
-        </div>
-      </details>
-
-      <details class="group rounded-[20px] border border-[#E2D8D0] bg-white shadow-sm transition-shadow duration-300 hover:shadow-md">
-        <summary class="flex cursor-pointer items-center justify-between gap-2 p-3 text-sm font-semibold text-[#4A2E1B] select-none">
-          Apakah produk menggunakan bahan pengawet?
-          <span class="text-xl text-[#963023] transition-transform duration-300 group-open:-rotate-180">▾</span>
-        </summary>
-        <div class="border-t border-[#F1ECE6] px-3 py-2 text-sm text-[#5F534B] leading-relaxed">
-          Produk kami menggunakan bahan-bahan alami tanpa pengawet berbahaya. Kami berkomitmen menghadirkan produk yang sehat dan aman dikonsumsi oleh seluruh anggota keluarga.
-        </div>
-      </details>
-
-      <details class="group rounded-[20px] border border-[#E2D8D0] bg-white shadow-sm transition-shadow duration-300 hover:shadow-md">
-        <summary class="flex cursor-pointer items-center justify-between gap-2 p-3 text-sm font-semibold text-[#4A2E1B] select-none">
-          Berapa lama daya tahan produk?
-          <span class="text-xl text-[#963023] transition-transform duration-300 group-open:-rotate-180">▾</span>
-        </summary>
-        <div class="border-t border-[#F1ECE6] px-3 py-2 text-sm text-[#5F534B] leading-relaxed">
-          Setiap produk memiliki masa simpan yang tertera di kemasan. Umumnya produk abon dan keripik dapat bertahan 1-3 bulan dalam kondisi disimpan di tempat sejuk dan kering. Kopi bubuk dan coklat jahe bisa bertahan lebih lama.
-        </div>
-      </details>
-
-      <details class="group rounded-[20px] border border-[#E2D8D0] bg-white shadow-sm transition-shadow duration-300 hover:shadow-md">
-        <summary class="flex cursor-pointer items-center justify-between gap-2 p-3 text-sm font-semibold text-[#4A2E1B] select-none">
-          Apakah ada minimum pembelian?
-          <span class="text-xl text-[#963023] transition-transform duration-300 group-open:-rotate-180">▾</span>
-        </summary>
-        <div class="border-t border-[#F1ECE6] px-3 py-2 text-sm text-[#5F534B] leading-relaxed">
-          Tidak ada minimum pembelian untuk order reguler. Namun untuk pembelian dalam jumlah besar (grosir/reseller), kami memiliki harga khusus. Silakan hubungi kami untuk informasi lebih lanjut.
-        </div>
-      </details>
-
-      <details class="group rounded-[20px] border border-[#E2D8D0] bg-white shadow-sm transition-shadow duration-300 hover:shadow-md">
-        <summary class="flex cursor-pointer items-center justify-between gap-2 p-3 text-sm font-semibold text-[#4A2E1B] select-none">
-          Apakah produk sudah bersertifikat halal?
-          <span class="text-xl text-[#963023] transition-transform duration-300 group-open:-rotate-180">▾</span>
-        </summary>
-        <div class="border-t border-[#F1ECE6] px-3 py-2 text-sm text-[#5F534B] leading-relaxed">
-          Seluruh produk kami dibuat dengan bahan-bahan yang halal dan diproses sesuai standar keamanan pangan. Sertifikasi halal sedang dalam proses pengajuan resmi.
-        </div>
-      </details>
-    </div>
-  </div>
-</section>
-
-<!--CTA-->
-<section id="kemitraan" class="py-12 bg-gradient-to-r from-[#8C1C1C] via-[#2A0E0B] to-black">
-  <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center text-white">
-    <div class="max-w-2xl mx-auto flex flex-col items-center">
-      
-      <h2 class="text-3xl md:text-[40px] font-bold tracking-tight mb-5 font-sans leading-tight">
-        Saatnya Menikmati Kuliner Praktis, Sehat, & Bergizi!
-      </h2>
-      
-      <p class="text-white/85 text-base md:text-[17px] leading-relaxed font-sans mb-12 max-w-xl">
-        Jangan biarkan meja makan Anda sepi tanpa kehangatan dan kegurihan produk terbaik kami.
-      </p>
-      
-      <div class="flex flex-col sm:flex-row gap-6 justify-center items-center w-full sm:w-auto">
-        
-        <a 
-          href="#"
-          class="w-full sm:w-auto bg-[#F7B200] text-[#2A0E0B] font-semibold text-base px-10 py-3.5 rounded-xl shadow-md hover:bg-[#D4CFC5] transition-all duration-300 text-center font-sans"
-        >
-          Cari Toko Terdekat
+      <div class="nav-actions">
+        <a class="btn btn-primary nav-order" href="https://wa.me/6282293648411?text=Halo%20Admin%2C%20saya%20ingin%20order%20produk%20Mulkan%20Mimba%27un.%0A%0APesan%20ini%20dikirim%20melalui%20website%20Mulkan%20Mimba%27un%20Powered%20by%20DekatLokal." target="_blank" rel="noopener noreferrer">
+          <svg class="wa-icon" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
+          Order Sekarang
         </a>
-        
-        <a 
-          href="https://wa.me/6282293648411?text=Halo%20Admin%2C%20saya%20ingin%20mendaftar%20atau%20mendapatkan%20informasi%20lebih%20lanjut%20tentang%20program%20Mulkan%20Mimba%27un." 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          class="w-full sm:w-auto bg-[#2A0E0B] border-2 border-[#F7B200] text-[#F7B200] font-semibold text-base px-10 py-3.5 rounded-xl hover:bg-[#3B140F] transition-all duration-300 text-center font-sans"
-        >
-          Hubungi Admin
-        </a>
-      </div>
-      
-    </div>
-  </div>
-</section>
-<!-- Footer -->
-<footer class="bg-white text-[#4A2E1B] full-width pt-section-gap-md pb-8 flat no shadows">
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter grid grid-cols-1 md:grid-cols-4 gap-element-gap">
-<div class="mb-8 md:mb-0">
-<img src="Asset/Logo-Mulkan.Mimba'un.png" alt="Logo Mulkan Mimba'un" class="max-w-[220px] h-auto mb-4" />
-<p class="font-body-md text-[#6A544B]">Authentic Culinary Heritage</p>
-</div>
-<div>
-<h4 class="font-label-md text-label-md text-[#4A2E1B] mb-4 uppercase tracking-wider">Tautan Cepat</h4>
-<ul class="space-y-3 font-body-md text-[#6A544B]">
-<li><a class="text-[#6A544B] hover:text-[#8C1C1C] transition-colors" href="#Beranda">Beranda</a></li>
-<li><a class="text-[#6A544B] hover:text-[#8C1C1C] transition-colors" href="#tentangkami">Tentang Kami</a></li>
-<li><a class="text-[#6A544B] hover:text-[#8C1C1C] transition-colors" href="#produk">Produk</a></li>
-<li><a class="text-[#6A544B] hover:text-[#8C1C1C] transition-colors" href="#bantuan">Bantuan</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-label-md text-label-md text-[#4A2E1B] mb-4 uppercase tracking-wider">Dukungan</h4>
-<ul class="space-y-3 font-body-md text-[#6A544B]">
-<li><a class="text-[#6A544B] hover:text-[#8C1C1C] transition-colors" href="#bantuan">Pusat Bantuan FAQ</a></li>
-<li><a class="text-[#6A544B] hover:text-[#8C1C1C] transition-colors" href="#home">Kontak Kami</a></li>
-</ul>
-</div>
-<div>
-  <div class="flex flex-col items-start text-left max-w-[280px]">
-    <h4 class="font-label-md text-label-md text-[#4A2E1B] mb-4 uppercase tracking-wider">Mitra Kami</h4>
-
-    <div class="flex flex-col items-start gap-5 w-full">
-      <div class="h-9 opacity-80 hover:opacity-100 transition-opacity duration-200">
-        <img 
-          src="Asset/dekat-lokal.png" 
-          alt="Dekat Lokal" 
-          class="h-full w-auto object-contain object-left"
-        />
-      </div>
-
-      <div class="h-14 opacity-80 hover:opacity-100 transition-opacity duration-200">
-        <img 
-          src="Asset/rumah-bumn.png" 
-          alt="Rumah BUMN Makassar" 
-          class="h-full w-auto object-contain object-left"
-        />
-      </div>
-
-      <div class="h-8 opacity-80 hover:opacity-100 transition-opacity duration-200">
-        <img 
-          src="Asset/bank-bri.png" 
-          alt="Bank BRI" 
-          class="h-full w-auto object-contain object-left"
-        />
+        <button class="menu-toggle" type="button" aria-label="Buka menu" aria-controls="mobile-menu" aria-expanded="false">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
       </div>
     </div>
-  </div>
-</div>
-</div>
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter mt-16 pt-8 border-t border-[#E7E4E0] text-center">
-  <p class="font-body-md text-[#6A5B51]">© 2026 Mulkan Mimba'un. Semua hak cipta dilindungi undang-undang | Powered by Dekat Lokal</p>
-</div>
-</footer>
-<script>
-  window.addEventListener('load', function() {
-    document.body.classList.add('loaded');
-    const observer = new IntersectionObserver((entries, obs) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          obs.unobserve(entry.target);
-        }
-      });
-    }, {
-      threshold: 0.12
-    });
+  </nav>
 
-    document.querySelectorAll('header, section').forEach(el => {
-      el.classList.add('reveal');
-      observer.observe(el);
-    });
-  });
-  
-  // Navbar active state management
-  document.addEventListener('DOMContentLoaded', function() {
-    const navLinks = document.querySelectorAll('.nav-link');
-    
-    // Handle click on navbar links
-    navLinks.forEach(link => {
-      link.addEventListener('click', function(e) {
-        // Remove active class from all links
-        navLinks.forEach(l => {
-          l.classList.remove('active-nav', 'text-secondary', 'border-b-2', 'border-secondary');
-          l.classList.add('text-on-surface-variant');
+  <aside class="mobile-panel" id="mobile-menu" aria-hidden="true">
+    <div class="mobile-panel-head">
+      <img src="Asset/Logo-Mulkan.Mimba'un.png" alt="Mulkan Mimba'un" />
+      <button class="menu-close" type="button" aria-label="Tutup menu">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+
+    <ul class="mobile-menu-links">
+      <li><a href="#home">Beranda <span class="material-symbols-outlined">arrow_forward</span></a></li>
+      <li><a href="#mitra">Mitra <span class="material-symbols-outlined">arrow_forward</span></a></li>
+      <li><a href="#tentangkami">Tentang Kami <span class="material-symbols-outlined">arrow_forward</span></a></li>
+      <li><a href="#produk">Produk <span class="material-symbols-outlined">arrow_forward</span></a></li>
+      <li><a href="#lokasi">Lokasi <span class="material-symbols-outlined">arrow_forward</span></a></li>
+      <li><a href="#faq">FAQ <span class="material-symbols-outlined">arrow_forward</span></a></li>
+    </ul>
+
+    <a class="btn mobile-order" href="https://wa.me/6282293648411?text=Halo%20Admin%2C%20saya%20ingin%20order%20produk%20Mulkan%20Mimba%27un.%0A%0APesan%20ini%20dikirim%20melalui%20website%20Mulkan%20Mimba%27un%20Powered%20by%20DekatLokal." target="_blank" rel="noopener noreferrer">
+      <svg class="wa-icon" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
+      Order Sekarang
+    </a>
+
+    <p class="mobile-powered">Powered by <a href="https://dekatlokal.com" target="_blank" rel="noopener noreferrer">DekatLokal</a></p>
+  </aside>
+
+  <header class="hero" id="home">
+    <div class="hero-bg" aria-hidden="true">
+      <img src="Asset/hero-section2.png" alt="" />
+    </div>
+
+    <div class="container hero-inner">
+      <div class="hero-copy reveal">
+        <h1>Oleh-Oleh Khas Indonesia dengan <span class="hero-highlight">Rasa yang Lebih Berkelas</span></h1>
+        <p>Makanan dan minuman praktis dari bahan pilihan, dibuat untuk keluarga, perjalanan, dan hadiah dari daerah yang terasa hangat saat dibuka.</p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#produk">
+            <span class="material-symbols-outlined">storefront</span>
+            Lihat Produk
+          </a>
+          <a class="btn btn-ghost" href="https://wa.me/6282293648411?text=Halo%20Admin%2C%20saya%20ingin%20order%20produk%20Mulkan%20Mimba%27un.%0A%0APesan%20ini%20dikirim%20melalui%20website%20Mulkan%20Mimba%27un%20Powered%20by%20DekatLokal." target="_blank" rel="noopener noreferrer">
+            <svg class="wa-icon" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
+            Order via WhatsApp
+          </a>
+        </div>
+
+        <div class="hero-proof">
+          <span class="proof-chip"><span class="material-symbols-outlined fill">verified</span> Produk lokal premium</span>
+          <span class="proof-chip"><span class="material-symbols-outlined fill">workspace_premium</span> Cocok untuk oleh-oleh</span>
+          <span class="proof-chip"><span class="material-symbols-outlined fill">local_shipping</span> Bisa pesan jarak jauh</span>
+        </div>
+      </div>
+    </div>
+
+    <a class="scroll-cue" href="#mitra" aria-label="Scroll ke mitra">
+      <span class="material-symbols-outlined">keyboard_arrow_down</span>
+    </a>
+  </header>
+
+  <main>
+    <section class="partners section-pad" id="mitra">
+      <div class="container">
+        <div class="partners-head reveal">
+          <span class="section-kicker"><span class="material-symbols-outlined">handshake</span> Mitra Terpercaya</span>
+          <h2 class="section-title">Didukung Ekosistem yang Membuat Produk Lebih Dekat</h2>
+          <p class="section-desc">Mulkan Mimba'un tumbuh bersama mitra yang membantu produk lokal hadir lebih rapi, mudah ditemukan, dan dipercaya pelanggan.</p>
+        </div>
+
+        <div class="partner-grid stagger reveal">
+          <a class="partner-card" href="https://dekatlokal.com" target="_blank" rel="noopener noreferrer" aria-label="Dekat Lokal">
+            <img src="Asset/dekat-lokal.png" alt="Logo Dekat Lokal" />
+          </a>
+          <div class="partner-card">
+            <img src="Asset/rumah-bumn.png" alt="Logo Rumah BUMN" />
+          </div>
+          <div class="partner-card">
+            <img src="Asset/bank-bri.png" alt="Logo Bank BRI" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="story section-pad" id="tentangkami">
+      <div class="container story-grid">
+        <div class="story-media reveal">
+          <img src="Asset/cerita-kami.png" alt="Koleksi produk Mulkan Mimba'un" />
+          <div class="story-badge">
+            <strong>Sejak 2019</strong>
+            <span>Inovasi dari bahan laut dan pangan lokal</span>
+          </div>
+        </div>
+
+        <div class="story-text reveal">
+          <span class="section-kicker"><span class="material-symbols-outlined">auto_stories</span> Cerita Kami</span>
+          <h2 class="section-title">Dari Tantangan Menjadi Inovasi Dapur Lokal</h2>
+          <p>Perjalanan Mulkan Mimba'un bermula di masa pandemi saat aktivitas pasar ikan terhenti, meninggalkan hasil tangkapan laut lokal yang belum termanfaatkan maksimal. Dari kondisi itu lahir ide mengolah ikan menjadi produk bernilai, dimulai dari Abon Tuna Panggang.</p>
+          <p>Seiring waktu, Mulkan Mimba'un terus berkembang. Produk kami merambah ke Keripik Tempe, Otak-Otak Ikan, minuman coklat jahe, hingga kopi bubuk yang cocok untuk oleh-oleh maupun konsumsi harian.</p>
+
+          <div class="story-points stagger reveal">
+            <div class="story-point"><span class="material-symbols-outlined">restaurant</span> Rasa nusantara</div>
+            <div class="story-point"><span class="material-symbols-outlined">inventory_2</span> Kemasan praktis</div>
+            <div class="story-point"><span class="material-symbols-outlined">verified</span> Bahan pilihan</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="products section-pad" id="produk">
+      <div class="container">
+        <div class="products-head reveal">
+          <div>
+            <span class="section-kicker"><span class="material-symbols-outlined">bakery_dining</span> Produk Kami</span>
+            <h2 class="section-title">Oleh-Oleh Praktis untuk Dibawa, Dibagi, dan Dinikmati</h2>
+            <p class="section-desc">Pilih makanan dan minuman favorit, lalu hubungi admin untuk pemesanan langsung.</p>
+          </div>
+          <div class="products-note">Setiap produk dirancang agar mudah dibawa dalam perjalanan, cocok untuk stok rumah, hampers, dan hadiah khas daerah.</div>
+        </div>
+
+        <div class="category">
+          <div class="category-head reveal">
+            <div class="category-icon"><span class="material-symbols-outlined">restaurant</span></div>
+            <div>
+              <h3>Makanan</h3>
+              <p>Gurih, renyah, dan siap jadi teman makan atau camilan.</p>
+            </div>
+          </div>
+
+          <div class="product-grid stagger reveal">
+            <article class="product-card">
+              <div class="product-media">
+                <img src="Asset/abon-tuna-panggang.png" alt="Abon Tuna Panggang" />
+                <span class="product-badge">Best Seller</span>
+              </div>
+              <div class="product-content">
+                <h4>Abon Tuna Panggang</h4>
+                <p>Olahan ikan tuna segar pilihan yang dipanggang dengan rempah otentik nusantara. Seratnya lembut, rasanya gurih, dan tidak terasa berminyak.</p>
+                <div class="product-meta">
+                  <span><span class="material-symbols-outlined">local_fire_department</span> Panggang</span>
+                  <span><span class="material-symbols-outlined">lunch_dining</span> Lauk praktis</span>
+                </div>
+                <div class="product-footer">
+                  <div class="price"><small>Mulai dari</small>IDR 35.000</div>
+                  <a class="btn btn-dark product-order" href="https://wa.me/6282293648411?text=Halo%20Admin%2C%20saya%20tertarik%20membeli%20Abon%20Tuna%20Panggang.%0A%0APesan%20ini%20dikirim%20melalui%20website%20Mulkan%20Mimba%27un%20Powered%20by%20DekatLokal." target="_blank" rel="noopener noreferrer">
+                    <svg class="wa-icon" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
+                    Beli Sekarang
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-media">
+                <img src="Asset/keripik-tempe.png" alt="Keripik Tempe" />
+                <span class="product-badge">Renyah</span>
+              </div>
+              <div class="product-content">
+                <h4>Keripik Tempe</h4>
+                <p>Camilan tradisional yang naik kelas. Dibuat dari kedelai pilihan dengan proses fermentasi rapi untuk tekstur tipis dan kriuk yang ringan.</p>
+                <div class="product-meta">
+                  <span><span class="material-symbols-outlined">grain</span> Kedelai</span>
+                  <span><span class="material-symbols-outlined">takeout_dining</span> Camilan</span>
+                </div>
+                <div class="product-footer">
+                  <div class="price"><small>Mulai dari</small>IDR 15.000</div>
+                  <a class="btn btn-dark product-order" href="https://wa.me/6282293648411?text=Halo%20Admin%2C%20saya%20tertarik%20membeli%20Keripik%20Tempe.%0A%0APesan%20ini%20dikirim%20melalui%20website%20Mulkan%20Mimba%27un%20Powered%20by%20DekatLokal." target="_blank" rel="noopener noreferrer">
+                    <svg class="wa-icon" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
+                    Beli Sekarang
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-media">
+                <img src="Asset/otak-otak.png" alt="Otak-Otak Ikan" />
+                <span class="product-badge">Premium</span>
+              </div>
+              <div class="product-content">
+                <h4>Otak-Otak Ikan</h4>
+                <p>Otak-otak ikan dari bahan pilihan dengan rasa gurih, tekstur lembut, dan aroma khas yang cocok untuk hidangan keluarga.</p>
+                <div class="product-meta">
+                  <span><span class="material-symbols-outlined">set_meal</span> Ikan pilihan</span>
+                  <span><span class="material-symbols-outlined">skillet</span> Siap saji</span>
+                </div>
+                <div class="product-footer">
+                  <div class="price"><small>Mulai dari</small>IDR 65.000</div>
+                  <a class="btn btn-dark product-order" href="https://wa.me/6282293648411?text=Halo%20Admin%2C%20saya%20tertarik%20membeli%20Otak%20-%20Otak%20Ikan.%0A%0APesan%20ini%20dikirim%20melalui%20website%20Mulkan%20Mimba%27un%20Powered%20by%20DekatLokal." target="_blank" rel="noopener noreferrer">
+                    <svg class="wa-icon" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
+                    Beli Sekarang
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="category">
+          <div class="category-head reveal">
+            <div class="category-icon"><span class="material-symbols-outlined">local_cafe</span></div>
+            <div>
+              <h3>Minuman</h3>
+              <p>Hangat, aromatik, dan siap menemani hari.</p>
+            </div>
+          </div>
+
+          <div class="product-grid drink-grid stagger reveal">
+            <article class="product-card">
+              <div class="product-media">
+                <img src="Asset/GULJACO.png" alt="GULJACO" />
+                <span class="product-badge">Hangat</span>
+              </div>
+              <div class="product-content">
+                <h4>GULJACO</h4>
+                <p>Minuman serbuk herbal instan yang memadukan cokelat premium dengan hangatnya jahe alami untuk stamina harian.</p>
+                <div class="product-meta">
+                  <span><span class="material-symbols-outlined">coffee</span> Coklat jahe</span>
+                  <span><span class="material-symbols-outlined">bolt</span> Instan</span>
+                </div>
+                <div class="product-footer">
+                  <div class="price"><small>Mulai dari</small>IDR 8.500</div>
+                  <a class="btn btn-dark product-order" href="https://wa.me/6282293648411?text=Halo%20Admin%2C%20saya%20tertarik%20membeli%20GULJACO.%0A%0APesan%20ini%20dikirim%20melalui%20website%20Mulkan%20Mimba%27un%20Powered%20by%20DekatLokal." target="_blank" rel="noopener noreferrer">
+                    <svg class="wa-icon" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
+                    Beli Sekarang
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-media">
+                <img src="Asset/Kopi.png" alt="Kopi Para Raja" />
+                <span class="product-badge">Aromatik</span>
+              </div>
+              <div class="product-content">
+                <h4>Kopi Para Raja</h4>
+                <p>Rasa dan aroma pekat khas Kopi Arabika Enrekang, Sulawesi Selatan, dikurasi untuk pencinta kopi yang mencari karakter daerah.</p>
+                <div class="product-meta">
+                  <span><span class="material-symbols-outlined">coffee_maker</span> Arabika</span>
+                  <span><span class="material-symbols-outlined">landscape</span> Enrekang</span>
+                </div>
+                <div class="product-footer">
+                  <div class="price"><small>Mulai dari</small>IDR 78.000</div>
+                  <a class="btn btn-dark product-order" href="https://wa.me/6282293648411?text=Halo%20Admin%2C%20saya%20tertarik%20membeli%20Kopi%20Para%20Raja.%0A%0APesan%20ini%20dikirim%20melalui%20website%20Mulkan%20Mimba%27un%20Powered%20by%20DekatLokal." target="_blank" rel="noopener noreferrer">
+                    <svg class="wa-icon" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
+                    Beli Sekarang
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials section-pad" id="testimoni">
+      <div class="container">
+        <div class="testimonial-head reveal">
+          <div>
+            <span class="section-kicker"><span class="material-symbols-outlined">reviews</span> Testimoni</span>
+            <h2 class="section-title">Cerita Pelanggan yang Sudah Mencicipi</h2>
+            <p class="section-desc">Pelanggan memilih Mulkan Mimba'un karena rasa yang konsisten, kemasan praktis, dan produk yang mudah direkomendasikan.</p>
+          </div>
+
+          <div class="trust-strip stagger reveal">
+            <div class="trust-item"><strong>5.0</strong><span>Rating pengalaman pelanggan</span></div>
+            <div class="trust-item"><strong>5+</strong><span>Varian makanan dan minuman</span></div>
+            <div class="trust-item"><strong>3</strong><span>Kota dan kanal penjualan</span></div>
+          </div>
+        </div>
+
+        <div class="testimonial-grid stagger reveal">
+          <article class="testimonial-card">
+            <div class="quote-mark"><span class="material-symbols-outlined">format_quote</span></div>
+            <div class="stars" aria-label="Rating 5 dari 5">
+              <span class="material-symbols-outlined fill">star</span>
+              <span class="material-symbols-outlined fill">star</span>
+              <span class="material-symbols-outlined fill">star</span>
+              <span class="material-symbols-outlined fill">star</span>
+              <span class="material-symbols-outlined fill">star</span>
+            </div>
+            <p>"Keripik tempenya tipis, renyah banget, dan gurihnya pas. Cocok untuk camilan sehat keluarga karena kualitasnya terasa premium."</p>
+            <div class="customer">
+              <div class="customer-icon"><span class="material-symbols-outlined fill">account_circle</span></div>
+              <div>
+                <strong>Budi Santoso</strong>
+                <small>Makassar, Indonesia</small>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="quote-mark"><span class="material-symbols-outlined">format_quote</span></div>
+            <div class="stars" aria-label="Rating 5 dari 5">
+              <span class="material-symbols-outlined fill">star</span>
+              <span class="material-symbols-outlined fill">star</span>
+              <span class="material-symbols-outlined fill">star</span>
+              <span class="material-symbols-outlined fill">star</span>
+              <span class="material-symbols-outlined fill">star</span>
+            </div>
+            <p>"Abon tuna panggang ini beneran beda karena tidak berminyak dan seratnya halus. Praktis untuk lauk makan nasi hangat."</p>
+            <div class="customer">
+              <div class="customer-icon green"><span class="material-symbols-outlined fill">account_circle</span></div>
+              <div>
+                <strong>Fatiha Alya</strong>
+                <small>Surabaya, Indonesia</small>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="quote-mark"><span class="material-symbols-outlined">format_quote</span></div>
+            <div class="stars" aria-label="Rating 5 dari 5">
+              <span class="material-symbols-outlined fill">star</span>
+              <span class="material-symbols-outlined fill">star</span>
+              <span class="material-symbols-outlined fill">star</span>
+              <span class="material-symbols-outlined fill">star</span>
+              <span class="material-symbols-outlined fill">star</span>
+            </div>
+            <p>"Otak-otaknya terasa sekali daging ikannya dan teksturnya lembut. Aroma rempahnya bikin produk ini mudah direkomendasikan."</p>
+            <div class="customer">
+              <div class="customer-icon gold"><span class="material-symbols-outlined fill">account_circle</span></div>
+              <div>
+                <strong>Gwen Cantika</strong>
+                <small>Jakarta, Indonesia</small>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="locations section-pad" id="lokasi">
+      <div class="container">
+        <div class="locations-head reveal">
+          <div>
+            <span class="section-kicker"><span class="material-symbols-outlined">pin_drop</span> Lokasi Kami</span>
+            <h2 class="section-title">Datang dan Lihat Produk <span class="accent">Secara Langsung</span></h2>
+            <p class="section-desc">Produk Mulkan Mimba'un tersedia di berbagai titik strategis, mulai dari area perjalanan, supermarket, outlet kota, sampai kanal online.</p>
+          </div>
+
+          <div class="location-proof">
+            <div class="location-proof-item"><span class="material-symbols-outlined fill">verified</span> Cabang dan mitra penjualan mudah dijangkau</div>
+            <div class="location-proof-item"><span class="material-symbols-outlined fill">inventory_2</span> Cocok untuk beli langsung atau stok oleh-oleh</div>
+            <div class="location-proof-item"><span class="material-symbols-outlined fill">map</span> Tautan lokasi siap dibuka lewat Google Maps</div>
+          </div>
+        </div>
+
+        <div class="special-location-grid stagger reveal">
+          <article class="location-special">
+            <div class="location-brand airport-logo">
+              <img src="Asset/logo-bandara.png" alt="Logo Bandara Sultan Hasanuddin" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" />
+              <span>Logo Bandara</span>
+            </div>
+            <span class="tag">Titik perjalanan</span>
+            <h3>Bandara Sultan Hasanuddin</h3>
+            <p>Cari produk kami di area keberangkatan Bandara Sultan Hasanuddin. Pilihan praktis untuk oleh-oleh sebelum terbang.</p>
+            <a class="btn" href="https://www.google.com/maps/place/Bandar+Udara+Internasional+Sultan+Hasanuddin/@-5.0777016,119.5467395,17z/data=!3m1!4b1!4m6!3m5!1s0x2dbefbcebbcac701:0xf030bfcad763610!8m2!3d-5.0777069!4d119.5493144!16s%2Fm%2F02pkf8y!5m2!1e4!1e1?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
+              Klik Disini
+              <span class="material-symbols-outlined">open_in_new</span>
+            </a>
+          </article>
+
+          <article class="location-special hero-market">
+            <div class="location-brand hero-logo">
+              <img src="Asset/logo-hero supermarket.png" alt="Logo Hero Supermarket" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" />
+              <span>Logo Hero Supermarket</span>
+            </div>
+            <span class="tag">Rak supermarket</span>
+            <h3>Hero Supermarket</h3>
+            <p>Kini produk Mulkan Mimba'un makin mudah ditemukan di deretan rak Hero Supermarket di kota Anda.</p>
+            <a class="btn" href="https://www.google.com/maps/place/HERO/@-5.15318,119.3983185,15z/data=!4m10!1m2!2m1!1shero+supermarket!3m6!1s0x2dbf1d587ab85b21:0x7a5f9ceb5a38a7ad!8m2!3d-5.15318!4d119.4173729!15sChBoZXJvIHN1cGVybWFya2V0WhIiEGhlcm8gc3VwZXJtYXJrZXSSAQtzdXBlcm1hcmtldOABAA!16s%2Fg%2F1ptvvhfqj!5m2!1e4!1e1?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
+              Klik Disini
+              <span class="material-symbols-outlined">open_in_new</span>
+            </a>
+          </article>
+        </div>
+
+        <div class="branch-grid stagger reveal">
+          <article class="branch-card">
+            <div class="branch-icon"><span class="material-symbols-outlined">location_on</span></div>
+            <h3>Makassar Pusat</h3>
+            <p>Tersedia di seluruh Outlet Roti dan Brownies Daeng Makassar. Kunjungi toko pusat kami untuk varian terlengkap dan pelayanan langsung.</p>
+            <a class="btn" href="https://www.google.com/maps/search/roti+daeng/@-5.1324351,119.3660223,13z/data=!3m1!4b1!5m2!1e4!1e1?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
+              Klik Disini
+              <span class="material-symbols-outlined">arrow_forward</span>
+            </a>
+          </article>
+
+          <article class="branch-card">
+            <div class="branch-icon"><span class="material-symbols-outlined">store</span></div>
+            <h3>Tangerang</h3>
+            <p>Tersedia di Outlet Roti dan Brownies Daeng Ciledug. Kunjungi toko kami untuk varian terlengkap dan pelayanan langsung.</p>
+            <a class="btn" href="https://www.google.com/maps/place/Roti+%26+Brownies+Daeng+-+Ciledug/@-6.2352895,106.7142551,17z/data=!3m1!4b1!4m6!3m5!1s0x2e69fbf092b139ff:0x35596934e5d5fdd5!8m2!3d-6.2352949!4d106.719126!16s%2Fg%2F11npbh8f40!5m2!1e4!1e1?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
+              Klik Disini
+              <span class="material-symbols-outlined">arrow_forward</span>
+            </a>
+          </article>
+
+          <article class="branch-card">
+            <div class="branch-icon"><span class="material-symbols-outlined">shopping_bag</span></div>
+            <h3>Surabaya</h3>
+            <p>Tersedia di Shopee. Kunjungi toko online kami untuk melihat varian produk dan melakukan pemesanan dari rumah.</p>
+            <a class="btn" href="https://shopee.co.id/Abon-Panggang-Tuna-Abon-Ikan-Tanpa-Proses-Goreng-Non-Kolesterol-i.2076328.19578323405?extraParams=%7B%22display_model_id%22%3A204195671360%2C%22model_selection_logic%22%3A3%7D&sp_atk=1f532cef-31b5-48d1-ad65-e614f2245171&xptdk=1f532cef-31b5-48d1-ad65-e614f2245171" target="_blank" rel="noopener noreferrer">
+              Klik Disini
+              <span class="material-symbols-outlined">arrow_forward</span>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq section-pad" id="faq">
+      <div class="container faq-grid">
+        <div class="faq-panel reveal">
+          <span class="section-kicker"><span class="material-symbols-outlined">help</span> FAQ</span>
+          <h2>Ada pertanyaan? Kami bantu jawab cepat.</h2>
+          <p>Informasi pemesanan, pengiriman, daya tahan, dan pembelian grosir tersedia di sini. Untuk jawaban yang lebih spesifik, hubungi admin via WhatsApp.</p>
+          <a class="btn" href="https://wa.me/6282293648411?text=Halo%20Admin%2C%20saya%20ingin%20bertanya%20tentang%20produk%20Mulkan%20Mimba%27un.%0A%0APesan%20ini%20dikirim%20melalui%20website%20Mulkan%20Mimba%27un%20Powered%20by%20DekatLokal." target="_blank" rel="noopener noreferrer">
+            <svg class="wa-icon" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
+            Tanya via WhatsApp
+          </a>
+        </div>
+
+        <div class="faq-list stagger reveal">
+          <details class="faq-item" open>
+            <summary>Bagaimana cara memesan produk Mulkan Mimba'un? <span class="material-symbols-outlined">expand_more</span></summary>
+            <div class="faq-answer">Anda bisa memesan melalui WhatsApp dan Shopee. Klik tombol "Beli Sekarang" pada produk yang diinginkan untuk langsung terhubung dengan admin.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Apakah produk tersedia untuk pengiriman ke luar kota? <span class="material-symbols-outlined">expand_more</span></summary>
+            <div class="faq-answer">Ya, kami melayani pengiriman ke berbagai kota di Indonesia. Produk dikemas dengan aman agar tetap rapi saat tiba di tangan pelanggan.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Apakah produk menggunakan bahan pengawet? <span class="material-symbols-outlined">expand_more</span></summary>
+            <div class="faq-answer">Produk dibuat dengan bahan pilihan dan diproses secara higienis. Untuk informasi komposisi detail setiap produk, silakan hubungi admin.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Berapa lama daya tahan produk? <span class="material-symbols-outlined">expand_more</span></summary>
+            <div class="faq-answer">Setiap produk memiliki masa simpan yang tertera di kemasan. Umumnya produk kering seperti abon, keripik, kopi, dan minuman serbuk lebih tahan lama jika disimpan di tempat sejuk dan kering.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Apakah ada minimum pembelian? <span class="material-symbols-outlined">expand_more</span></summary>
+            <div class="faq-answer">Tidak ada minimum pembelian untuk order reguler. Untuk pembelian grosir, reseller, atau kebutuhan hampers, admin dapat membantu memberikan penawaran khusus.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Apakah produk sudah bersertifikat halal? <span class="material-symbols-outlined">expand_more</span></summary>
+            <div class="faq-answer">Produk dibuat dari bahan halal dan diproses dengan standar keamanan pangan. Untuk status sertifikasi terbaru, silakan konfirmasi langsung kepada admin.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="order">
+      <div class="container cta-inner">
+        <div class="reveal">
+          <h2>Saatnya Bawa Pulang Rasa Lokal yang Lebih Berkesan</h2>
+          <p>Pilih produk favorit, pesan langsung, atau cari lokasi terdekat untuk melihat produk Mulkan Mimba'un secara langsung.</p>
+        </div>
+
+        <div class="cta-actions reveal">
+          <a class="btn btn-light" href="#lokasi">
+            <span class="material-symbols-outlined">pin_drop</span>
+            Cari Toko Terdekat
+          </a>
+          <a class="btn btn-ghost" href="https://wa.me/6282293648411?text=Halo%20Admin%2C%20saya%20ingin%20order%20produk%20Mulkan%20Mimba%27un.%0A%0APesan%20ini%20dikirim%20melalui%20website%20Mulkan%20Mimba%27un%20Powered%20by%20DekatLokal." target="_blank" rel="noopener noreferrer">
+            <svg class="wa-icon" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
+            Hubungi Admin
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img class="footer-logo" src="Asset/Logo-Mulkan.Mimba'un.png" alt="Logo Mulkan Mimba'un" />
+          <p>Oleh-oleh makanan dan minuman lokal yang dirancang untuk perjalanan, keluarga, dan hadiah yang terasa dekat dengan daerah.</p>
+        </div>
+
+        <div>
+          <h3>Tautan Cepat</h3>
+          <ul>
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#mitra">Mitra</a></li>
+            <li><a href="#tentangkami">Tentang Kami</a></li>
+            <li><a href="#produk">Produk</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Dukungan</h3>
+          <ul>
+            <li><a href="#lokasi">Lokasi Cabang</a></li>
+            <li><a href="#faq">Pusat Bantuan FAQ</a></li>
+            <li><a href="https://wa.me/6282293648411?text=Halo%20Admin%2C%20saya%20ingin%20bertanya%20tentang%20produk%20Mulkan%20Mimba%27un.%0A%0APesan%20ini%20dikirim%20melalui%20website%20Mulkan%20Mimba%27un%20Powered%20by%20DekatLokal." target="_blank" rel="noopener noreferrer">Kontak WhatsApp</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Mitra Kami</h3>
+          <div class="footer-partners">
+            <img class="footer-partner-dekat" src="Asset/dekat-lokal.png" alt="Dekat Lokal" />
+            <img class="footer-partner-rumah" src="Asset/rumah-bumn.png" alt="Rumah BUMN Makassar" />
+            <img class="footer-partner-bri" src="Asset/bank-bri.png" alt="Bank BRI" />
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Mulkan Mimba'un. All rights reserved | Powered by <a class="dekat-link" href="https://dekatlokal.com" target="_blank" rel="noopener noreferrer">DekatLokal</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const body = document.body;
+      const nav = document.querySelector(".site-nav");
+      const progress = document.querySelector(".scroll-progress");
+      const menu = document.getElementById("mobile-menu");
+      const menuToggle = document.querySelector(".menu-toggle");
+      const menuClose = document.querySelector(".menu-close");
+      const mobileLinks = menu.querySelectorAll("a[href^='#']");
+      const desktopLinks = document.querySelectorAll(".nav-link");
+      const sections = Array.from(document.querySelectorAll("header[id], section[id]"));
+
+      const setLoaded = function () {
+        body.classList.add("is-loaded");
+      };
+
+      const updateScrollState = function () {
+        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        const progressValue = maxScroll > 0 ? window.scrollY / maxScroll : 0;
+        progress.style.transform = "scaleX(" + progressValue + ")";
+        nav.classList.toggle("is-scrolled", window.scrollY > 12);
+      };
+
+      const setActiveLink = function () {
+        let current = "home";
+        sections.forEach(function (section) {
+          const top = section.offsetTop - 130;
+          if (window.scrollY >= top) {
+            current = section.id;
+          }
         });
-        
-        // Add active class to clicked link
-        this.classList.add('active-nav', 'text-secondary', 'border-b-2', 'border-secondary');
-        this.classList.remove('text-on-surface-variant');
+
+        desktopLinks.forEach(function (link) {
+          const hash = link.getAttribute("href").replace("#", "");
+          link.classList.toggle("is-active", hash === current);
+        });
+      };
+
+      const openMenu = function () {
+        menu.classList.add("is-open");
+        body.classList.add("menu-open");
+        menu.setAttribute("aria-hidden", "false");
+        menuToggle.setAttribute("aria-expanded", "true");
+      };
+
+      const closeMenu = function () {
+        menu.classList.remove("is-open");
+        body.classList.remove("menu-open");
+        menu.setAttribute("aria-hidden", "true");
+        menuToggle.setAttribute("aria-expanded", "false");
+      };
+
+      const revealObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, {
+        rootMargin: "0px 0px -10% 0px",
+        threshold: 0.16
       });
-    });
-    
-    // Update navbar on scroll to show which section is in view
-    window.addEventListener('scroll', function() {
-      const sections = document.querySelectorAll('header, section');
-      let currentSection = '';
-      
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
-        const sectionHeight = section.offsetHeight;
-        
-        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-          currentSection = section.id;
+
+      document.querySelectorAll(".reveal").forEach(function (item) {
+        revealObserver.observe(item);
+      });
+
+      menuToggle.addEventListener("click", openMenu);
+      menuClose.addEventListener("click", closeMenu);
+      mobileLinks.forEach(function (link) {
+        link.addEventListener("click", closeMenu);
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          closeMenu();
         }
       });
-      
-      // Update navbar based on scroll position
-      navLinks.forEach(link => {
-        const linkSection = link.getAttribute('data-section');
-        if (linkSection === currentSection) {
-          link.classList.add('active-nav', 'text-secondary', 'border-b-2', 'border-secondary');
-          link.classList.remove('text-on-surface-variant');
-        } else {
-          link.classList.remove('active-nav', 'text-secondary', 'border-b-2', 'border-secondary');
-          link.classList.add('text-on-surface-variant');
-        }
+
+      window.addEventListener("load", setLoaded);
+      window.addEventListener("scroll", function () {
+        updateScrollState();
+        setActiveLink();
+      }, { passive: true });
+      window.addEventListener("resize", function () {
+        updateScrollState();
+        setActiveLink();
       });
-    });
-  });
-  
-  
-</script>
-</body></html>
+
+      updateScrollState();
+      setActiveLink();
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "missing": [
+        {
+          "type": "host",
+          "value": "mulkanmimbaun.dekatlokal.com"
+        }
+      ],
+      "destination": "https://mulkanmimbaun.dekatlokal.com/:path*",
+      "permanent": true
+    }
+  ]
+}
