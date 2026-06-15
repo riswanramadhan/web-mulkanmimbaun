@@ -1227,7 +1227,7 @@
 
     .special-location-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 22px;
       margin-bottom: 22px;
     }
@@ -1268,6 +1268,12 @@
         linear-gradient(135deg, var(--green), var(--orange));
     }
 
+    .location-special.discount-market {
+      background:
+        linear-gradient(145deg, rgba(53, 18, 13, 0.94), rgba(111, 51, 35, 0.88)),
+        linear-gradient(135deg, var(--yellow), var(--red));
+    }
+
     .location-brand {
       display: flex;
       align-items: center;
@@ -1288,6 +1294,10 @@
 
     .location-brand.hero-logo {
       width: min(260px, 100%);
+    }
+
+    .location-brand.discount-logo {
+      width: min(250px, 100%);
     }
 
     .location-brand img {
@@ -1327,14 +1337,45 @@
       margin: 0;
       max-width: 520px;
       font-family: var(--font-heading);
-      font-size: clamp(1.7rem, 3.2vw, 2.65rem);
+      font-size: clamp(1.5rem, 2.25vw, 2.35rem);
       line-height: 1.04;
     }
 
     .location-special p {
-      margin: 14px 0 22px;
+      margin: 14px 0 18px;
       max-width: 560px;
       color: rgba(255, 255, 255, 0.85);
+    }
+
+    .location-detail-list {
+      display: grid;
+      gap: 10px;
+      width: 100%;
+      max-width: 620px;
+      margin: 0 0 22px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .location-detail-list li {
+      display: grid;
+      gap: 4px;
+      padding: 11px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .location-detail-list strong {
+      color: #fff;
+      font-size: 13px;
+      line-height: 1.35;
+    }
+
+    .location-detail-list small {
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 12px;
+      line-height: 1.45;
     }
 
     .location-special .btn {
@@ -1399,6 +1440,85 @@
       background: var(--soft);
       color: var(--red);
       box-shadow: none;
+    }
+
+    .store-more-card {
+      grid-column: 1 / -1;
+      min-height: auto;
+    }
+
+    .location-more {
+      width: 100%;
+      margin-top: 18px;
+      border: 1px solid rgba(234, 217, 200, 0.92);
+      border-radius: var(--radius);
+      background: var(--paper);
+      overflow: hidden;
+    }
+
+    .location-more summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      min-height: 54px;
+      padding: 14px 16px;
+      color: var(--red);
+      font-weight: 900;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .location-more summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .location-more summary span {
+      flex: 0 0 auto;
+      transition: transform 0.25s ease;
+    }
+
+    .location-more[open] summary span {
+      transform: rotate(180deg);
+    }
+
+    .location-more-body {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      padding: 0 16px 16px;
+    }
+
+    .additional-location {
+      display: grid;
+      gap: 7px;
+      padding: 14px;
+      border: 1px solid rgba(234, 217, 200, 0.78);
+      border-radius: var(--radius);
+      background: #fff;
+    }
+
+    .additional-location strong {
+      color: var(--deep);
+      font-size: 14px;
+      line-height: 1.35;
+    }
+
+    .additional-location address {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      font-style: normal;
+      line-height: 1.55;
+    }
+
+    .additional-location a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--red);
+      font-size: 13px;
+      font-weight: 900;
     }
 
     .faq {
@@ -1800,6 +1920,10 @@
       .cta-actions {
         justify-content: flex-start;
       }
+
+      .special-location-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
     }
 
     @media (max-width: 860px) {
@@ -1880,6 +2004,10 @@
       .footer-partner-bri {
         --footer-partner-height: 28px;
         --footer-partner-max-width: 126px;
+      }
+
+      .location-more-body {
+        grid-template-columns: 1fr;
       }
     }
 
@@ -2383,7 +2511,41 @@
             <span class="tag">Rak supermarket</span>
             <h3>Hero Supermarket</h3>
             <p>Kini produk Mulkan Mimba'un makin mudah ditemukan di deretan rak Hero Supermarket di kota Anda.</p>
-            <a class="btn" href="https://www.google.com/maps/place/HERO/@-5.15318,119.3983185,15z/data=!4m10!1m2!2m1!1shero+supermarket!3m6!1s0x2dbf1d587ab85b21:0x7a5f9ceb5a38a7ad!8m2!3d-5.15318!4d119.4173729!15sChBoZXJvIHN1cGVybWFya2V0WhIiEGhlcm8gc3VwZXJtYXJrZXSSAQtzdXBlcm1hcmtldOABAA!16s%2Fg%2F1ptvvhfqj!5m2!1e4!1e1?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
+            <ul class="location-detail-list" aria-label="Alamat Hero Supermarket">
+              <li>
+                <strong>Hero Supermarket Nipah Park</strong>
+                <small>Nipah Park (Nipah Mall), Lantai 1, Jalan Urip Sumoharjo No. 23C, Panaikang, Makassar</small>
+              </li>
+              <li>
+                <strong>Hero Supermarket MaRI</strong>
+                <small>Ground Floor (GF), Jalan Dr. Ratulangi No. 35, Mamajang, Makassar</small>
+              </li>
+            </ul>
+            <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Hero%20Supermarket%20Makassar" target="_blank" rel="noopener noreferrer">
+              Klik Disini
+              <span class="material-symbols-outlined">open_in_new</span>
+            </a>
+          </article>
+
+          <article class="location-special discount-market">
+            <div class="location-brand discount-logo">
+              <img src="/assets/logo-mitradiskon.jpeg" alt="Logo Mitra Diskon Swalayan" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" />
+              <span>Logo Mitra Diskon</span>
+            </div>
+            <span class="tag">Swalayan</span>
+            <h3>Mitra Diskon Swalayan</h3>
+            <p>Produk Mulkan Mimba'un juga tersedia di cabang Mitra Diskon Swalayan area Makassar.</p>
+            <ul class="location-detail-list" aria-label="Alamat Mitra Diskon Swalayan">
+              <li>
+                <strong>Mitra Diskon Swalayan Tamalanrea</strong>
+                <small>Jl. Perintis Kemerdekaan KM.11 No. 242, RT.2, Tamalanrea, Kec. Biringkanaya, Kota Makassar, Sulawesi Selatan 90245</small>
+              </li>
+              <li>
+                <strong>Mitra Diskon Swalayan Alauddin</strong>
+                <small>Jl. Sultan Alauddin No. 237, Gunung Sari, Kecamatan Rappocini</small>
+              </li>
+            </ul>
+            <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Mitra%20Diskon%20Swalayan%20Makassar" target="_blank" rel="noopener noreferrer">
               Klik Disini
               <span class="material-symbols-outlined">open_in_new</span>
             </a>
@@ -2419,6 +2581,67 @@
               Klik Disini
               <span class="material-symbols-outlined">arrow_forward</span>
             </a>
+          </article>
+
+          <article class="branch-card store-more-card">
+            <div class="branch-icon"><span class="material-symbols-outlined">storefront</span></div>
+            <h3>Lokasi Lainnya di Makassar</h3>
+            <p>Produk Mulkan Mimba'un juga bisa ditemukan di beberapa outlet dan titik penjualan tambahan berikut.</p>
+
+            <details class="location-more">
+              <summary>
+                See More
+                <span class="material-symbols-outlined">expand_more</span>
+              </summary>
+              <div class="location-more-body">
+                <div class="additional-location">
+                  <strong>Hertasning Baru</strong>
+                  <address>Jl. Hertasning Baru No. 25, Kassi-Kassi</address>
+                  <a href="tel:+62895341599412"><span class="material-symbols-outlined">call</span> 0895341599412</a>
+                  <a href="tel:+6285234084509"><span class="material-symbols-outlined">call</span> 085234084509</a>
+                </div>
+                <div class="additional-location">
+                  <strong>Ruko Dataran Indah Antang</strong>
+                  <address>Jl. Leimena Antang (Ruko Dataran Indah)</address>
+                  <a href="tel:+6281242214474"><span class="material-symbols-outlined">call</span> 081242214474</a>
+                </div>
+                <div class="additional-location">
+                  <strong>RS Mata Tallasa City</strong>
+                  <address>RS Mata Tallasa City</address>
+                  <a href="tel:+6285756585747"><span class="material-symbols-outlined">call</span> 085756585747</a>
+                </div>
+                <div class="additional-location">
+                  <strong>RS Unhas Lobby</strong>
+                  <address>Lobby RS Unhas</address>
+                  <a href="tel:+6285342968011"><span class="material-symbols-outlined">call</span> 085342968011</a>
+                </div>
+                <div class="additional-location">
+                  <strong>RS Tadjuddin Lobby</strong>
+                  <address>Lobby RS Tadjuddin</address>
+                  <a href="tel:+6285656893194"><span class="material-symbols-outlined">call</span> 085656893194</a>
+                </div>
+                <div class="additional-location">
+                  <strong>Mobil MTos</strong>
+                  <address>MTos</address>
+                  <a href="tel:+6282194529044"><span class="material-symbols-outlined">call</span> 082194529044</a>
+                </div>
+                <div class="additional-location">
+                  <strong>RM Ulujuku 2</strong>
+                  <address>Jl. Ujung Pandang No. 2, Lantai Dasar RM Ulujuku 2</address>
+                  <a href="tel:+6281398746790"><span class="material-symbols-outlined">call</span> 081398746790</a>
+                </div>
+                <div class="additional-location">
+                  <strong>Ruko Mutiara Niaga Fiesta</strong>
+                  <address>Ruko Mutiara Niaga Fiesta No. 41</address>
+                  <a href="tel:+6282194508643"><span class="material-symbols-outlined">call</span> 082194508643</a>
+                </div>
+                <div class="additional-location">
+                  <strong>Pasar Grosir Daya Modern</strong>
+                  <address>Jl. Ruko Daya Blok H2 No. 25, Ruko Pasar Grosir Daya Modern</address>
+                  <a href="tel:+6281398746790"><span class="material-symbols-outlined">call</span> +6281398746790</a>
+                </div>
+              </div>
+            </details>
           </article>
         </div>
       </div>
